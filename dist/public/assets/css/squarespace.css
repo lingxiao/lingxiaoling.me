@@ -1,4 +1,4 @@
-/*! Squarespace LESS Compiler  (less.js language v1.3.3)  */
+! Squarespace LESS Compiler  (less.js language v1.3.3)  */
 
 html,
 body,
@@ -22363,8 +22363,30 @@ body:not(.tweak-index-slideshow-on).tweak-index-inactive-on-load .nav-hovered .i
     -moz-transition: opacity 300ms ease;
     -ms-transition: opacity 300ms ease;
     -o-transition: opacity 300ms ease;
-    transition: opacity 300ms ease
+    transition: opacity 300ms ease;
 }
+
+/* Xiao added this */
+.collection-nav-desc-wrapper-hidden {
+    box-sizing: border-box;
+    z-index: 12;
+    position: absolute;
+    top: 50%;
+    left: 4vw;
+    opacity: 0;
+    -webkit-transform: translate3d(0, -50%, 0);
+    -moz-transform: translate3d(0, -50%, 0);
+    -ms-transform: translate3d(0, -50%, 0);
+    -o-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+    -webkit-transition: opacity 300ms ease;
+    -moz-transition: opacity 300ms ease;
+    -ms-transition: opacity 300ms ease;
+    -o-transition: opacity 300ms ease;
+    transition: opacity 300ms ease;
+    z-index: -1
+}
+
 
 .collection-nav-desc-wrapper.show {
     opacity: 1
@@ -25196,4 +25218,4 @@ body:not(.collection-type-index):not(.collection-type-gallery).tweak-show-page-b
 }
 
 
-/*! Squarespace LESS Compiler  (less.js language v1.3.3)  */
+/*! Squarespace LESS Compiler  (less.js language v1.3.3)  
