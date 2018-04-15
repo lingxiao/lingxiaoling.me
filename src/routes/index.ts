@@ -26,6 +26,13 @@ index.get('/tech', (req, res, next) => {
 index.get('/alt', (req, res, next) => { 
 	res.sendFile('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/alt.html');
 });
+
+index.get('/alt-1', (req, res, next) => { 
+	res.sendFile('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/alt-1.html');
+});
+
+
+
 export default index;
 
 
