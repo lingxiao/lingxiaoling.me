@@ -1,0 +1,32 @@
+.index-nav
+  .index-gallery-wrapper.index-item-navigation(data-controller='IndexSetup, IndexPositioning, IndexNavOverflow, IndexNavScroll')
+    .collection-images.index-nav-images
+      .image-container.content-fill.active.active-page(data-url-id='tech')
+        img(data-src='https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a38103053450a1651184f58/1513616512686/', data-image='https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a38103053450a1651184f58/1513616512686/', data-image-dimensions='1440x807', data-image-focal-point='0.5,0.5', alt='   Deep Reinforcement Learning with Hierarchical Recurrent Encoder-Decoder for Conversation   ', data-load='false')
+      .image-container.content-fill(data-url-id='art')
+        img(data-src='https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a3822d441920241ebc83e53/1513628375624/title.jpg', data-image='https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a3822d441920241ebc83e53/1513628375624/title.jpg', data-image-dimensions='1024x768', data-image-focal-point='0.5,0.5', alt='title.jpg', data-load='false')
+      .image-container.content-fill(data-url-id='personal')
+        img(data-src='https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a1df5f371c10b644b378a19/1511913027578/_MG_9185.jpg', data-image='https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a1df5f371c10b644b378a19/1511913027578/_MG_9185.jpg', data-image-dimensions='1271x873', data-image-focal-point='0.5,0.5', alt='_MG_9185.jpg', data-load='false')
+      .overlay.blended-overlay.index-overlay
+    .collection-nav-desc-wrapper
+      #collectionDesc.collection-desc
+        p
+          a(href='/tech') Tech | <em>
+          //- |  
+          a(href='/art') Art | <em>
+          //- |  
+          a(href='/personal') ___
+
+      nav.index-navigation.collection-nav(role='navigation')
+        .collection-nav-item.active.active-page(data-url-id='tech')
+          a.tech(href='/tech/')
+            span.collection-nav-item-span  
+        .collection-nav-item(data-url-id='art')
+          a.art(href='/art/')
+            span.collection-nav-item-span 
+        .collection-nav-item(data-url-id='personal')
+          a.personal(href='/personal/')
+            span.collection-nav-item-span 
+script(src='https://static1.squarespace.com/static/ta/56d9c0fe40261d18462df72d/339/scripts/site-bundle.js', type='text/javascript')
+script(type='text/javascript', data-sqs-type='imageloader-bootstraper').
+  (function() {if(window.ImageLoader) { window.ImageLoader.bootstrap({}, document); }})();

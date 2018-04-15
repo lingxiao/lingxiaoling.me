@@ -1,0 +1,19 @@
+doctype html
+html(lang='en')
+	head
+		include includes-old/head.pug
+		//- block header
+
+	body
+		//- PRELOADER
+		.page-loader
+			.loader Loading...
+		//- /PRELOADER
+		
+		//- problem: when the navbar is included: the title gets pushed down
+		include includes-old/navbar.html
+		//- include includes/navbar.pug
+		
+		block content
+		//- block footer
+		include includes-old/footer-js-files.pug

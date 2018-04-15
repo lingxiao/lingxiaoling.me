@@ -1,0 +1,23 @@
+extend layout-scroll.pug
+block content
+
+	include includes/title-card.pug
+
+	//- now I need to make them smaller and tile it two to a piece
+	//- may need a different template solution
+
+	.main-content-inner-wrapper(data-content-field="main-content")
+		.gallery-wrapper(data-controller="GalleryLayout")
+			.slides
+				.grid-wrapper
+					.grid-item-wrapper.grid-hidden(data-slide-id="59c1726318b27d3922681df0" data-controller="GalleryVideoHandler")
+						.grid-image-wrapper(data-slide-id="59c1726318b27d3922681df0")
+							img(data-src="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/59c1725512abd934a0adf1b2/59c1726318b27d3922681df0/1513616512686/G-home-2.png" data-image="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/59c1725512abd934a0adf1b2/59c1726318b27d3922681df0/1513616512686/G-home-2.png" data-image-dimensions="1440x807" data-image-focal-point="0.5,0.5" alt="   Deep Reinforcement Learning with Hierarchical Recurrent Encoder-Decoder for Conversation   " data-load="false" data-grid-image="")
+							.image-title-desc(data-slide-id="59c1726318b27d3922681df0")
+								.image-desc
+									p
+										a(href="/drl-dialogue")
+											strong
+												| Deep Reinforcement Learning with Hierarchical Recurrent Encoder-Decoder for Conversation
+
+

@@ -1,0 +1,19 @@
+extends layout.pug
+
+block content
+
+    #mainContent.main-content(role='main')
+      .main-content-inner-wrapper(data-content-field='main-content')
+        .index-gallery-wrapper(data-controller='IndexSetup, IndexPositioning, IndexNavOverflow, IndexGallery')
+
+          .collection-nav-desc-wrapper
+            #collectionDesc.collection-desc
+              p
+                a(href='/tech')  Tech | <em>
+                //- |  
+                a(href='/art') Art | <em>
+                //- |                      
+                a(href='/personal') ___
+
+            nav.index-navigation.collection-nav(role='navigation')
+

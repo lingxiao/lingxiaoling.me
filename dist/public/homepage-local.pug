@@ -1,0 +1,38 @@
+extends layout.pug
+
+block content
+
+
+    .main-content-inner-wrapper(data-content-field='main-content')
+    .index-gallery-wrapper(data-controller='IndexSetup, IndexPositioning, IndexNavOverflow, IndexGallery')
+      .collection-images
+        .image-container.index-main-image.no-main-image-bg
+        .image-container.content-fill(data-url-id='tech')
+          img(data-src='', data-image='', data-image-dimensions='1440x807', data-image-focal-point='0.5,0.5', alt='   Deep Reinforcement Learning with Hierarchical Recurrent Encoder-Decoder for Conversation   ', data-load='false')
+        .image-container.content-fill(data-url-id='art')
+          img(data-src='', data-image='', data-image-dimensions='1024x768', data-image-focal-point='0.5,0.5', alt='title.jpg', data-load='false')
+        .image-container.content-fill(data-url-id='personal')
+          img(data-src='', data-image='', data-image-dimensions='1271x873', data-image-focal-point='0.5,0.5', alt='_MG_9185.jpg', data-load='false')
+        .overlay.blended-overlay.index-overlay
+      .collection-nav-desc-wrapper
+        #collectionDesc.collection-desc
+          p
+            a(href='home/tech')  Tech | <em>
+            //- |  
+            a(href='/art') Art | <em>
+            //- |                      
+            a(href='/personal') ___
+
+        nav.index-navigation.collection-nav(role='navigation')
+          .collection-nav-item(data-url-id='tech')
+            a.tech(href='/tech/')
+              span.collection-nav-item-span 
+              //- Tech
+          .collection-nav-item(data-url-id='art')
+            a.art(href='/art/')
+              span.collection-nav-item-span 
+              //- Art
+          .collection-nav-item(data-url-id='personal')
+            a.personal(href='/personal/')
+              span.collection-nav-item-span 
+              Personal
