@@ -3,9 +3,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
 const index = express_1.Router();
 index.get('/', (req, res, next) => {
-    res.render('/Users/lingxiao/Documents/Career/Homepage/public/site/index', {});
+    res.render('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/index', {});
 });
 index.get('/tech', (req, res, next) => {
-    res.render('/Users/lingxiao/Documents/Career/Homepage/public/site/index-tech', {});
+    res.render('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/index-tech', {});
+});
+index.get('/alt', (req, res, next) => {
+    res.sendFile('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/alt.html');
 });
 exports.default = index;

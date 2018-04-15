@@ -6,9 +6,8 @@ block content
 	.main-content-inner-wrapper(data-content-field='main-content')
 		.index-gallery-wrapper(data-controller='IndexSetup, IndexPositioning, IndexNavOverflow, IndexGallery')
 			.collection-nav-desc-wrapper
-				<div id="collectionDesc" class="collection-desc">
-					<p><a href="/tech">Tech</a> | <a href="/art">Art</a> | <a href="/personal">___</a></p>
-				</div>
+
+				include ../templates/includes/menu.pug
 
 				nav.index-navigation.collection-nav(role='navigation')
 

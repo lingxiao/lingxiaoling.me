@@ -14,15 +14,18 @@ const index: Router = Router();
 	Template under development
 */
 index.get('/', (req, res, next) => { 
-	res.render('/Users/lingxiao/Documents/Career/Homepage/public/site/index', {});
+	res.render('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/index', {});
 });
 
 
 index.get('/tech', (req, res, next) => { 
-	res.render('/Users/lingxiao/Documents/Career/Homepage/public/site/index-tech', {});
+	res.render('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/index-tech', {});
 });
 
 
+index.get('/alt', (req, res, next) => { 
+	res.sendFile('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/alt.html');
+});
 export default index;
 
 
