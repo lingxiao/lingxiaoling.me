@@ -37,7 +37,7 @@ Static.SQUARESPACE_CONTEXT= {
         }
         ,
         "squarespace-events-collection": {
-            "css": "", "js": ""
+            "css": "//static.squarespace.com/universal/styles-compressed/events-collection-56713b1663346e1fe5b31a3adb8f31fc-min.css", "js": "//static.squarespace.com/universal/scripts-compressed/events-collection-ff1638541e92c10f0cdc-min.en-US.js"
         }
         ,
         "squarespace-form-rendering-utils": {
