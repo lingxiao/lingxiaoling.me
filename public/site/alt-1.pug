@@ -51,22 +51,5 @@ html.touch-styles.authenticated-account(xmlns:og="http://opengraphprotocol.org/s
 
             
                 // Past Events
-              script.
-                // if no thumbnails have been uploaded, but the thumbnails tweak is enabled, manually remove the tweak class.
-                // it just looks nicer.
-                if( document.querySelectorAll('.eventlist--upcoming .eventlist-thumbnail').length === 0 &&
-                document.querySelectorAll('.event-show-past-events .eventlist--past .eventlist-thumbnail').length === 0) {
-                document.querySelector('body').classList.remove('event-thumbnails');
-                }
-            #collection-footer-572a60e7d51cd42747cadf8a.sqs-layout.sqs-grid-12.columns-12.collection-footer.empty(data-layout-label="Collection Footer Content" data-type="block-field")
-              .row.sqs-row
-                .col.sqs-col-12.span-12
-          footer#footer.site-footer(role="contentinfo")
-            #footer-blocks.sqs-layout.sqs-grid-12.columns-12.empty(data-layout-label="Footer Content" data-type="block-field" data-updated-on="1462293974799")
-              .row.sqs-row
-                .col.sqs-col-12.span-12
-      script(src="https://static1.squarespace.com/static/ta/55dccaa0e4b0f748d9f6f215/933/scripts/site-bundle.js" type="text/javascript")
-      script(type="text/javascript" data-sqs-type="imageloader-bootstraper").
-        (function() {if(window.ImageLoader) { window.ImageLoader.bootstrap({}, document); }})();
-      script.
-        Squarespace.afterBodyLoad(Y);
+                include ../templates/includes/footer.pug
+                include ../templates/includes/load-script-after-body.pug
