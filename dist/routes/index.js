@@ -16,10 +16,13 @@ index.get('/', (req, res, next) => {
 index.get('/tech', (req, res, next) => {
     res.render('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/index-tech', {});
 });
+index.get('/image', (req, res, next) => {
+    res.render('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/article.pug', {});
+});
 index.get('/alt', (req, res, next) => {
     res.sendFile('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/alt.html');
 });
 index.get('/alt-1', (req, res, next) => {
-    res.render('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/alt-1.pug', {});
+    res.sendFile('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/alt-1.html');
 });
 exports.default = index;
