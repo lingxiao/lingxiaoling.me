@@ -4,12 +4,12 @@ block content
 
 	include ../templates/includes/title-card.pug
 
+	include mixins.pug
+
 	.main-content-inner-wrapper(data-content-field="main-content")
 		.gallery-wrapper(data-controller="GalleryLayout")
 			.slides
 				.grid-wrapper
 
-					include article-xiao.pug
-					include article-xiao.pug
-					include article-xiao.pug
-
+					+person('May')
+					+person('July')

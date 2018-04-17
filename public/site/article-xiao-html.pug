@@ -1,17 +1,32 @@
+//- <article class="eventlist-event eventlist-event--upcoming eventlist-event--hasimg eventlist-hasimg eventlist-event--multiday">
 article.eventlist-event.eventlist-event--upcoming.eventlist-event--hasimg.eventlist-hasimg.eventlist-event--multiday
+	//- <a class = 'eventlist-column-thumbnail content-fill'>
 	a.eventlist-column-thumbnail.content-fill
+		//- <img src = '../assets/images/g-home-1.png' style = 'max-width: 100%'>
+		//- the way it works in squarespace is that after the page is loaded, the url and size of image 
+		//- are injected intot the DOM. you're looking to hard code it which is why it's messing things up
+		//- load imageimag
+		//- naturual size of the image affects the amount of space underneath the div which is really annoying
+		//- <img class="eventlist-thumbnail" data-src="../assets/images/g-home-1.png" data-image="../assets/images/g-home-1.png" data-image-dimensions="" data-image-focal-point="0.5,0.5">
 		img.eventlist-thumbnail(data-src='../assets/images/g-home-1.png', data-image='../assets/images/g-home-1.png', 	data-image-dimensions='', data-image-focal-point='0.5,0.5')
+		//- </a>
+		//- date label in image
 		a.eventlist-column-date(href="/workshops-shibori/2016/5/4/shibori-101")
 			.eventlist-datetag
 				.eventlist-datetag-inner
 					.eventlist-datetag-startdate.eventlist-datetag-startdate--month May
 					.eventlist-datetag-startdate.eventlist-datetag-startdate--day 4
 					.eventlist-datetag-enddate 2017
+	//- </a>
+	//- Title 
 	.eventlist-column-info
 		h1.eventlist-title
 			a.eventlist-title-link(href="/workshops-shibori/2016/5/4/shibori-101") A Proof from Probability
+		//- 
+		//- Abstract
 		ul.eventlist-meta.event-meta
 			li.eventlist-meta-item.eventlist-meta-date.event-meta-item
+				//- time.event-date(datetime="") 
 				<time class="event-date" datetime="" style='font-family: Arial, Helvetica; letter-spacing: 0px; font-weight: normal; font-style: normal; font-size: 14.6667px; line-height:1.2'> 
 					| I co-opted this section to write the abstract here instead. In this section we 
 					| consider the problem of random walk in three dimensions, and show that unlike a 

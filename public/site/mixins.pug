@@ -1,0 +1,19 @@
+mixin person(name)
+
+	//- p #{name}'s Pug source code!
+	article.eventlist-event.eventlist-event--upcoming.eventlist-event--hasimg.eventlist-hasimg.eventlist-event--multiday
+		a.eventlist-column-thumbnail.content-fill
+			img.eventlist-thumbnail(data-src="../assets/images/g-home-1.png" data-image="../assets/images/g-home-1.png" data-image-dimensions="" data-image-focal-point="0.5,0.5")
+				//- date label in image
+				a.eventlist-column-date(href="/workshops-shibori/2016/5/4/shibori-101")
+					.eventlist-datetag
+						.eventlist-datetag-inner
+							.eventlist-datetag-startdate.eventlist-datetag-startdate--month #{name}
+							.eventlist-datetag-startdate.eventlist-datetag-startdate--day 4
+							.eventlist-datetag-enddate 2017
+				.eventlist-column-info
+					h1.eventlist-title
+						a.eventlist-title-link(href="/workshops-shibori/2016/5/4/shibori-101") A Proof from Probability
+	.clear
+
+
