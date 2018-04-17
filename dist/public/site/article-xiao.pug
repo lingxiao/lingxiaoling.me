@@ -1,7 +1,10 @@
 <article class="eventlist-event eventlist-event--upcoming eventlist-event--hasimg eventlist-hasimg eventlist-event--multiday">
-
 	<a class = 'eventlist-column-thumbnail content-fill'>
-		<img src = '../assets/images/g-home-1.png' style = 'max-width: 100%'>
+
+		//- <img src = '../assets/images/g-home-1.png' style = 'max-width: 100%'>
+		<img class="eventlist-thumbnail" data-src="../assets/images/g-home-1.png" data-image="../assets/images/g-home-1.png" data-image-dimensions=''>
+
+
 		a.eventlist-column-date(href="/workshops-shibori/2016/5/4/shibori-101")
 			.eventlist-datetag
 				.eventlist-datetag-inner
@@ -16,11 +19,13 @@
 
 		ul.eventlist-meta.event-meta
 			li.eventlist-meta-item.eventlist-meta-date.event-meta-item
-				time.event-date(datetime="2016-05-04") 
+				//- time.event-date(datetime="") 
+				<time class="event-date" datetime=""> 
 					| I co-opted this section to write the abstract here instead. In this section we 
 					| consider the problem of random walk in three dimensions, and show that unlike a 
 					| random walk in 2D that returns to the origin infinitely often, a random walk in 
 					| 3D diverges almost surely. 
+				</time>				
 				//- span.eventlist-meta-time
 					time.event-time-12hr(datetime="2016-05-04") 5:00 PM
 					time.event-time-24hr(datetime="2016-05-04") 17:00
