@@ -2,29 +2,34 @@ extend ../templates/layout-scroll.pug
 
 block content
 
-    include ../templates/includes/title-card.pug
+	include ../templates/includes/title-card.pug
 
-    include article.pug
+	include article.pug
 
-    .main-content-inner-wrapper(data-content-field="main-content")
-        .gallery-wrapper(data-controller="GalleryLayout")
-            .slides
-                .grid-wrapper
+	.main-content-inner-wrapper(data-content-field="main-content")
+		.gallery-wrapper(data-controller="GalleryLayout")
+			.slides
+				.grid-wrapper
 
-                    +article('Deep Recurrent Dialogue Generation'
-                            , 'May' 
-                            , '22'
-                            , '2012'
-                            , '../assets/images/g-home-1.png'
-                            , 'In this section we consider the problem of random walk in three dimensions, and show that unlike a random walk in 2D that returns to the origin infinitely often, a random walk in 3D diverges almost surely.'
-                            ) 
+					//- right now there's a huge problem: images do not load on click through
+					//- squarespace does this standard thing where images don't load when you navigate to page
 
+					+article('Deep Recurrent Dialogue Generation'
+						, 'May' 
+						, '22'
+						, '2012'
+						, '../assets/images/g-home-1.png'
+						, ''
+						, 'In this post I describe the training process of an open domain conversational agent using hierarchical hierarchical recurrent neural nets, followed by more self-training using deep reinforcement learning.'
+						) 
 
-                    +article('Random Walk in 3D'
-                            , 'July'
-                            , '34'
-                            , '2013'
-                            , '../assets/images/rand-walk-2.png'
-                            , 'In this section we consider the problem of random walk in three dimensions, and show that unlike a random walk in 2D that returns to the origin infinitely often, a random walk in 3D diverges almost surely.'
-                            )
+//- 
+					+article('Random Walk in 3D'
+						, 'July'
+						, '34'
+						, '2013'
+						, '../assets/images/rand-walk-2.png'
+						, ''
+						, 'In this post we consider the problem of random walk in three dimensions, and show that unlike a random walk in 2D that returns to the origin infinitely often, a random walk in 3D diverges almost surely.'
+						)
 

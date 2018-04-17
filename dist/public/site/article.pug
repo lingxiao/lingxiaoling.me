@@ -1,12 +1,14 @@
-mixin article(title, month, date, year, src, abstract)
+mixin article(title, month, date, year, img_src, link, abstract)
+
 	
 	//- article class
 	article.eventlist-event.eventlist-event--upcoming.eventlist-event--hasimg.eventlist-hasimg.eventlist-event--multiday
-		a.eventlist-column-thumbnail.content-fill
-			//- load image
-			img.eventlist-thumbnail(data-src=`${src}`, data-image=`${src}`, data-image-dimensions='', data-image-focal-point='0.5,0.5')
+		a.eventlist-column-thumbnail.content-fill(href=`${link}`)
+			//- load image: this does not load on page navigation, only on refresh
+			//- funny thing is that 
+			img.eventlist-thumbnail-xiao(data-src=`${img_src}`, data-image=`${img_src}`, data-image-dimensions='', data-image-focal-point='0.5,0.5')
 			//- load date
-			a.eventlist-column-date(href="/workshops-shibori/2016/5/4/shibori-101")
+			a.eventlist-column-date(href=`${link}`)
 				.eventlist-datetag
 					.eventlist-datetag-inner
 						.eventlist-datetag-startdate.eventlist-datetag-startdate--month #{month}
@@ -15,7 +17,7 @@ mixin article(title, month, date, year, src, abstract)
 		//- load title and abstract
 		.eventlist-column-info
 			h1.eventlist-title
-				a.eventlist-title-link(href="/workshops-shibori/2016/5/4/shibori-101") #{title}
+				a.eventlist-title-link(href=`${link}`) #{title}
 			ul.eventlist-meta.event-meta
 				li.eventlist-meta-item.eventlist-meta-date.event-meta-item
 					//- 
@@ -25,5 +27,6 @@ mixin article(title, month, date, year, src, abstract)
 	.clear
 
 
-
-
+//- TODO:
+//- add likes
+//- add shares for twitter and facebook

@@ -19,10 +19,11 @@
 /*.eventlist-column-thumbnail-xiao img:not(.loaded) {*/
     /*opacity: 0*/
 /*}*/
-
+/*
 body:not(.event-thumbnails) .eventlist-column-thumbnail-xiao {
     display: none
 }
+*/
 
 .event-disable-item-pages .eventlist-column-thumbnail-xiao {
     cursor: default;
