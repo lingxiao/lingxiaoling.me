@@ -1,7 +1,11 @@
 <div style='position: relative; margin: 68px 0 0 0; padding: 0'>
-	//- | hello world
-	//- container
-	<div style = 'display: block; float: left; width: 35%; height: 0; padding-bottom: 23.33333333333%; text-decoration: none; background: rgba(110, 110, 110, .05)'>
+
+
+	//- container: problem: it does not look good when you scale it, it should scale so that it fills the browser
+	//- right now: make this thing scale under different window sizes
+	//- <div style = 'display: block; float: left; width: 35%; height: 0; padding-bottom: 23.33333333333%; text-decoration: none; background: rgba(110, 110, 110, .05)'>
+
+	<a class = 'eventlist-column-thumbnail-xiao'>
 		//- right now this image is too big, need to scale down
 		<img src = '../assets/images/g-home-1.png' style = 'max-width: 100%'>
 		a.eventlist-column-date(href="/workshops-shibori/2016/5/4/shibori-101")
@@ -11,7 +15,7 @@
 					.eventlist-datetag-startdate.eventlist-datetag-startdate--day 4
 					.eventlist-datetag-enddate 2017
 					.eventlist-datetag-status      
-	</div>
+	</a>
 	.eventlist-column-info
 		h1.eventlist-title
 			a.eventlist-title-link(href="/workshops-shibori/2016/5/4/shibori-101") Article title
@@ -27,3 +31,4 @@
 								|  Lorem ipsum dolor sit
 </div>
 .clear
+
