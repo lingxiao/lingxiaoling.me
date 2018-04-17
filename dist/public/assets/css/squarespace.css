@@ -5844,6 +5844,10 @@ body:not(.event-thumbnails) .eventlist-column-date {
 }
 
 .eventlist-datetag {
+    /* xiao added this to make things blend better */
+    opacity: 0.9;
+
+    /* nothing below was changed*/
     display: table;
     position: absolute;
     top: 10px;
@@ -6093,7 +6097,7 @@ body:not(.event-list-address) .eventlist-meta-address {
 }
 
 .event-list-time .eventlist-event--multiday .eventlist-meta-date .event-date:after {
-    content: ", "
+    content: ""
 }
 
 .event-list-time .eventlist-event--multiday .eventlist-meta-time {
@@ -6101,7 +6105,7 @@ body:not(.event-list-address) .eventlist-meta-address {
 }
 
 .eventlist-meta-address-line:after {
-    content: ", "
+    content: ""
 }
 
 .eventlist-meta-address-line:last-of-type:after {
@@ -6314,7 +6318,7 @@ body:not(.event-item-back-link) .eventitem-backlink {
 }
 
 .eventitem--multiday .eventitem-meta-date .event-date:after {
-    content: ", "
+    content: ""
 }
 
 .eventitem--multiday .eventitem-meta-time {
@@ -6322,7 +6326,7 @@ body:not(.event-item-back-link) .eventitem-backlink {
 }
 
 .eventitem-meta-address-line:after {
-    content: ", "
+    content: ""
 }
 
 .eventitem-meta-address-line:last-of-type:after {

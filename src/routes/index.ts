@@ -42,6 +42,10 @@ index.get('/image', (req, res, next) => {
 	res.render('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/article.pug', {});
 });
 
+index.get('/parent', (req, res, next) => { 
+	res.render('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/parent.pug', {});
+});
+
 
 index.get('/alt', (req, res, next) => { 
 	res.sendFile('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/alt.html');
