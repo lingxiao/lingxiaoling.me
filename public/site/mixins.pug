@@ -1,19 +1,24 @@
-mixin person(name)
+mixin person(month, date, year)
 
-	//- p #{name}'s Pug source code!
 	article.eventlist-event.eventlist-event--upcoming.eventlist-event--hasimg.eventlist-hasimg.eventlist-event--multiday
 		a.eventlist-column-thumbnail.content-fill
-			img.eventlist-thumbnail(data-src="../assets/images/g-home-1.png" data-image="../assets/images/g-home-1.png" data-image-dimensions="" data-image-focal-point="0.5,0.5")
-				//- date label in image
-				a.eventlist-column-date(href="/workshops-shibori/2016/5/4/shibori-101")
-					.eventlist-datetag
-						.eventlist-datetag-inner
-							.eventlist-datetag-startdate.eventlist-datetag-startdate--month #{name}
-							.eventlist-datetag-startdate.eventlist-datetag-startdate--day 4
-							.eventlist-datetag-enddate 2017
-				.eventlist-column-info
-					h1.eventlist-title
-						a.eventlist-title-link(href="/workshops-shibori/2016/5/4/shibori-101") A Proof from Probability
-	.clear
+			img.eventlist-thumbnail(data-src='../assets/images/g-home-1.png', data-image='../assets/images/g-home-1.png', 	data-image-dimensions='', data-image-focal-point='0.5,0.5')
+			a.eventlist-column-date(href="/workshops-shibori/2016/5/4/shibori-101")
+				.eventlist-datetag
+					.eventlist-datetag-inner
+						.eventlist-datetag-startdate.eventlist-datetag-startdate--month #{month}
+						.eventlist-datetag-startdate.eventlist-datetag-startdate--day #{date}
+						.eventlist-datetag-enddate #{year}
+		.eventlist-column-info
+			h1.eventlist-title
+				a.eventlist-title-link(href="/workshops-shibori/2016/5/4/shibori-101") A Proof from Probability
+			ul.eventlist-meta.event-meta
+				li.eventlist-meta-item.eventlist-meta-date.event-meta-item
+					<time class="event-date" datetime="" style='font-family: Arial, Helvetica; letter-spacing: 0px; font-weight: normal; font-style: normal; font-size: 14.6667px; line-height:1.2'> 
+						| I co-opted this section to write the abstract here instead. In this section we 
+						| consider the problem of random walk in three dimensions, and show that unlike a 
+						| random walk in 2D that returns to the origin infinitely often, a random walk in 
+						| 3D diverges almost surely. 
+					</time>				
 
-
+	//- .clear

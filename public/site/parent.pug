@@ -4,12 +4,13 @@ block content
 
 	include ../templates/includes/title-card.pug
 
-	include mixins.pug
+	include article.pug
 
 	.main-content-inner-wrapper(data-content-field="main-content")
 		.gallery-wrapper(data-controller="GalleryLayout")
 			.slides
 				.grid-wrapper
 
-					+person('May')
-					+person('July')
+					+article('Deep Recurrent Dialogue Generation', 'May' , '22', '2012', '../assets/images/g-home-1.png') 
+					+article('Random Walk in 3D', 'July', '34', '2013', '../assets/images/rand-walk-1.png')
+
