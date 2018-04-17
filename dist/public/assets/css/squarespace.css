@@ -5771,9 +5771,10 @@ body:not(.event-show-past-events) .eventlist.eventlist--past {
     transition: opacity .3s ease-in
 }
 
-.eventlist-column-thumbnail img:not(.loaded) {
-    opacity: 0
-}
+/* xiao commented this out because when images are loaded, they're not shown */
+/*.eventlist-column-thumbnail img:not(.loaded) {*/
+    /*opacity: 0*/
+/*}*/
 
 body:not(.event-thumbnails) .eventlist-column-thumbnail {
     display: none
