@@ -49,7 +49,6 @@ index.get('/alt', (req, res, next) => {
 
 index.get('/alt-1', (req, res, next) => { 
 	res.render('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/alt-1.pug', {});
-	// res.sendFile('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/alt-1.html');
 });
 
 

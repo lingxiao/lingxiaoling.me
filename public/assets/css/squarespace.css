@@ -5752,6 +5752,7 @@ body:not(.event-show-past-events) .eventlist.eventlist--past {
     margin: 0
 }
 
+
 .eventlist-column-thumbnail {
     display: block;
     float: left;

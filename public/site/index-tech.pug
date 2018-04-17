@@ -2,10 +2,9 @@ extend ../templates/layout-scroll.pug
 
 block content
 
-
 	include ../templates/includes/title-card.pug
 
-	.main-content-inner-wrapper(data-content-field="main-content")
+	//- .main-content-inner-wrapper(data-content-field="main-content")
 		.gallery-wrapper(data-controller="GalleryLayout")
 			.slides
 				.grid-wrapper
@@ -15,8 +14,61 @@ block content
 						// Upcoming Events
 						.eventlist.eventlist--upcoming
 
-					include article.pug
-					include article.pug
-					include article.pug
+	.main-content-inner-wrapper(data-content-field="main-content")
+		.gallery-wrapper(data-controller="GalleryLayout")
+			.slides
+				.grid-wrapper
+
+					//- write write raw html and see if it works
+					include article-xiao.pug
+					include article-xiao.pug
+					include article-xiao.pug
+					include article-xiao.pug
+
+					//- <div style='position: relative; margin: 68px 0 0 0; padding: 0'>
+					//- 	//- | hello world
+					//- 	//- container
+					//- 	<div style = 'display: block; float: left; width: 35%; height: 0; padding-bottom: 23.33333333333%; text-decoration: none; background: rgba(110, 110, 110, .05)'>
+					//- 		//- right now this image is too big, need to scale down
+					//- 		<img src = '../assets/images/g-home-1.png' style = 'max-width: 100%'>
+					//- 		a.eventlist-column-date(href="/workshops-shibori/2016/5/4/shibori-101")
+					//- 			.eventlist-datetag
+					//- 				.eventlist-datetag-inner
+					//- 					.eventlist-datetag-startdate.eventlist-datetag-startdate--month May
+					//- 					.eventlist-datetag-startdate.eventlist-datetag-startdate--day 4
+					//- 					.eventlist-datetag-enddate 2017
+					//- 					.eventlist-datetag-status      
+					//- 	</div>
+					//- 	.eventlist-column-info
+					//- 		h1.eventlist-title
+					//- 			a.eventlist-title-link(href="/workshops-shibori/2016/5/4/shibori-101") Article title
+					//- 	.eventlist-description
+					//- 		#item-572a6103d51cd42747cae0be.sqs-layout.sqs-grid-12.columns-12(data-layout-label="Post Body" data-type="item" data-updated-on="1462395212641")
+					//- 			.row.sqs-row
+					//- 				.col.sqs-col-12.span-12
+					//- 					#block-fa1912e2df0764942719.sqs-block.html-block.sqs-block-html(data-block-type="2")
+					//- 						.sqs-block-content
+					//- 							p
+					//- 								span(style="font-size:14.6667px")
+					//- 									| The following text is placeholder known as “lorem ipsum,” which is scrambled Latin used by designers to mimic real copy.
+					//- 								|  Lorem ipsum dolor sit
+					//- </div>
+					//- .eventlist-description
+						#item-572a6103d51cd42747cae0be.sqs-layout.sqs-grid-12.columns-12(data-layout-label="Post Body" data-type="item" data-updated-on="1462395212641")
+							.row.sqs-row
+								.col.sqs-col-12.span-12
+									#block-fa1912e2df0764942719.sqs-block.html-block.sqs-block-html(data-block-type="2")
+										.sqs-block-content
+											p
+												span(style="font-size:14.6667px")
+													| The following text is placeholder known as “lorem ipsum,” which is scrambled Latin used by designers to mimic real copy.
+												|  Lorem ipsum dolor sit
+
+
+
+
+	//- include article.pug
+	//- include article.pug
+	//- include article.pug
 
 
