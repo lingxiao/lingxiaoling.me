@@ -1,0 +1,41 @@
+<article class="eventlist-event eventlist-event--upcoming eventlist-event--hasimg eventlist-hasimg eventlist-event--multiday"><a class="eventlist-column-thumbnail content-fill" href="/workshops-shibori/2016/5/4/shibori-101"><img class="eventlist-thumbnail" data-src="https://static1.squarespace.com/static/572543917c65e48584f9382f/572a60e7d51cd42747cadf8a/572a6103d51cd42747cae0be/1463000053404/8.jpg" data-image="https://static1.squarespace.com/static/572543917c65e48584f9382f/572a60e7d51cd42747cadf8a/572a6103d51cd42747cae0be/1463000053404/8.jpg" data-image-dimensions="2605x3648" data-image-focal-point="0.5,0.5" alt="Kanoko Technique" data-load="false"></a>
+    <a
+        class="eventlist-column-date" href="/workshops-shibori/2016/5/4/shibori-101">
+        <div class="eventlist-datetag">
+            <div class="eventlist-datetag-inner">
+                <div class="eventlist-datetag-startdate eventlist-datetag-startdate--month">May</div>
+                <div class="eventlist-datetag-startdate eventlist-datetag-startdate--day">4</div>
+                <div class="eventlist-datetag-enddate">to Oct 4</div>
+                <div class="eventlist-datetag-status"></div>
+            </div>
+        </div>
+        </a>
+        <div class="eventlist-column-info">
+            <h1 class="eventlist-title"><a class="eventlist-title-link" href="/workshops-shibori/2016/5/4/shibori-101">Article title</a></h1>
+            <ul class="eventlist-meta event-meta">
+                <li class="eventlist-meta-item eventlist-meta-date event-meta-item"><time class="event-date" datetime="2016-05-04">Wed, May 4, 2016</time><span class="eventlist-meta-time"><time class="event-time-12hr" datetime="2016-05-04">5:00 PM</time><time class="event-time-24hr" datetime="2016-05-04">17:00</time></span>
+                    <span
+                        class="event-datetime-divider"></span><time class="event-date" datetime="2018-10-04">Thu, Oct 4, 2018</time><span class="eventlist-meta-time"><time class="event-time-12hr" datetime="2018-10-04">6:00 PM</time><time class="event-time-24hr" datetime="2018-10-04">18:00</time></span></li>
+                <li
+                    class="eventlist-meta-item eventlist-meta-export event-meta-item"></li>
+            </ul>
+            <div class="eventlist-description">
+                <div class="sqs-layout sqs-grid-12 columns-12" id="item-572a6103d51cd42747cae0be" data-layout-label="Post Body" data-type="item" data-updated-on="1462395212641">
+                    <div class="row sqs-row">
+                        <div class="col sqs-col-12 span-12">
+                            <div class="sqs-block html-block sqs-block-html" id="block-fa1912e2df0764942719" data-block-type="2">
+                                <div class="sqs-block-content">
+                                    <p><span style="font-size:14.6667px">The following text is placeholder known as “lorem ipsum,” which is scrambled Latin used by designers to mimic real copy.</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Maecenas faucibus lacinia lorem vel consectetur. Sed eros lacus, elementum at lacus quis, fermentum vestibulum velit. Duis id urna blandit, lobortis velit id, ultricies magna. Vestibulum id dui ex. Fusce molestie,
+                                        urna sit amet maximus mattis, lectus neque tristique est, nec tortor velit ut lorem.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><a class="eventlist-button sqs-editable-button" href="/workshops-shibori/2016/5/4/shibori-101">View Event →</a>
+            <div class="eventlist-actions"><span class="sqs-simple-like" data-item-id="572a6103d51cd42747cae0be" data-like-count="0"><span class="like-icon"></span><span class="like-count"></span></span><span class="squarespace-social-buttons inline-style" data-system-data-id="1462395203441-4W2NHMDAG4KW0SASEEW4"
+                    data-asset-url="https://static1.squarespace.com/static/572543917c65e48584f9382f/572a60e7d51cd42747cadf8a/572a6103d51cd42747cae0be/1463000053404/8.jpg" data-record-type="12" data-full-url="/workshops-shibori/2016/5/4/shibori-101" data-title="Kanoko Technique"></span></div>
+        </div>
+        <div class="clear"></div>
+</article>

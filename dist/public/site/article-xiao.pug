@@ -1,12 +1,6 @@
-<div style='position: relative; margin: 68px 0 0 0; padding: 0'>
-
-
-	//- container: problem: it does not look good when you scale it, it should scale so that it fills the browser
-	//- right now: make this thing scale under different window sizes
-	//- <div style = 'display: block; float: left; width: 35%; height: 0; padding-bottom: 23.33333333333%; text-decoration: none; background: rgba(110, 110, 110, .05)'>
+<article class="eventlist-event eventlist-event--upcoming eventlist-event--hasimg eventlist-hasimg eventlist-event--multiday">
 
 	<a class = 'eventlist-column-thumbnail content-fill'>
-		//- right now this image is too big, need to scale down
 		<img src = '../assets/images/g-home-1.png' style = 'max-width: 100%'>
 		a.eventlist-column-date(href="/workshops-shibori/2016/5/4/shibori-101")
 			.eventlist-datetag
@@ -18,17 +12,54 @@
 	</a>
 	.eventlist-column-info
 		h1.eventlist-title
-			a.eventlist-title-link(href="/workshops-shibori/2016/5/4/shibori-101") Article title
-	.eventlist-description
+			a.eventlist-title-link(href="/workshops-shibori/2016/5/4/shibori-101") A Proof from Probability
+
+		ul.eventlist-meta.event-meta
+			li.eventlist-meta-item.eventlist-meta-date.event-meta-item
+				time.event-date(datetime="2016-05-04") 
+					| I co-opted this section to write the abstract here instead. In this section we 
+					| consider the problem of random walk in three dimensions, and show that unlike a 
+					| random walk in 2D that returns to the origin infinitely often, a random walk in 
+					| 3D diverges almost surely. 
+				//- span.eventlist-meta-time
+					time.event-time-12hr(datetime="2016-05-04") 5:00 PM
+					time.event-time-24hr(datetime="2016-05-04") 17:00
+				//- span.event-datetime-divider
+				//- time.event-date(datetime="2018-10-04") Thu, Oct 4, 2018
+				//- span.eventlist-meta-time
+					time.event-time-12hr(datetime="2018-10-04") 6:00 PM
+					time.event-time-24hr(datetime="2018-10-04") 18:00
+
+		//- abstract: startegy: strip out the divs one by one until we find the one that shows 
+		//- problem: space is too large between things
+		//- <div class="eventlist-description">
+			<div class="sqs-layout sqs-grid-12 columns-12" id="item-572a6103d51cd42747cae0be" data-layout-label="Post Body" data-type="item" data-updated-on="1462395212641">
+				<div class="row sqs-row">
+					<div class="col sqs-col-12 span-12">
+						<div class="sqs-block html-block sqs-block-html" id="block-fa1912e2df0764942719" data-block-type="2">
+							<div class="sqs-block-content">
+								<p><span style="font-size:14.6667px">The following text is placeholder known as “lorem ipsum,” which is scrambled Latin used by designers to mimic real copy.</span> 
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+		//- </div>
+
+	//- .eventlist-description
 		#item-572a6103d51cd42747cae0be.sqs-layout.sqs-grid-12.columns-12(data-layout-label="Post Body" data-type="item" data-updated-on="1462395212641")
 			.row.sqs-row
 				.col.sqs-col-12.span-12
 					#block-fa1912e2df0764942719.sqs-block.html-block.sqs-block-html(data-block-type="2")
+
+						//- right now the problem is that this text is here but it's not showing for some reason...
 						.sqs-block-content
 							p
 								span(style="font-size:14.6667px")
 									| The following text is placeholder known as “lorem ipsum,” which is scrambled Latin used by designers to mimic real copy.
 								|  Lorem ipsum dolor sit
-</div>
+</article>	
 .clear
 
+
+//- <div style='position: relative; margin: 68px 0 0 0; padding: 0'>

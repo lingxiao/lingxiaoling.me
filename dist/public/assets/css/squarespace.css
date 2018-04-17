@@ -6120,9 +6120,10 @@ body:not(.event-list-icalgcal-links) .eventlist-meta-export {
     content: "\00B7"
 }
 
+/* when I comment this out, words appear */
 body:not(.event-excerpts) .eventlist-description,
 body:not(.event-excerpts) .eventlist-excerpt {
-    display: none
+    /*display: none*/
 }
 
 .eventlist-excerpt {
