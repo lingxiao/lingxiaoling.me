@@ -1,12 +1,18 @@
 mixin article(title, month, date, year, img_src, link, abstract)
 
-	
+	//- the point of this is to show that image will load on click if it's just the bare html style
+
 	//- article class
 	article.eventlist-event.eventlist-event--upcoming.eventlist-event--hasimg.eventlist-hasimg.eventlist-event--multiday
 		a.eventlist-column-thumbnail.content-fill(href=`${link}`)
-			//- load image: this does not load on page navigation, only on refresh
-			//- funny thing is that 
-			img.eventlist-thumbnail-xiao(data-src=`${img_src}`, data-image=`${img_src}`, data-image-dimensions='', data-image-focal-point='0.5,0.5')
+
+			//- wrote my own div so that image loads on page load instead of on refresh
+			//- problem: this one does not fill in height wise
+			img(src=`${img_src}`, alt=`${img_src}`, style='position: static; float:left; width: 100%;')
+
+			//- original one does not load unless page refresh
+			//- img.eventlist-thumbnail-xiao(data-src=`${img_src}`, data-image=`${img_src}`, data-image-dimensions='', data-image-focal-point='0.5,0.5')
+
 			//- load date
 			a.eventlist-column-date(href=`${link}`)
 				.eventlist-datetag
@@ -25,8 +31,3 @@ mixin article(title, month, date, year, img_src, link, abstract)
 					time.event-date(datetime='', style='font-family: Arial, Helvetica; letter-spacing: 0px; font-weight: normal; font-style: normal; font-size: 14.6667px; line-height:1.2')
 						| #{abstract}
 	.clear
-
-
-//- TODO:
-//- add likes
-//- add shares for twitter and facebook
