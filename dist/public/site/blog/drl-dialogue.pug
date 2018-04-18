@@ -1,0 +1,11 @@
+extend ../parent-scroll.pug
+
+block content
+
+	.main-content-inner-wrapper(data-content-field="main-content")
+		.gallery-wrapper(data-controller="GalleryLayout")
+			.slides
+				.grid-wrapper
+
+					include content.pug
+

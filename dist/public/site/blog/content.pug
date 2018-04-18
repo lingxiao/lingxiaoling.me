@@ -1,0 +1,329 @@
+<div class="main-content-inner-wrapper" data-content-field="main-content">
+	<div class="sqs-layout sqs-grid-12 columns-12" data-type="page" data-updated-on="1513616943309" id="page-59c2e758197aea9115b6457b"><div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-31bc36482659076d2784"><div class="sqs-block-content"><h1 class="text-align-center"><strong>Deep Reinforcement Learning with </strong><strong>Hierarchical<br />Recurrent Encoder-Decoder for Conversation</strong></h1></div></div><div class="sqs-block image-block sqs-block-image" data-aspect-ratio="60" data-block-type="5" id="block-a56be9e646b3401dd85e"><div class="sqs-block-content">
+
+
+
+
+<div class="image-block-outer-wrapper layout-caption-below design-layout-inline">
+
+<div class="intrinsic" style="max-width:1600.0px;">
+
+	<div style="padding-bottom:60.0%;" class="image-block-wrapper   has-aspect-ratio" data-description="" >
+		<noscript><img src="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a21590ae4966be2ad884a0f/1512134926475/G-home-1.jpeg"  alt="G-home-1.jpeg"  /></noscript><img class="thumb-image" alt="G-home-1.jpeg" data-src="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a21590ae4966be2ad884a0f/1512134926475/G-home-1.jpeg" data-image="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a21590ae4966be2ad884a0f/1512134926475/G-home-1.jpeg" data-image-dimensions="1600x900" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="5a21590ae4966be2ad884a0f" data-type="image" />
+	</div>
+
+
+
+
+</div>
+
+</div>
+
+
+
+
+
+</div></div><div class="sqs-block spacer-block sqs-block-spacer sized vsize-1" data-block-type="21" id="block-32fe810acc8721a94269"><div class="sqs-block-content">&nbsp;</div></div></div></div><div class="row sqs-row"><div class="col sqs-col-1 span-1"><div class="sqs-block spacer-block sqs-block-spacer sized vsize-1" data-block-type="21" id="block-377a51a1257979423374"><div class="sqs-block-content">&nbsp;</div></div></div><div class="col sqs-col-10 span-10"><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-17f321948bf8eedab8d9"><div class="sqs-block-content"><h2>ABSTRACT</h2></div></div><div class="sqs-block image-block sqs-block-image sqs-col-5 span-5 float float-right" data-block-type="5" id="block-yui_3_17_2_5_1512316064481_75368"><div class="sqs-block-content">
+
+
+
+
+<div class="image-block-outer-wrapper layout-caption-below design-layout-inline">
+
+	<div class="intrinsic" style="max-width:829.0px;">
+
+		<div style="padding-bottom:52.95536422729492%;" class="image-block-wrapper   has-aspect-ratio" data-description="" >
+			<noscript><img src="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a242dc824a694ef80492444/1512320460680/echo-2.jpg"  alt="echo-2.jpg"  /></noscript><img class="thumb-image" alt="echo-2.jpg" data-src="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a242dc824a694ef80492444/1512320460680/echo-2.jpg" data-image="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a242dc824a694ef80492444/1512320460680/echo-2.jpg" data-image-dimensions="829x439" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="5a242dc824a694ef80492444" data-type="image" />
+		</div>
+
+
+
+
+	</div>
+
+</div>
+
+
+
+
+
+</div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-yui_3_17_2_5_1512316064481_80478"><div class="sqs-block-content"><p>I co-led the project with <a target="_blank" href="https://www.chloehjeong.com/">Heejin Jeong</a> and built an intelligent dialogue system that was deployed on the Echo Dot. It is well known that dialogue systems relying on hand-crafted rules are too inflexible to handle the myriad of sentences in a natural conversation. And although current recurrent neural net based systems are more robust to input, they have a tendency to generate irrelevant or curt responses that terminates a conversation prematurely. We hypothesized that an engaging dialogue system should satisfy two criteria: it must incorporate the dialogue history when deciding what to say next, and it must be able to understand the future consequence of its utterances. We posed the “history aware” problem as an optimization problem with multiple objectives where by both likelihood of the current sentence given previous sentences, and the likelihood of the current word given previous words are maximized. This complex distribution is represented by a hierarchical neural net. We posed the “future aware” requirement as a deep reinforcement learning problem, whereby the dialogue agent optimized a conversation policy given specified future reward.&nbsp;&nbsp;Our model was trained on CALLHOME American English speech corpus as well as the OpenSubtitles corpus.&nbsp; The <a target="_blank" href="https://github.com/lingxiao/neural-chatbot/blob/master/paper/final_hj.pdf">paper</a> was submitted to The Mid-Atlantic Student Colloquium on Speech, Language and Learning and accepted for poster presentation.&nbsp;</p><h2>INTRODUCTION</h2></div></div><div class="sqs-block image-block sqs-block-image sqs-col-4 span-4 float float-left" data-block-type="5" id="block-yui_3_17_2_2_1512075837160_19774"><div class="sqs-block-content">
+
+
+
+
+<div class="image-block-outer-wrapper layout-caption-below design-layout-inline">
+
+	<div class="intrinsic" style="max-width:2197.0px;">
+
+		<div style="padding-bottom:66.49977111816406%;" class="image-block-wrapper   has-aspect-ratio" data-description="" >
+			<noscript><img src="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a20732d24a694eb0d092fe9/1512076201663/turing-1.jpg"  alt="turing-1.jpg"  /></noscript><img class="thumb-image" alt="turing-1.jpg" data-src="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a20732d24a694eb0d092fe9/1512076201663/turing-1.jpg" data-image="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a20732d24a694eb0d092fe9/1512076201663/turing-1.jpg" data-image-dimensions="2197x1461" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="5a20732d24a694eb0d092fe9" data-type="image" />
+		</div>
+
+
+
+
+	</div>
+
+</div>
+
+
+
+
+
+</div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-yui_3_17_2_2_1512075837160_27649"><div class="sqs-block-content"><blockquote style="margin-left:80px"><em>“A computer would deserve to be called intelligent if it could deceive a human into believing that it was human"<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Alan Turing</em></blockquote><p>A long standing goal of artificial intelligence has been to program a computer that can carry on a conversation intelligently with a human being.&nbsp; The first milestone in this direction was ELIZA, created in 1964 at MIT Artificial Intelligence Laboratory by Dr. Joseph Weizenbaum. ELIZA simulated “the responses of a&nbsp; non-directional psychotherapist in an initial psychiatric interview,” a shrink asking open-ended questions. Some of its responses were so convincing that users became emotionally attached to the program. This led many academics at the time to believe that ELIZA could positively impact people’s mental well being.&nbsp; However, its rule based system was ultimately too restrictive for prolonged conversation, and this line of research was discontinued after the AI winter.&nbsp;</p><p><span style="letter-spacing:0.01em">In recent years, the proliferation of home assistant devices such as the Alexa and Google Home led to a resurgence of interest in intelligent conversation agents, so called “chatbots.”&nbsp; Broadly speaking, chabots are expected to carry on two kinds of conversation: informational-retrieval based conversation where the user expects the correct answer for a specific query; and open-domain dialog, where the chatbot is expected to speak about any topic and be “interesting.”&nbsp; We focus on the second task, using the latest machine learning techniques to train an algorithm on conversation etiquette using transcripts from movie scripts and recorded phone calls.&nbsp;</span></p><h2><br /><span style="font-size:22px">TECHNICAL BACKGROUND</span></h2><p>The next two sections describes the technical background required to understand this work. We assume a basic understanding of computer science, probability, and linear algebra.&nbsp; And reasonable familiarity with machine learning both in concept and practice.&nbsp;</p><h3>Recurrent neural network</h3></div></div><div class="sqs-block image-block sqs-block-image sqs-col-5 span-5 float float-right" data-block-type="5" id="block-yui_3_17_2_4_1512338267045_10871"><div class="sqs-block-content">
+
+
+
+
+<div class="image-block-outer-wrapper layout-caption-below design-layout-inline">
+
+	<div class="intrinsic" style="max-width:275.0px;">
+
+		<div style="padding-bottom:153.4545440673828%;" class="image-block-wrapper   has-aspect-ratio" data-description="&lt;p&gt;Fig. 1. Cartoon of a simple Recurrent Neural Net. Diagram from &lt;a target=&quot;_blank&quot; href=&quot;http://colah.github.io/posts/2015-08-Understanding-LSTMs/&quot;&gt;Colah&lt;/a&gt;.&lt;/p&gt;" >
+			<noscript><img src="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a24738be2c483bcf3dc32aa/1512404964157/RNN-1.png"  alt=" Fig. 1. Cartoon of a simple Recurrent Neural Net. Diagram from  Colah . "  /></noscript><img class="thumb-image" alt=" Fig. 1. Cartoon of a simple Recurrent Neural Net. Diagram from  Colah . " data-src="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a24738be2c483bcf3dc32aa/1512404964157/RNN-1.png" data-image="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a24738be2c483bcf3dc32aa/1512404964157/RNN-1.png" data-image-dimensions="275x422" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="5a24738be2c483bcf3dc32aa" data-type="image" />
+		</div>
+
+
+
+			<div class="image-caption-wrapper">
+				<div class="image-caption"><p>Fig. 1. Cartoon of a simple Recurrent Neural Net. Diagram from <a target="_blank" href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">Colah</a>.</p></div>
+			</div>
+
+
+	</div>
+
+</div>
+
+
+
+
+
+</div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-yui_3_17_2_4_1512338267045_13502"><div class="sqs-block-content"><p>We only provide a brief description of recurrent neural nets (RNNs) here. A great introduction to RNN and its popular extension the long short term memory networks (LSTM) can be found <a target="_blank" href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">here</a>. RNNs are a family of networks for processing sequences of values, i.e., sentences. For example in Fig 1, the RNN denoted by A will take in some word x in the English language, and output a “hidden” state h. Notably, the arrow that stems from A and loops back onto the box symbolizes the fact that the hidden output is a both a function of the input x, as well as the previous hidden state stored in the network. The representative power of RNNs stems from the fact it has short term memory spanning several symbols in the sequence, which is essential in natural language sentences that have long term dependencies.&nbsp;In practice, the memory capacity of RNNs proved insufficient to model real languages, thus the LSTMs architecture was introduced to explicitly model long term dependencies.&nbsp;</p></div></div><div class="sqs-block image-block sqs-block-image sqs-col-5 span-5 float float-left" data-block-type="5" id="block-yui_3_17_2_4_1512338267045_60000"><div class="sqs-block-content">
+
+
+
+
+<div class="image-block-outer-wrapper layout-caption-below design-layout-inline">
+
+	<div class="intrinsic" style="max-width:605.0px;">
+
+		<div style="padding-bottom:59.338844299316406%;" class="image-block-wrapper   has-aspect-ratio" data-description="&lt;p&gt;Fig 2. A projection of hidden representations onto two dimensions. Note semantically similar words have smaller cosine distance.&amp;nbsp;From &lt;a target=&quot;_blank&quot; href=&quot;http://www.iro.umontreal.ca/~lisa/pointeurs/turian-wordrepresentations-acl10.pdf&quot;&gt;Turian &lt;em&gt;et al.&lt;/em&gt;&amp;nbsp;(2010)&lt;/a&gt;.&amp;nbsp;&lt;/p&gt;" >
+			<noscript><img src="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a24798bf9619ac01b0dccd7/1512339854007/embedding-1.png"  alt=" Fig 2. A projection of hidden representations onto two dimensions. Note semantically similar words have smaller cosine distance.&amp;nbsp;From  Turian  et al. &amp;nbsp;(2010) .&amp;nbsp; "  /></noscript><img class="thumb-image" alt=" Fig 2. A projection of hidden representations onto two dimensions. Note semantically similar words have smaller cosine distance.&amp;nbsp;From  Turian  et al. &amp;nbsp;(2010) .&amp;nbsp; " data-src="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a24798bf9619ac01b0dccd7/1512339854007/embedding-1.png" data-image="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a24798bf9619ac01b0dccd7/1512339854007/embedding-1.png" data-image-dimensions="605x359" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="5a24798bf9619ac01b0dccd7" data-type="image" />
+		</div>
+
+
+
+			<div class="image-caption-wrapper">
+				<div class="image-caption"><p>Fig 2. A projection of hidden representations onto two dimensions. Note semantically similar words have smaller cosine distance.&nbsp;From <a target="_blank" href="http://www.iro.umontreal.ca/~lisa/pointeurs/turian-wordrepresentations-acl10.pdf">Turian <em>et al.</em>&nbsp;(2010)</a>.&nbsp;</p></div>
+			</div>
+
+
+	</div>
+
+</div>
+
+
+
+
+
+</div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-yui_3_17_2_4_1512338267045_62237"><div class="sqs-block-content"><p>Finally, let us examine a specific RNN model and why it matters.&nbsp;In <a href="https://en.wikipedia.org/wiki/Continuous_bag-of-words">continuous bag-of-words</a> model, the RNN is given news articles and must predict the current word given a window of surrounding context words. In this case, the input x is a one-hot representation while the output h is some n-dimensional vector. The power of model is evident when examining the hidden representations, semantically similar words are closer together under under cosine distance than those with dissimilar meanings. In a very rough sense, continuous bag-of-words relate meaning of words to geometry, also known as an embedding. There are numerous such models, collectively called word2vec. Although word2vec has performed admirably on certain word analogy tasks, there is no unique embedding that captures all the various relationships between words at the same time, ie antonyms, hypernyms, meronyms. In fact for many of these relationships, there is tremendous merit to <a target="_blank" href="https://lingxiaoling.me/new-page-3">explicitly learning them from data</a>.&nbsp;<span style="letter-spacing:0.01em">Word2vec models certainly do not relate words to the myriad of entities they may symbolize.&nbsp; Therefore word2vec do not solve the</span><a target="_blank" style="letter-spacing: 0.01em;" href="https://en.wikipedia.org/wiki/Symbol_grounding_problem"><strong>&nbsp;symbol grounding problem</strong></a><span style="letter-spacing:0.01em">.&nbsp;</span></p><h3>Reinforcement Learning</h3></div></div><div class="sqs-block code-block sqs-block-code sqs-col-5 span-5 float float-right" data-block-type="23" id="block-yui_3_17_2_2_1512340736618_82341"><div class="sqs-block-content"><img src="https://i.makeagif.com/media/7-26-2015/Xf4zu7.gif" style - "padding: 0; margin: 0"/>
+<h3 style="font-size: 10px">Fig 3. Pew Pew. </h3></div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-yui_3_17_2_2_1512340736618_82408"><div class="sqs-block-content"><p>This section gives a gentle introduction to reinforcement learning (RL) and deep RL. The essence of RL is learning through interaction. An RL agent interacts with its environment and, upon observing the consequences of its actions, can learn to alter its own behaviour in response to rewards received. This paradigm of trial and error learning is rooted in psychology. Specifically, the autonomous agent has a set of actions A it can take on the environment, there is a set of states S, and a set of rewards R that the agent may receive upon each action. The agent will take an action a at each state s, and upon transitioning to a new state, receive a reward r from the environment.&nbsp; The agent’s goal is to determine a policy of which action to take in each state so that its reward is maximized at the end of the game. The simplest way to represent policy is as a table mapping states and actions to rewards. Historically, the states and actions of the game is constructed by hand, this is sufficient for simple games (such as tic-tac-toe) but do not scale well to games with high dimensional input and no clear heuristic as to how to represent the states. In the game Space Invaders (Fig 3) for example, the states could be every possible image frame over all possible space invaders games, and the action are all possible left, right, and shoot combinations the player could take. Therefore both the state space and the policy is too large so as to render the problem intractable. Deep RL promises to solve the intractability problem, for example a deep convolutional neural net is first used to compress the states in Space Invaders, then RL is used to approximate a policy with this reduced state space.&nbsp;</p></div></div><div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_2_1512340736618_62585"><div class="sqs-block-content">
+
+
+
+
+<div class="image-block-outer-wrapper layout-caption-below design-layout-inline">
+
+	<div class="intrinsic" style="max-width:2229.0px;">
+
+		<div style="padding-bottom:16.958276748657227%;" class="image-block-wrapper   has-aspect-ratio" data-description="&lt;p&gt;Fig 4. First, a convolutional neural net is used to compress the states of Space Invaders, then RL is used to learn an optimal policy of the game over the approximated state space.&amp;nbsp; From &lt;a target=&quot;_blank&quot; href=&quot;https://arxiv.org/pdf/1708.05866.pdf&quot;&gt;Arulkumaran et al. (2017)&lt;/a&gt;&lt;/p&gt;" >
+			<noscript><img src="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a24b1a88165f506770e987b/1512354221067/deep-RL-1.png"  alt=" Fig 4. First, a convolutional neural net is used to compress the states of Space Invaders, then RL is used to learn an optimal policy of the game over the approximated state space.&amp;nbsp; From  Arulkumaran et al. (2017)  "  /></noscript><img class="thumb-image" alt=" Fig 4. First, a convolutional neural net is used to compress the states of Space Invaders, then RL is used to learn an optimal policy of the game over the approximated state space.&amp;nbsp; From  Arulkumaran et al. (2017)  " data-src="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a24b1a88165f506770e987b/1512354221067/deep-RL-1.png" data-image="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a24b1a88165f506770e987b/1512354221067/deep-RL-1.png" data-image-dimensions="2229x378" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="5a24b1a88165f506770e987b" data-type="image" />
+		</div>
+
+
+
+			<div class="image-caption-wrapper">
+				<div class="image-caption"><p>Fig 4. First, a convolutional neural net is used to compress the states of Space Invaders, then RL is used to learn an optimal policy of the game over the approximated state space.&nbsp; From <a target="_blank" href="https://arxiv.org/pdf/1708.05866.pdf">Arulkumaran et al. (2017)</a></p></div>
+			</div>
+
+
+	</div>
+
+</div>
+
+
+
+
+
+</div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-yui_3_17_2_2_1512340736618_62863"><div class="sqs-block-content"><h2>PROBLEM FORMULATION</h2><p>This section describes how we formulated the problem of training an intelligent dialogue agent using LSTMs and Deep RL. We model the conversation as a sequence of utterances between two speakers, each utterance is composed of a sequence of words. The goal of the intelligent agent is then to output the “best” response given <em>all </em>previous utterances, and the expected reward of outputting this response.&nbsp;</p></div></div><div class="sqs-block image-block sqs-block-image sqs-col-5 span-5 float float-right" data-block-type="5" id="block-yui_3_17_2_4_1512397748778_78137"><div class="sqs-block-content">
+
+
+
+
+<div class="image-block-outer-wrapper layout-caption-below design-layout-inline">
+
+	<div class="intrinsic" style="max-width:539.0px;">
+
+		<div style="padding-bottom:29.31354331970215%;" class="image-block-wrapper   has-aspect-ratio" data-description="&lt;p&gt;Fig 5. As a baseline, we use seq2seq framework to model conversation. The token &amp;lt;eos&amp;gt; denotes the end-of-sentence, a special symbol inserted into the end of each sentence during preprocessing. From &lt;strong&gt;&lt;a target=&quot;_blank&quot; href=&quot;https://arxiv.org/pdf/1506.05869.pdf&quot;&gt;Vinyals and Le&lt;/a&gt;&amp;nbsp;(2015).&lt;/strong&gt;&lt;/p&gt;" >
+			<noscript><img src="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a25720d0d92971cbf028ffb/1512403478931/seq2seq-1.png"  alt=" Fig 5. As a baseline, we use seq2seq framework to model conversation. The token &amp;lt;eos&amp;gt; denotes the end-of-sentence, a special symbol inserted into the end of each sentence during preprocessing. From   Vinyals and Le &amp;nbsp;(2015).  "  /></noscript><img class="thumb-image" alt=" Fig 5. As a baseline, we use seq2seq framework to model conversation. The token &amp;lt;eos&amp;gt; denotes the end-of-sentence, a special symbol inserted into the end of each sentence during preprocessing. From   Vinyals and Le &amp;nbsp;(2015).  " data-src="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a25720d0d92971cbf028ffb/1512403478931/seq2seq-1.png" data-image="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a25720d0d92971cbf028ffb/1512403478931/seq2seq-1.png" data-image-dimensions="539x158" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="5a25720d0d92971cbf028ffb" data-type="image" />
+		</div>
+
+
+
+			<div class="image-caption-wrapper">
+				<div class="image-caption"><p>Fig 5. As a baseline, we use seq2seq framework to model conversation. The token &lt;eos&gt; denotes the end-of-sentence, a special symbol inserted into the end of each sentence during preprocessing. From <strong><a target="_blank" href="https://arxiv.org/pdf/1506.05869.pdf">Vinyals and Le</a>&nbsp;(2015).</strong></p></div>
+			</div>
+
+
+	</div>
+
+</div>
+
+
+
+
+
+</div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-yui_3_17_2_4_1512397748778_174487"><div class="sqs-block-content"><p>As a baseline, we replicated the work of <a target="_blank" href="https://arxiv.org/pdf/1506.05869.pdf">Vinyals and Le</a> (2015). They cast the best response given previous response as a sequence-to-sequence (seq2seq) learning problem. In seq2seq, an encoder LSTM reads the input sequence on token at a time, and keeps track of a hidden state that is updated upon each word read. This hidden state may be loosely interpreted as a “summary” of the sentence, sometimes referred to as an utterance vector. The summary vector is then passed to a decoder LSTM, which predicts the output sequence one word at a time, while updating the same utterance vector from the encoder LSTM. During training, the true output sequence is given to the decoder LSTM, and the model is trained to maximize the cross entropy of the correct sequence given its context.&nbsp;</p></div></div><div class="sqs-block image-block sqs-block-image sqs-col-5 span-5 float float-left" data-block-type="5" id="block-yui_3_17_2_4_1512421368576_130126"><div class="sqs-block-content">
+
+
+
+
+<div class="image-block-outer-wrapper layout-caption-below design-layout-inline">
+
+	<div class="intrinsic" style="max-width:600.0px;">
+
+		<div style="padding-bottom:102.16666412353516%;" class="image-block-wrapper   has-aspect-ratio" data-description="&lt;p&gt;Fig 6. The conversation is modeled as a random walk through discourse space.&lt;/p&gt;" >
+			<noscript><img src="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a25bf359140b79633c3f44a/1512423224610/randwalk-2.jpg"  alt=" Fig 6. The conversation is modeled as a random walk through discourse space. "  /></noscript><img class="thumb-image" alt=" Fig 6. The conversation is modeled as a random walk through discourse space. " data-src="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a25bf359140b79633c3f44a/1512423224610/randwalk-2.jpg" data-image="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a25bf359140b79633c3f44a/1512423224610/randwalk-2.jpg" data-image-dimensions="600x613" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="5a25bf359140b79633c3f44a" data-type="image" />
+		</div>
+
+
+
+			<div class="image-caption-wrapper">
+				<div class="image-caption"><p>Fig 6. The conversation is modeled as a random walk through discourse space.</p></div>
+			</div>
+
+
+	</div>
+
+</div>
+
+
+
+
+
+</div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-yui_3_17_2_4_1512421368576_130403"><div class="sqs-block-content"><p>Next, we tested the hypothesis that the dialogue agent benefits from a richer representation of the conversation history. Specifically, we model the conversation as a <a target="_blank" href="https://arxiv.org/pdf/1502.03520.pdf">random walk over a “discourse space”</a>, where each vector in this space represent some abstract topic of the conversation. Then at each time point, the discourse vector is projected onto the utterance space, and a sequence of words is generated conditioned on this projected discourse vector. We represent this process using a hierarchical recurrent encoder-decoder architecture (HRED), first proposed by <a target="_blank" href="https://arxiv.org/pdf/1507.02221.pdf">Sordoni et al</a>. (2015a)&nbsp;for query prediction, and later adapted by <a target="_blank" href="https://arxiv.org/pdf/1507.04808.pdf">Serban et al</a>. (2016)&nbsp;for neural dialogue generation. Under this model, and encoder LSTM maps each utterance to an utterance vector.&nbsp; &nbsp;Then an higher-level context LSTM maps this utterance vector to the discourse vector, and propagates this discourse vector between conversations. The decoder LSTM is then used to generate the response conditioned on the discourse vector. Finally, both the baseline seq2seq model and HRED are trained by maximizing the log likelihood (MLE) of the entire session.</p></div></div><div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_4_1512421368576_18304"><div class="sqs-block-content">
+
+
+
+
+<div class="image-block-outer-wrapper layout-caption-below design-layout-inline">
+
+	<div class="intrinsic" style="max-width:700.0px;">
+
+		<div style="padding-bottom:51.28571319580078%;" class="image-block-wrapper   has-aspect-ratio" data-description="&lt;p&gt;Fig 7. HRED architecture. Each utterance is encoded into an &quot;utterance representation&quot; and mapped into the hidden discourse vector, which is used to generate the words in the response. This hierarchical structure allows information to propagate farther along the conversation, thus maintaining the conversation history.&amp;nbsp; From &lt;a target=&quot;_blank&quot; href=&quot;https://arxiv.org/pdf/1507.04808.pdf&quot;&gt;Serban et al&lt;/a&gt;. (2016).&lt;/p&gt;" >
+			<noscript><img src="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a25b863085229ae8ce3972d/1512421480345/hred-2.png"  alt=" Fig 7. HRED architecture. Each utterance is encoded into an &quot;utterance representation&quot; and mapped into the hidden discourse vector, which is used to generate the words in the response. This hierarchical structure allows information to propagate farther along the conversation, thus maintaining the conversation history.&amp;nbsp; From  Serban et al . (2016). "  /></noscript><img class="thumb-image" alt=" Fig 7. HRED architecture. Each utterance is encoded into an &quot;utterance representation&quot; and mapped into the hidden discourse vector, which is used to generate the words in the response. This hierarchical structure allows information to propagate farther along the conversation, thus maintaining the conversation history.&amp;nbsp; From  Serban et al . (2016). " data-src="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a25b863085229ae8ce3972d/1512421480345/hred-2.png" data-image="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a25b863085229ae8ce3972d/1512421480345/hred-2.png" data-image-dimensions="700x359" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="5a25b863085229ae8ce3972d" data-type="image" />
+		</div>
+
+
+
+			<div class="image-caption-wrapper">
+				<div class="image-caption"><p>Fig 7. HRED architecture. Each utterance is encoded into an "utterance representation" and mapped into the hidden discourse vector, which is used to generate the words in the response. This hierarchical structure allows information to propagate farther along the conversation, thus maintaining the conversation history.&nbsp; From <a target="_blank" href="https://arxiv.org/pdf/1507.04808.pdf">Serban et al</a>. (2016).</p></div>
+			</div>
+
+
+	</div>
+
+</div>
+
+
+
+
+
+</div></div><div class="sqs-block image-block sqs-block-image sqs-col-5 span-5 float float-right" data-block-type="5" id="block-yui_3_17_2_4_1512421368576_266563"><div class="sqs-block-content">
+
+
+
+
+<div class="image-block-outer-wrapper layout-caption-below design-layout-inline">
+
+	<div class="intrinsic" style="max-width:2109.0px;">
+
+		<div style="padding-bottom:53.247982025146484%;" class="image-block-wrapper   has-aspect-ratio" data-description="&lt;p&gt;Fig 8. Similar to Samantha from the film&lt;a target=&quot;_blank&quot; href=&quot;https://www.youtube.com/watch?v=23JrtlxZxxk&quot;&gt; Her (Spike Jonze, 2013)&lt;/a&gt;, our neural dialogue agents learns conversation etiquette over the course of many dialogue sessions, in this case with itself.&lt;/p&gt;" >
+			<noscript><img src="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a25c53fc8302554b580453a/1512442307747/"  alt=" Fig 8. Similar to Samantha from the film  Her (Spike Jonze, 2013) , our neural dialogue agents learns conversation etiquette over the course of many dialogue sessions, in this case with itself. "  /></noscript><img class="thumb-image" alt=" Fig 8. Similar to Samantha from the film  Her (Spike Jonze, 2013) , our neural dialogue agents learns conversation etiquette over the course of many dialogue sessions, in this case with itself. " data-src="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a25c53fc8302554b580453a/1512442307747/" data-image="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a25c53fc8302554b580453a/1512442307747/" data-image-dimensions="2109x1123" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="5a25c53fc8302554b580453a" data-type="image" />
+		</div>
+
+
+
+			<div class="image-caption-wrapper">
+				<div class="image-caption"><p>Fig 8. Similar to Samantha from the film<a target="_blank" href="https://www.youtube.com/watch?v=23JrtlxZxxk"> Her (Spike Jonze, 2013)</a>, our neural dialogue agents learns conversation etiquette over the course of many dialogue sessions, in this case with itself.</p></div>
+			</div>
+
+
+	</div>
+
+</div>
+
+
+
+
+
+</div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-yui_3_17_2_4_1512421368576_60274"><div class="sqs-block-content"><p>Baseline models trained using MLE objectives often output short-sighted and dull responses such as “I don’t know.”&nbsp; This is not surprising since the MLE objective does not capture the original intent of developing an open-domain dialogue agent that engages the user. We remedy this problem using deep reinforcement learning with hand-crafted reward functions. In our setting, the actions of the agent are the responses it can output, the states are defined by the previous two turns of the dialogue, while the policy is represented by the two baseline encoder-decoder networks we trained using the MLE objective. Following the work of<a target="_blank" href="https://aclweb.org/anthology/D16-1127"> Li et al</a>. (2016), our reward function is a weighted sum of three hand crafted objectives that promote “engaging” dialogue behavior, and the weights are tuned heuristically during training time. The first objective penalizes “dull” responses, defined as eight or more consecutive responses of key phrase such as “I don’t know”, “I have no idea”, and “I don’t know what you’re talking about”, etc. The second function penalizes semantic similarly defined by the cosine distance of the utterance vector of the query and response, this prevents responses that simply paraphrase the user query. The last reward promotes semantic coherence, defined by the probability of the response given the previous state. When searching for the optimal policy using RL, we first initialized the policy using the encoder-decoder trained using the MLE objective, so that it already outputs plausible responses. Then we simulated a conversation between two dialogue agents so that they may find the optimal conversation policy.&nbsp;</p><h2>EXPERIMENT</h2><h3>DATASET</h3></div></div><div class="sqs-block image-block sqs-block-image sqs-col-5 span-5 float float-left" data-block-type="5" id="block-yui_3_17_2_4_1512487254930_43846"><div class="sqs-block-content">
+
+
+
+
+<div class="image-block-outer-wrapper layout-caption-below design-layout-inline">
+
+	<div class="intrinsic" style="max-width:1393.0px;">
+
+		<div style="padding-bottom:51.90237045288086%;" class="image-block-wrapper   has-aspect-ratio" data-description="&lt;p&gt;Fig 9.&amp;nbsp; CALLHOME corpus. Note it is very common for very long queries to be followed by short responses&amp;nbsp;&lt;/p&gt;" >
+			<noscript><img src="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a26c8ea652deaad92cef608/1512491246316/callhome.png"  alt=" Fig 9.&amp;nbsp; CALLHOME corpus. Note it is very common for very long queries to be followed by short responses&amp;nbsp; "  /></noscript><img class="thumb-image" alt=" Fig 9.&amp;nbsp; CALLHOME corpus. Note it is very common for very long queries to be followed by short responses&amp;nbsp; " data-src="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a26c8ea652deaad92cef608/1512491246316/callhome.png" data-image="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a26c8ea652deaad92cef608/1512491246316/callhome.png" data-image-dimensions="1393x723" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="5a26c8ea652deaad92cef608" data-type="image" />
+		</div>
+
+
+
+			<div class="image-caption-wrapper">
+				<div class="image-caption"><p>Fig 9.&nbsp; CALLHOME corpus. Note it is very common for very long queries to be followed by short responses&nbsp;</p></div>
+			</div>
+
+
+	</div>
+
+</div>
+
+
+
+
+
+</div></div><div class="sqs-block image-block sqs-block-image sqs-col-5 span-5 float float-left" data-block-type="5" id="block-yui_3_17_2_4_1512487254930_56989"><div class="sqs-block-content">
+
+
+
+
+<div class="image-block-outer-wrapper layout-caption-below design-layout-inline">
+
+	<div class="intrinsic" style="max-width:1465.0px;">
+
+		<div style="padding-bottom:36.99658966064453%;" class="image-block-wrapper   has-aspect-ratio" data-description="&lt;p&gt;Fig 10. OpenSubtitles Corpus. Since we do not have access to the original movie script, we heuristically assigned utterances to speakers.&amp;nbsp;&lt;/p&gt;" >
+			<noscript><img src="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a26c923f9619ab1f724fe7e/1512491300660/"  alt=" Fig 10. OpenSubtitles Corpus. Since we do not have access to the original movie script, we heuristically assigned utterances to speakers.&amp;nbsp; "  /></noscript><img class="thumb-image" alt=" Fig 10. OpenSubtitles Corpus. Since we do not have access to the original movie script, we heuristically assigned utterances to speakers.&amp;nbsp; " data-src="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a26c923f9619ab1f724fe7e/1512491300660/" data-image="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a26c923f9619ab1f724fe7e/1512491300660/" data-image-dimensions="1465x542" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="5a26c923f9619ab1f724fe7e" data-type="image" />
+		</div>
+
+
+
+			<div class="image-caption-wrapper">
+				<div class="image-caption"><p>Fig 10. OpenSubtitles Corpus. Since we do not have access to the original movie script, we heuristically assigned utterances to speakers.&nbsp;</p></div>
+			</div>
+
+
+	</div>
+
+</div>
+
+
+
+
+
+</div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-yui_3_17_2_4_1512487254930_215855"><div class="sqs-block-content"><p>The baseline models are trained on two data sets. The first one is CALLHOME American English Speech corpus (<a target="_blank" href="https://catalog.ldc.upenn.edu/ldc97s42">LDC97S42</a>), consisting of 120 30-minute phone conversations.&nbsp; We also used from the <a target="_blank" href="http://opus.nlpl.eu/">OpenSubtitles</a> corpus. Both corpus were normalized by case-folding, whitespace stripping, and converting all tokens to lower cases. Proper nouns and numbers were kept as is. The quality of data is extremely important in machine learning, and there were significant weaknesses in both corpus. In the CALLHOME corpus, we saw it was very common for short responses such as “uh-uh” to follow very long queries (see figure 9). This biases the algorithm to output short responses when it encounters a very long sentence. In the OpenSubtitles corpus the speakers were not annotated, and there were multiple speakers. Thus we heuristically assigned each turn to one of two speakers, clearly this is far from ideal. These challenges underscore the weaknesses of data-driven dialogue generation: it is very difficult to acquire natural dialogues from daily life due to privacy constraints.&nbsp;</p><h3><strong>experimental results</strong></h3><p>Experiments for this projects are ongoing!&nbsp;</p><h2>CONCLUSION</h2><h2>TEAM</h2><p><a target="_blank" href="https://www.chloehjeong.com/">Heejin Jeong</a>, Xiao Ling</p><h2>DETAILS&nbsp;</h2><p><a target="_blank" href="https://github.com/lingxiao/neural-chatbot/blob/master/paper/final_hj.pdf">paper</a>, <a target="_blank" href="https://github.com/lingxiao/neural-chatbot">&nbsp;source code</a></p><p> </p></div></div><div class="sqs-block spacer-block sqs-block-spacer sized vsize-1" data-block-type="21" id="block-4f3bcdfbee05ff2784a3"><div class="sqs-block-content">&nbsp;</div></div></div><div class="col sqs-col-1 span-1"><div class="sqs-block spacer-block sqs-block-spacer sized vsize-1" data-block-type="21" id="block-db409702d9e6ffa3f593"><div class="sqs-block-content">&nbsp;</div></div></div></div></div>
+</div>
+

@@ -56,15 +56,9 @@ index.get('/about-me', (req, res, next) => {
 });
 
 
-index.get('/image', (req, res, next) => { 
-	res.render('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/article.pug', {});
-});
-
-
 index.get('/drl-dialogue', (req, res, next) => { 
-	res.sendFile('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/blog.html');
+	res.render('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/blog/drl-dialogue.pug', {});
 });
-
 
 
 export default index;
