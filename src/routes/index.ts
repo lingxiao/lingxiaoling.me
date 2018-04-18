@@ -31,7 +31,7 @@ index.get('/curriculum-vitae', (req, res, next) => {
 
 	BUG LIST:
 		1. Images only load on refresh
-		2. navigate back do not load page
+		2. navigate back do not load page when navigate to dead link
 
 */
 index.get('/', (req, res, next) => { 
