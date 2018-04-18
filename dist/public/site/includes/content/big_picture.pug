@@ -1,0 +1,13 @@
+//- 
+//- module: insert big picture 
+//- Date  : April 18th, 2018
+//- Author: Xiao Ling
+//- 
+mixin big_picture(src)
+
+    .image-block-outer-wrapper.layout-caption-below.design-layout-inline
+      .intrinsic(style="max-width:1600.0px;")
+        .image-block-wrapper.has-aspect-ratio(style="padding-bottom:60.0%;" data-description="")
+          noscript
+            img(src=`${src}`)
+          img.thumb-image(alt="" data-src=`${src}` data-image=`${src}` data-image-dimensions="1600x900" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="" data-type="image")
