@@ -1,11 +1,8 @@
 mixin article(title, month, date, year, img_src, link, abstract)
 
-	//- the point of this is to show that image will load on click if it's just the bare html style
-
 	//- article class
 	article.eventlist-event.eventlist-event--upcoming.eventlist-event--hasimg.eventlist-hasimg.eventlist-event--multiday
 		a.eventlist-column-thumbnail.content-fill(href=`${link}`)
-
 			//- wrote my own div so that image loads on page load instead of on refresh
 			//- TODO: this one does not fill in height wise
 			img(src=`${img_src}`, alt=`${img_src}`, style='position: static; float:left; width: 100%;')
