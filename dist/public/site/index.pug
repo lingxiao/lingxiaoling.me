@@ -1,13 +1,16 @@
-extend ../templates/layout.pug
-
+extend parent.pug
 
 block content
+
+	include includes/menu.pug
+
 
 	.main-content-inner-wrapper(data-content-field='main-content')
 		.index-gallery-wrapper(data-controller='IndexSetup, IndexPositioning, IndexNavOverflow, IndexGallery')
 			.collection-nav-desc-wrapper
 
-				include ../templates/includes/menu.pug
+				//- include includes/menu.pug
+				+menu('/art', '/blog', '/code', '/about-me')
 
 				nav.index-navigation.collection-nav(role='navigation')
 

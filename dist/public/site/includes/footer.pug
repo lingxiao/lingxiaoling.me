@@ -1,0 +1,12 @@
+include menu.pug
+
+.index-nav
+	.index-gallery-wrapper.index-item-navigation(data-controller="IndexSetup, IndexPositioning, IndexNavOverflow, IndexNavScroll")
+		.collection-images.index-nav-images
+
+			.overlay.blended-overlay.index-overlay
+		.collection-nav-desc-wrapper
+			+menu('/art', '/blog', '/code', '/about-me')
+			//- include menu.pug
+			nav.index-navigation.collection-nav(role="navigation")
+
