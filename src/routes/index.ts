@@ -33,6 +33,10 @@ index.get('/', (req, res, next) => {
 	res.render('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/index', {});
 });
 
+index.get('/blog', (req, res, next) => { 
+	res.render('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/index-blog', {});
+});
+
 
 index.get('/code', (req, res, next) => { 
 	res.render('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/index-code', {});
@@ -42,6 +46,10 @@ index.get('/image', (req, res, next) => {
 	res.render('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/article.pug', {});
 });
 
+
+index.get('/drl-dialogue', (req, res, next) => { 
+	res.sendFile('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/blog.html');
+});
 
 
 

@@ -3,8 +3,9 @@ extend parent-scroll.pug
 block content
 
 	include includes/title-card.pug
-
 	include includes/article.pug
+
+	+title_card('TECH', 'A Collection of My Machine Learning Projects')
 
 	.main-content-inner-wrapper(data-content-field="main-content")
 		.gallery-wrapper(data-controller="GalleryLayout")
@@ -19,7 +20,7 @@ block content
 						, '22'
 						, '2017'
 						, '../assets/images/g-home-1.png'
-						, ''
+						, '/drl-dialogue'
 						, 'In this post I describe the training process of an open domain conversational agent using hierarchical hierarchical recurrent neural nets, followed by more self-training using deep reinforcement learning.'
 						) 
 
@@ -52,7 +53,6 @@ block content
 						, ''
 						, 'In this post I describe the training process of an open domain conversational agent using hierarchical hierarchical recurrent neural nets, followed by more self-training using deep reinforcement learning.'
 						) 
-
 
 					+article('Random Walk in 3D'
 						, 'December'
