@@ -11,21 +11,21 @@ index.get('/curriculum-vitae', (req, res, next) => {
     });
 });
 index.get('/', (req, res, next) => {
-    res.render('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/index', {});
+    res.render('site/index', {});
 });
 index.get('/art', (req, res, next) => {
-    res.render('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/index-art', {});
+    res.render('site/index-art', {});
 });
 index.get('/blog', (req, res, next) => {
-    res.render('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/index-blog', {});
+    res.render('site/index-blog', {});
 });
 index.get('/code', (req, res, next) => {
-    res.render('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/index-code', {});
+    res.render('site/index-code', {});
 });
 index.get('/about-me', (req, res, next) => {
-    res.render('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/about_me', {});
+    res.render('site/about_me', {});
 });
 index.get('/drl-dialogue', (req, res, next) => {
-    res.render('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/blog/drl-dialogue.pug', {});
+    res.render('site/blog/drl-dialogue.pug', {});
 });
 exports.default = index;

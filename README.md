@@ -11,4 +11,9 @@ with typescript
 basic types: https://www.typescriptlang.org/docs/handbook/basic-types.html
 
 
+## Feature requests ##
+
+1. Twitter and Facebook integration
+2. Native like integration
+
 
