@@ -27,7 +27,7 @@ index.get('/curriculum-vitae', (req, res, next) => {
 
 
 /**
-	Template under development
+	lingxiaoling.me
 */
 index.get('/', (req, res, next) => { 
 	res.render('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/index', {});
@@ -44,9 +44,7 @@ index.get('/image', (req, res, next) => {
 
 
 
+
 export default index;
-
-
-// case number:  155 - 362 - 60
 
 

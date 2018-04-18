@@ -3,12 +3,13 @@ mixin article(title, month, date, year, img_src, link, abstract)
 	//- article class
 	article.eventlist-event.eventlist-event--upcoming.eventlist-event--hasimg.eventlist-hasimg.eventlist-event--multiday
 		a.eventlist-column-thumbnail.content-fill(href=`${link}`)
+
 			//- wrote my own div so that image loads on page load instead of on refresh
 			//- TODO: this one does not fill in height wise
-			img(src=`${img_src}`, alt=`${img_src}`, style='position: static; float:left; width: 100%;')
+			//- img(src=`${img_src}`, alt=`${img_src}`, style='position: static; float:left; width: 100%;')
 
 			//- original one does not load unless page refresh
-			//- img.eventlist-thumbnail-xiao(data-src=`${img_src}`, data-image=`${img_src}`, data-image-dimensions='', data-image-focal-point='0.5,0.5')
+			img.eventlist-thumbnail-xiao(data-src=`${img_src}`, data-image=`${img_src}`, data-image-dimensions='', data-image-focal-point='0.5,0.5')
 
 			//- load date
 			a.eventlist-column-date(href=`${link}`)
