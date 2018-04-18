@@ -1,5 +1,6 @@
 include ../includes/content/big_picture.pug
 include ../includes/content/title.pug
+include ../includes/content/section.pug
 
 #page-59c2e758197aea9115b6457b.sqs-layout.sqs-grid-12.columns-12(data-type="page" data-updated-on="1513616943309")
 
@@ -8,47 +9,54 @@ include ../includes/content/title.pug
 	)
 
 
-//- big image: this works for header, but not for ones that fit into the width of rest of document
-//- it also centers left
-<div class="image-block-outer-wrapper layout-caption-below design-layout-inline">
-	<div class="intrinsic" style="max-width:1600.0px;">
-		<img src = "../../assets/images/homepod-2.jpg" style='width:100%; float: center'>
-		//- <div style="padding-bottom:60.0%;" class="image-block-wrapper   has-aspect-ratio" data-description="" >
-			<noscript><img src="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a21590ae4966be2ad884a0f/1512134926475/G-home-1.jpeg"  alt="G-home-1.jpeg"  /></noscript><img class="thumb-image" alt="G-home-1.jpeg" data-src="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a21590ae4966be2ad884a0f/1512134926475/G-home-1.jpeg" data-image="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a21590ae4966be2ad884a0f/1512134926475/G-home-1.jpeg" data-image-dimensions="1600x900" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="5a21590ae4966be2ad884a0f" data-type="image" />
-		</div>
-	</div>
-</div>
-
-
-
-
-
+//- Note: 
+//- 	this is not efficient, it's better if we do this in latex and convert to pug
+//-     another way to do it is to 
+//- 
+//- 
+//- 
 
 .row.sqs-row
 	.col.sqs-col-1.span-1  
 		#block-377a51a1257979423374.sqs-block.spacer-block.sqs-block-spacer.sized.vsize-1(data-block-type="21")
 			.sqs-block-content  
 	.col.sqs-col-10.span-10
-		#block-17f321948bf8eedab8d9.sqs-block.html-block.sqs-block-html(data-block-type="2")
-			.sqs-block-content
-				h2 ABSTRACT
-		#block-yui_3_17_2_5_1512316064481_75368.sqs-block.image-block.sqs-block-image.sqs-col-5.span-5.float.float-right(data-block-type="5")
-			.sqs-block-content
-				.image-block-outer-wrapper.layout-caption-below.design-layout-inline
-					.intrinsic(style="max-width:829.0px;")
-						.image-block-wrapper.has-aspect-ratio(style="padding-bottom:52.95536422729492%;" data-description="")
-							//- noscript
-							//- img(src="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a242dc824a694ef80492444/1512320460680/echo-2.jpg" alt="echo-2.jpg")
-							img.thumb-image(alt="" data-src="../../assets/images/echo-2.jpg" data-image="../../assets/images/echo-2.jpg" data-image-dimensions="829x439" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="5a242dc824a694ef80492444" data-type="image")
-		#block-yui_3_17_2_5_1512316064481_80478.sqs-block.html-block.sqs-block-html(data-block-type="2")
-			.sqs-block-content
-				p
-					| I co-led the project with 
-					a(target="_blank" href="https://www.chloehjeong.com/") Heejin Jeong
-					|  and built an intelligent dialogue system that was deployed on the Echo Dot. It is well known that dialogue systems relying on hand-crafted rules are too inflexible to handle the myriad of sentences in a natural conversation. And although current recurrent neural net based systems are more robust to input, they have a tendency to generate irrelevant or curt responses that terminates a conversation prematurely. We hypothesized that an engaging dialogue system should satisfy two criteria: it must incorporate the dialogue history when deciding what to say next, and it must be able to understand the future consequence of its utterances. We posed the “history aware” problem as an optimization problem with multiple objectives where by both likelihood of the current sentence given previous sentences, and the likelihood of the current word given previous words are maximized. This complex distribution is represented by a hierarchical neural net. We posed the “future aware” requirement as a deep reinforcement learning problem, whereby the dialogue agent optimized a conversation policy given specified future reward.  Our model was trained on CALLHOME American English speech corpus as well as the OpenSubtitles corpus.  The 
-					a(target="_blank" href="https://github.com/lingxiao/neural-chatbot/blob/master/paper/final_hj.pdf") paper
-					|  was submitted to The Mid-Atlantic Student Colloquium on Speech, Language and Learning and accepted for poster presentation.
-				h2 INTRODUCTION
+		//- #block-17f321948bf8eedab8d9.sqs-block.html-block.sqs-block-html(data-block-type="2")
+			//- .sqs-block-content
+
+		+section( "Abstract"
+		        , "This is the abstract of this blog, here we talk about stuff, here we talk about stuff here we talk about stuff here we talk about stuff here we talk about stuff. here we talk about stuff. here we talk about stuff. here we talk about stuff. here we talk about stuff.  here we talk about stuff.  here we talk about stuff.  here we talk about stuff.  here we talk about stuff.  here we talk about stuff. here we talk about stuff.here we talk about stuff.here we talk about stuff.here we talk about stuff.here we talk about stuff.here we talk about stuff.here we talk about stuff."
+		        , '../../assets/images/homepod-1.jpg'
+		        ,'left'
+		        )
+
+
+		+section( "Introduction I"
+		        , "This is the abstract of this blog, here we talk about stuff, here we talk about stuff here we talk about stuff here we talk about stuff here we talk about stuff. here we talk about stuff. here we talk about stuff. here we talk about stuff. here we talk about stuff.  here we talk about stuff.  here we talk about stuff.  here we talk about stuff.  here we talk about stuff.  here we talk about stuff. here we talk about stuff.here we talk about stuff.here we talk about stuff.here we talk about stuff.here we talk about stuff.here we talk about stuff.here we talk about stuff."
+		        , '../../assets/images/g-home-1.png'
+		        , 'right'
+		        )
+
+
+
+		//- h2  &nbsp;  ABSTRACT
+		//- #block-yui_3_17_2_5_1512316064481_75368.sqs-block.image-block.sqs-block-image.sqs-col-5.span-5.float.float-right(data-block-type="5")
+		//- 	.sqs-block-content
+		//- 		.image-block-outer-wrapper.layout-caption-below.design-layout-inline
+		//- 			.intrinsic(style="max-width:829.0px;")
+		//- 				.image-block-wrapper.has-aspect-ratio(style="padding-bottom:52.95536422729492%;" data-description="")
+		//- 					//- noscript
+		//- 					//- img(src="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a242dc824a694ef80492444/1512320460680/echo-2.jpg" alt="echo-2.jpg")
+		//- 					img.thumb-image(alt="" data-src="../../assets/images/echo-2.jpg" data-image="../../assets/images/echo-2.jpg" data-image-dimensions="829x439" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="5a242dc824a694ef80492444" data-type="image")
+		//- #block-yui_3_17_2_5_1512316064481_80478.sqs-block.html-block.sqs-block-html(data-block-type="2")
+		//- 	.sqs-block-content
+		//- 		p
+		//- 			| I co-led the project with 
+		//- 			a(target="_blank" href="https://www.chloehjeong.com/") Heejin Jeong
+		//- 			|  and built an intelligent dialogue system that was deployed on the Echo Dot. It is well known that dialogue systems relying on hand-crafted rules are too inflexible to handle the myriad of sentences in a natural conversation. And although current recurrent neural net based systems are more robust to input, they have a tendency to generate irrelevant or curt responses that terminates a conversation prematurely. We hypothesized that an engaging dialogue system should satisfy two criteria: it must incorporate the dialogue history when deciding what to say next, and it must be able to understand the future consequence of its utterances. We posed the “history aware” problem as an optimization problem with multiple objectives where by both likelihood of the current sentence given previous sentences, and the likelihood of the current word given previous words are maximized. This complex distribution is represented by a hierarchical neural net. We posed the “future aware” requirement as a deep reinforcement learning problem, whereby the dialogue agent optimized a conversation policy given specified future reward.  Our model was trained on CALLHOME American English speech corpus as well as the OpenSubtitles corpus.  The 
+		//- 			a(target="_blank" href="https://github.com/lingxiao/neural-chatbot/blob/master/paper/final_hj.pdf") paper
+		//- 			|  was submitted to The Mid-Atlantic Student Colloquium on Speech, Language and Learning and accepted for poster presentation.
+		h2 INTRODUCTION
 		#block-yui_3_17_2_2_1512075837160_19774.sqs-block.image-block.sqs-block-image.sqs-col-4.span-4.float.float-left(data-block-type="5")
 			.sqs-block-content
 				.image-block-outer-wrapper.layout-caption-below.design-layout-inline
@@ -57,6 +65,7 @@ include ../includes/content/title.pug
 							noscript
 								img(src="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a20732d24a694eb0d092fe9/1512076201663/turing-1.jpg" alt="turing-1.jpg")
 							img.thumb-image(alt="turing-1.jpg" data-src="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a20732d24a694eb0d092fe9/1512076201663/turing-1.jpg" data-image="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a20732d24a694eb0d092fe9/1512076201663/turing-1.jpg" data-image-dimensions="2197x1461" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="5a20732d24a694eb0d092fe9" data-type="image")
+
 		#block-yui_3_17_2_2_1512075837160_27649.sqs-block.html-block.sqs-block-html(data-block-type="2")
 			.sqs-block-content
 				blockquote(style="margin-left:80px")
@@ -113,8 +122,6 @@ include ../includes/content/title.pug
 										|  (2010)
 									| .
 
-
-
 		#block-yui_3_17_2_4_1512338267045_62237.sqs-block.html-block.sqs-block-html(data-block-type="2")
 			.sqs-block-content
 				p
@@ -137,6 +144,9 @@ include ../includes/content/title.pug
 			.sqs-block-content
 				p
 					| This section gives a gentle introduction to reinforcement learning (RL) and deep RL. The essence of RL is learning through interaction. An RL agent interacts with its environment and, upon observing the consequences of its actions, can learn to alter its own behaviour in response to rewards received. This paradigm of trial and error learning is rooted in psychology. Specifically, the autonomous agent has a set of actions A it can take on the environment, there is a set of states S, and a set of rewards R that the agent may receive upon each action. The agent will take an action a at each state s, and upon transitioning to a new state, receive a reward r from the environment.  The agent’s goal is to determine a policy of which action to take in each state so that its reward is maximized at the end of the game. The simplest way to represent policy is as a table mapping states and actions to rewards. Historically, the states and actions of the game is constructed by hand, this is sufficient for simple games (such as tic-tac-toe) but do not scale well to games with high dimensional input and no clear heuristic as to how to represent the states. In the game Space Invaders (Fig 3) for example, the states could be every possible image frame over all possible space invaders games, and the action are all possible left, right, and shoot combinations the player could take. Therefore both the state space and the policy is too large so as to render the problem intractable. Deep RL promises to solve the intractability problem, for example a deep convolutional neural net is first used to compress the states in Space Invaders, then RL is used to approximate a policy with this reduced state space.
+		
+
+	
 		#block-yui_3_17_2_2_1512340736618_62585.sqs-block.image-block.sqs-block-image(data-block-type="5")
 			.sqs-block-content
 				.image-block-outer-wrapper.layout-caption-below.design-layout-inline
@@ -259,6 +269,7 @@ include ../includes/content/title.pug
 							.image-caption
 								p
 									| Fig 10. OpenSubtitles Corpus. Since we do not have access to the original movie script, we heuristically assigned utterances to speakers.
+
 		#block-yui_3_17_2_4_1512487254930_215855.sqs-block.html-block.sqs-block-html(data-block-type="2")
 			.sqs-block-content
 				p

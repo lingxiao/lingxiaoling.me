@@ -3,32 +3,22 @@
 //- Date  : April 18th, 2018
 //- Author: Xiao Ling
 //- 
-mixin section(title, content)
+mixin section(title, content, src, pic)
 
-	#block-32fe810acc8721a94269.sqs-block.spacer-block.sqs-block-spacer.sized.vsize-1(data-block-type="21")
-		.sqs-block-content  
-	.row.sqs-row
-		.col.sqs-col-1.span-1
-			#block-377a51a1257979423374.sqs-block.spacer-block.sqs-block-spacer.sized.vsize-1(data-block-type="21")
-				.sqs-block-content  
-		.col.sqs-col-10.span-10
-			#block-17f321948bf8eedab8d9.sqs-block.html-block.sqs-block-html(data-block-type="2")
-				.sqs-block-content
-					h2 #{title}
-			#block-yui_3_17_2_5_1512316064481_75368.sqs-block.image-block.sqs-block-image.sqs-col-5.span-5.float.float-right(data-block-type="5")
-				.sqs-block-content
-					.image-block-outer-wrapper.layout-caption-below.design-layout-inline
-						.intrinsic(style="max-width:829.0px;")
-							.image-block-wrapper.has-aspect-ratio(style="padding-bottom:52.95536422729492%;" data-description="")
-								noscript
-									img(src="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a242dc824a694ef80492444/1512320460680/echo-2.jpg" alt="echo-2.jpg")
-								img.thumb-image(alt="echo-2.jpg" data-src="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a242dc824a694ef80492444/1512320460680/echo-2.jpg" data-image="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a242dc824a694ef80492444/1512320460680/echo-2.jpg" data-image-dimensions="829x439" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="5a242dc824a694ef80492444" data-type="image")
-			#block-yui_3_17_2_5_1512316064481_80478.sqs-block.html-block.sqs-block-html(data-block-type="2")
-				.sqs-block-content
-					p
-						| I co-led the project with 
-						a(target="_blank" href="https://www.chloehjeong.com/") Heejin Jeong
-						|  and built an intelligent dialogue system that was deployed on the Echo Dot. It is well known that dialogue systems relying on hand-crafted rules are too inflexible to handle the myriad of sentences in a natural conversation. And although current recurrent neural net based systems are more robust to input, they have a tendency to generate irrelevant or curt responses that terminates a conversation prematurely. We hypothesized that an engaging dialogue system should satisfy two criteria: it must incorporate the dialogue history when deciding what to say next, and it must be able to understand the future consequence of its utterances. We posed the “history aware” problem as an optimization problem with multiple objectives where by both likelihood of the current sentence given previous sentences, and the likelihood of the current word given previous words are maximized. This complex distribution is represented by a hierarchical neural net. We posed the “future aware” requirement as a deep reinforcement learning problem, whereby the dialogue agent optimized a conversation policy given specified future reward.  Our model was trained on CALLHOME American English speech corpus as well as the OpenSubtitles corpus.  The 
-						a(target="_blank" href="https://github.com/lingxiao/neural-chatbot/blob/master/paper/final_hj.pdf") paper
-						|  was submitted to The Mid-Atlantic Student Colloquium on Speech, Language and Learning and accepted for poster presentation.
-
+	if(pic=='left')
+		h2 &nbsp; #{title}
+		//- #block-yui_3_17_2_5_1512316064481_75368.sqs-block.image-block.sqs-block-image.sqs-col-5.span-5.float.float-right(data-block-type="5")
+		#block-yui_3_17_2_2_1512075837160_19774.sqs-block.image-block.sqs-block-image.sqs-col-4.span-4.float.float-left(data-block-type="5")
+			.sqs-block-content
+				.image-block-outer-wrapper.layout-caption-below.design-layout-inline
+					.intrinsic(style="max-width:829.0px;")
+						.image-block-wrapper.has-aspect-ratio(style="padding-bottom:52.95536422729492%;" data-description="")
+							//- noscript
+							//- img(src="https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5a242dc824a694ef80492444/1512320460680/echo-2.jpg" alt="echo-2.jpg")
+							img.thumb-image(alt="" data-src=`${src}` data-image-dimensions="829x439" data-image-focal-point="0.5,0.5")
+							//- data-load="false" data-image-id="5a242dc824a694ef80492444" data-type="image")
+		#block-yui_3_17_2_5_1512316064481_80478.sqs-block.html-block.sqs-block-html(data-block-type="2")
+			.sqs-block-content
+				p #{content}
+		br
+		
