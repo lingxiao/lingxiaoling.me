@@ -14,7 +14,7 @@ index.get('/', (req, res, next) => {
     res.render('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/index', {});
 });
 index.get('/art', (req, res, next) => {
-    res.render('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/art', {});
+    res.render('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/index-art', {});
 });
 index.get('/blog', (req, res, next) => {
     res.render('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/index-blog', {});

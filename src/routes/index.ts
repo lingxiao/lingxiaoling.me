@@ -39,7 +39,7 @@ index.get('/', (req, res, next) => {
 });
 
 index.get('/art', (req, res, next) => { 
-	res.render('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/art', {});
+	res.render('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/index-art', {});
 });
 
 index.get('/blog', (req, res, next) => { 
@@ -62,5 +62,6 @@ index.get('/drl-dialogue', (req, res, next) => {
 
 
 export default index;
+
 
 
