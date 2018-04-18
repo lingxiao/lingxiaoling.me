@@ -1,4 +1,4 @@
-mixin menu(art, blog, code, aboutme)
+mixin menu(art, blog, code, aboutme, src)
 
 	#collectionDesc.collection-desc
 		p
@@ -8,5 +8,9 @@ mixin menu(art, blog, code, aboutme)
 			|  |
 			a(href=`${code}`)   Code
 			|  |
-			a(href=`${link}`)   ___
+			a(href=`${aboutme}`)   ___
+
+	nav.index-navigation.collection-nav(role='navigation')
+		a.art(href=`${src}` target='_blank')
+			span.collection-nav-item-span source 
 

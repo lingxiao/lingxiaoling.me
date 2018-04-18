@@ -13,11 +13,17 @@ index.get('/curriculum-vitae', (req, res, next) => {
 index.get('/', (req, res, next) => {
     res.render('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/index', {});
 });
+index.get('/art', (req, res, next) => {
+    res.render('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/art', {});
+});
 index.get('/blog', (req, res, next) => {
     res.render('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/index-blog', {});
 });
 index.get('/code', (req, res, next) => {
     res.render('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/index-code', {});
+});
+index.get('/about-me', (req, res, next) => {
+    res.render('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/about_me', {});
 });
 index.get('/image', (req, res, next) => {
     res.render('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/article.pug', {});
