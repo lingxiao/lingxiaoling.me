@@ -13,10 +13,12 @@ mixin section(pic, title, content, src)
 					.intrinsic(style="max-width:829.0px;")
 						.image-block-wrapper.has-aspect-ratio(style="padding-bottom:52.95536422729492%;" data-description="")
 							img.thumb-image(alt="" data-src=`${src}` data-image-dimensions="829x439" data-image-focal-point="0.5,0.5")
+							//- <div class="image-caption-wrapper">
+								//- <div class="image-caption"><p>Fig. 1. Cartoon of a simple Recurrent Neural Net. Diagram from <a target="_blank" href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">Colah</a>.</p></div>
+							//- </div>
 		#block-yui_3_17_2_5_1512316064481_80478.sqs-block.html-block.sqs-block-html(data-block-type="2")
 			.sqs-block-content
 				p #{content}
-		br
 	else if pic == 'PIC-RIGHT'
 		h2 &nbsp; #{title}
 		#block-yui_3_17_2_5_1512316064481_75368.sqs-block.image-block.sqs-block-image.sqs-col-5.span-5.float.float-right(data-block-type="5")
@@ -28,10 +30,10 @@ mixin section(pic, title, content, src)
 		#block-yui_3_17_2_5_1512316064481_80478.sqs-block.html-block.sqs-block-html(data-block-type="2")
 			.sqs-block-content
 				p #{content}
-		br
+
 	else
-		h2 #{title}
+		h2  &nbsp; #{title}
+		#block-yui_3_17_2_5_1512316064481_75368.sqs-block.image-block.sqs-block-image.sqs-col-5.span-5.float.float-right(data-block-type="5")
 		#block-yui_3_17_2_5_1512316064481_80478.sqs-block.html-block.sqs-block-html(data-block-type="2")
 			.sqs-block-content
 				p #{content}
-		br
