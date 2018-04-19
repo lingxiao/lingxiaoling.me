@@ -4913,7 +4913,7 @@ body.sqs-lightbox-open {
     line-height: 1em;
     /* 
         commenting this one out because it messes up
-        when deployed on remote server
+        when deployed on google cloud platform
     */
     /*font-family: adobe-garamond-pro;*/
     font-weight: 600;
@@ -22415,7 +22415,8 @@ body:not(.tweak-index-slideshow-on).tweak-index-inactive-on-load .nav-hovered .i
     font-style: italic;
     letter-spacing: 0px;
     line-height: 1.2em;
-    font-family: adobe-garamond-pro;
+    /*i commented this out reproduce the problem on local server*/
+    /*font-family: adobe-garamond-pro;*/
     font-size: 120px;
     font-weight: 600;
     font-style: normal;

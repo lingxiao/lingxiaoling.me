@@ -38,3 +38,11 @@ basic types: https://www.typescriptlang.org/docs/handbook/basic-types.html
 3. also may have to consider a ground up rewrite of everything, now that you know how the thing works roughly.
 
 
+## where you left off ##
+
+1. accidentally recreated the bug locally by changing stuff in .css and .js files. but now list it
+
+
+
+
+

@@ -1,6 +1,9 @@
 mixin menu(art, blog, code, aboutme, src)
 
 	#collectionDesc.collection-desc
+		//- defining the font is here is necessary so that it shows up the 
+		//- right way on the local server when the corresponding css property is turned off
+		//- p(style='font-family: adobe-garamond-pro')
 		p
 			a(href=`${art}`) Art 
 			|  |

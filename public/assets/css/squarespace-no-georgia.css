@@ -18479,7 +18479,7 @@ body:not(.tweak-product-quick-view-lightbox-show-close-button) .sqs-product-quic
 }
 
 .tweak-site-tagline-font {
-    font-family: Georgia, serif;
+    font-family: adobe-garamond-pro;
     font-size: 18px;
     font-style: italic;
     font-weight: normal;
@@ -18550,7 +18550,7 @@ body:not(.tweak-product-quick-view-lightbox-show-close-button) .sqs-product-quic
 }
 
 .tweak-body-font {
-    font-family: Georgia, serif;
+    font-family: adobe-garamond-pro;
     font-weight: normal;
     font-size: 18px;
     letter-spacing: 0px;
@@ -18558,7 +18558,7 @@ body:not(.tweak-product-quick-view-lightbox-show-close-button) .sqs-product-quic
 }
 
 .tweak-quote-font {
-    font-family: Georgia, serif;
+    font-family: adobe-garamond-pro;
     font-weight: normal;
     font-style: italic;
     font-size: 24px;
@@ -18609,7 +18609,7 @@ body:not(.tweak-product-quick-view-lightbox-show-close-button) .sqs-product-quic
 }
 
 .tweak-index-desc-font {
-    font-family: Georgia, serif;
+    font-family: adobe-garamond-pro;
     font-size: 36px;
     font-weight: normal;
     font-style: italic;
@@ -18630,7 +18630,7 @@ body:not(.tweak-product-quick-view-lightbox-show-close-button) .sqs-product-quic
 }
 
 .tweak-gallery-desc-font {
-    font-family: Georgia, serif;
+    font-family: adobe-garamond-pro;
     font-size: 36px;
     line-height: 1.4em;
     text-transform: none;
@@ -18652,7 +18652,7 @@ body:not(.tweak-product-quick-view-lightbox-show-close-button) .sqs-product-quic
 }
 
 .tweak-image-desc-font {
-    font-family: georgia, serif;
+    font-family: adobe-garamond-pro;
     font-size: 12px;
     font-weight: normal;
     font-style: normal;
@@ -18664,7 +18664,7 @@ body:not(.tweak-product-quick-view-lightbox-show-close-button) .sqs-product-quic
 
 body {
     color: #222;
-    font-family: Georgia, serif;
+    font-family: adobe-garamond-pro;
     font-weight: normal;
     font-size: 18px;
     letter-spacing: 0px;
@@ -19198,7 +19198,7 @@ body,
 #productList .product .product-price,
 .no-touch .product-list-titles-overlay #productList .product .product-price,
 #productDetails .product-price {
-    font-family: Georgia, serif;
+    font-family: adobe-garamond-pro;
     font-weight: normal;
     font-size: 18px;
     letter-spacing: 0px;
@@ -19355,7 +19355,7 @@ blockquote {
     padding: 0 2em;
     border: none;
     color: #333;
-    font-family: Georgia, serif;
+    font-family: adobe-garamond-pro;
     font-weight: normal;
     font-style: italic;
     font-size: 24px;
@@ -19583,7 +19583,7 @@ blockquote {
     white-space: nowrap;
     line-height: 1;
     margin-bottom: 0;
-    font-family: Georgia, serif;
+    font-family: adobe-garamond-pro;
     font-size: 18px;
     font-style: italic;
     font-weight: normal;
@@ -21934,7 +21934,7 @@ body:not(.tweak-display-social-icons) .header-social-icons-with-nav {
 .site-tagline--overlay {
     display: none;
     color: #eee;
-    font-family: Georgia, serif;
+    font-family: adobe-garamond-pro;
     font-size: 18px;
     font-style: italic;
     font-weight: normal;
@@ -22409,14 +22409,14 @@ body:not(.tweak-index-slideshow-on).tweak-index-inactive-on-load .nav-hovered .i
 
 .collection-nav-desc-wrapper .collection-desc p {
     color: #e1483d;
-    font-family: Georgia, serif;
+    font-family: adobe-garamond-pro;
     font-size: 36px;
     font-weight: normal;
     font-style: italic;
     letter-spacing: 0px;
     line-height: 1.2em;
     /*i commented this out reproduce the problem on local server*/
-    /*font-family: adobe-garamond-pro;*/
+    font-family: adobe-garamond-pro;
     font-size: 120px;
     font-weight: 600;
     font-style: normal;
@@ -23328,7 +23328,7 @@ body:not(.tweak-index-slideshow-on).tweak-index-inactive-on-load .collection-ima
 
 .collection-type-gallery .image-title-desc .image-desc p {
     color: #bbb;
-    font-family: georgia, serif;
+    font-family: adobe-garamond-pro;
     font-size: 12px;
     font-weight: normal;
     letter-spacing: 0px;
@@ -23665,7 +23665,7 @@ body:not(.tweak-index-slideshow-on).tweak-index-inactive-on-load .collection-ima
     text-align: center;
     margin: 0 auto 1.8em;
     width: 51%;
-    font-family: Georgia, serif;
+    font-family: adobe-garamond-pro;
     font-size: 36px;
     line-height: 1.4em;
     letter-spacing: 0px;
