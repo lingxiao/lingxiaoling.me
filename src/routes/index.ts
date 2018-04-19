@@ -36,7 +36,6 @@ index.get('/curriculum-vitae', (req, res, next) => {
 		2. navigate back do not load page when navigate to dead link
 		3. do not deploy on gcloud
 */
-
 index.get('/', (req, res, next) => { 
 	res.render('site/index', {});
 });

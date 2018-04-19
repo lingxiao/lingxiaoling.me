@@ -1,4 +1,4 @@
-# lingxiaoling.me source code #
+# lingxiaoling.me feature requests and bug 
 
 The following set of instructions allow you to set a node.js minimal app
 with typescript
@@ -33,8 +33,6 @@ basic types: https://www.typescriptlang.org/docs/handbook/basic-types.html
 ## Plan ##
 
 1. fix home page on mobile: it's possible that a different template is loaded on mobile by squarespace,
-   but if that's the case. or maybe something is not loaded on remote server
-2. may have to dramatically simplify the templates to see what's going on.
-3. also may have to consider a ground up rewrite of everything, now that you know how the thing works roughly.
+   but if that's the case 
 
 
