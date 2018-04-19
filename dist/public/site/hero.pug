@@ -4,22 +4,34 @@ html
 
         title Xiao Ling
         
-        link(rel='stylesheet', type='text/css', href='../assets/css/lingxiaoling.css')
-        //- link(rel='stylesheet', type='text/css', href='../assets/css/squarespace.css')
+        //- link(rel='stylesheet', type='text/css', href='../assets/css/lingxiaoling-navigation.css')
+        link(rel='stylesheet', type='text/css', href='../assets/css/squarespace.css')
+        link(rel='stylesheet', type='text/css', href='../assets/css/lingxiaoling-content.css')
 
     body 
+            //- now consider the header
+            <nav class="main-navigation--overlay">
+                <div class="nav-item external">
+                    <a href="/curriculum-vitae" target="_blank">
+                        <span>CV</span>
+                    </a>
+                </div>
+            </nav>
+                        
 
-            //- #mainContent.main-content(role='main')
+            //- main body
             <div class = 'main-content'>
-                <div class = 'hero-title'>
-                    p
-                        a Art 
-                        |  &#124;
-                        a   Blog
-                        |  |
-                        a   Code
-                        |  |
-                        a   ___
+                <div class = 'main-content-inner-wrapper'>
+                    <div class = 'hero-title' style="color: #e1483d">
+                        p
+                            a Art 
+                            |  &#124;
+                            a   Blog
+                            |  |
+                            a   Code
+                            |  |
+                            a   ___
+                    </div>
                 </div>
             </div>
 

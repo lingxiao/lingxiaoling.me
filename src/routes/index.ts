@@ -28,17 +28,6 @@ index.get('/curriculum-vitae', (req, res, next) => {
 });
 
 
-/**
-	trial
-*/
-index.get('/mobile', (req, res, next) => { 
-	res.render('site/mobile', {});
-});
-
-index.get('/hero', (req, res, next) => { 
-	res.render('site/hero', {});
-});
-
 
 /**
 	lingxiaoling.me

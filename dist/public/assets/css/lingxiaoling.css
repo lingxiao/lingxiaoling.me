@@ -1,7 +1,13 @@
 /*
-    CSS for my website
+    CSS for my website lingxiaoling
 */
 
+
+
+/**
+    Hero Navigation Menu
+
+*/
 .hero-title p {
     color: #e1483d;
     font-family: adobe-garamond-pro;
@@ -19,12 +25,22 @@
     text-decoration: none
 }
 
+/**
+    Navigation
+*/
+
+
+/*
+    Main Content
+*/
+
 
 .main-content {
     position: relative;
     background-color: #fff;
     z-index: 100;
     padding: 9vw;
+    /*padding: 15vw;*/
 
     /*try this */
     border: 3px red solid;
@@ -43,16 +59,27 @@
 .has-index-nav .main-content {
     margin-bottom: 101vh
 }
-/*
+
 .main-content-inner-wrapper {
     position: relative;
     height: 100%;
     overflow: hidden
 }
-*/
+
+
 .collection-type-index .main-content {
     position: relative;
     box-sizing: border-box;
     padding: 0;
     max-width: 100%
+}
+
+
+body:not(.collection-type-gallery):not(.collection-type-index) .main-content-inner-wrapper {
+    position: relative;
+    z-index: 15;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 6vw 1.5vw
 }
