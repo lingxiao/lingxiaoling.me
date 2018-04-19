@@ -23,7 +23,7 @@ basic types: https://www.typescriptlang.org/docs/handbook/basic-types.html
 2. Navigate back do not load page when navigate to dead link
 3. Deploy on google cloud platform but:
 	1. home page is wonkey
-		1. on browser: the font is off.
+[FIXED]		1. on browser: the font is off.           
 		problem is font is not delivered:
 
 			 * The Typekit service used to deliver this font or fonts for use on websites
@@ -31,8 +31,9 @@ basic types: https://www.typescriptlang.org/docs/handbook/basic-types.html
 			 * http://www.adobe.com/products/eulas/tou_typekit. For font license
 			 * information, see the list below.
 			 		
-		2. on mobile: the home page nav menu disappears. it's not centered. it disappears because of animation 
-	2. blog page completely unreadable on mobile: 
+[FIXED]	2. on mobile: the home page nav menu disappears. it's not centered. it disappears because of animation 
+
+[TODO]	2. blog page completely unreadable on mobile: 
 		1. too much space to the left and right: find way to flood the whole page on mobile. the whole thing is fatter 	
 			- the problem is that its' very hard to diagnose this
 		2. font is too big. space between fonts is too big: find way to 

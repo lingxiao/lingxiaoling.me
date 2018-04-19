@@ -2,14 +2,28 @@ extend parent.pug
 
 block content
 
-	include includes/menu.pug
+    include includes/menu.pug
 
-	.main-content-inner-wrapper(data-content-field="main-content")
-		.index-gallery-wrapper(data-controller='IndexSetup, IndexPositioning, IndexNavOverflow, IndexGallery')
-			.collection-nav-desc-wrapper
-
-				//- problem: right now this disappears because of the way images cycle ... 
-				+menu('/art', '/blog', '/code', '/about-me', 'https://github.com/lingxiao/lingxiaoling.me')
-				//- nav.index-navigation.collection-nav(role='navigation')
+    .main-content-inner-wrapper(data-content-field="main-content").index-gallery-wrapper(data-controller="IndexSetup, IndexPositioning, IndexNavOverflow, IndexNavScroll")
+        .collection-nav-desc-wrapper
+            +menu('/art', '/blog', '/code', '/about-me', 'https://github.com/lingxiao/lingxiaoling.me')
 
 
+    //- .main-content-inner-wrapper(data-content-field="main-content")
+    //-     .index-gallery-wrapper(data-controller='IndexSetup, IndexPositioning, IndexNavOverflow, IndexGallery')
+    //-         .collection-nav-desc-wrapper
+
+    //-             //- problem: right now this disappears because of the way images cycle ... 
+    //-             +menu('/art', '/blog', '/code', '/about-me', 'https://github.com/lingxiao/lingxiaoling.me')
+    //-             //- nav.index-navigation.collection-nav(role='navigation')
+
+
+
+
+
+        //- .index-gallery-wrapper.index-item-navigation(data-controller="IndexSetup, IndexPositioning, IndexNavOverflow, IndexNavScroll")
+        //- .collection-images.index-nav-images
+        //-     .overlay.blended-overlay.index-overlay
+        //-         .collection-nav-desc-wrapper
+        //-             +menu('/art', '/blog', '/code', '/about-me', 'https://github.com/lingxiao/lingxiaoling.me')
+        //-             nav.index-navigation.collection-nav(role="navigation")

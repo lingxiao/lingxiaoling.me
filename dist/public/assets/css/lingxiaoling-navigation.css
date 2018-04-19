@@ -1,0 +1,497 @@
+/*
+    CSS for my website lingxiaoling
+*/
+
+.main-navigation .nav-item,
+.main-navigation--overlay .nav-item {
+    cursor: pointer;
+    line-height: 1;
+    white-space: nowrap;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-family: Lato;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 13px;
+    letter-spacing: .1em;
+    text-transform: uppercase
+}
+
+@media screen and (min-width:1920px) and (max-width:1920px) {
+    .main-navigation .nav-item,
+    .main-navigation--overlay .nav-item {
+        font-size: .6770833333333334vw
+    }
+}
+
+@media screen and (max-width:1920px) {
+    .main-navigation .nav-item,
+    .main-navigation--overlay .nav-item {
+        font-size: 13px
+    }
+}
+
+@media screen and (min-width:1920px) {
+    .main-navigation .nav-item,
+    .main-navigation--overlay .nav-item {
+        font-size: 13px
+    }
+}
+
+.main-navigation a,
+.main-navigation--overlay a,
+.main-navigation .folder,
+.main-navigation--overlay .folder {
+    color: #333;
+    -webkit-transition: color 140ms ease-in-out;
+    -moz-transition: color 140ms ease-in-out;
+    -ms-transition: color 140ms ease-in-out;
+    -o-transition: color 140ms ease-in-out;
+    transition: color 140ms ease-in-out;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-family: Lato;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 13px;
+    letter-spacing: .1em;
+    text-transform: uppercase
+}
+
+@media screen and (min-width:1920px) and (max-width:1920px) {
+    .main-navigation a,
+    .main-navigation--overlay a,
+    .main-navigation .folder,
+    .main-navigation--overlay .folder {
+        font-size: .6770833333333334vw
+    }
+}
+
+@media screen and (max-width:1920px) {
+    .main-navigation a,
+    .main-navigation--overlay a,
+    .main-navigation .folder,
+    .main-navigation--overlay .folder {
+        font-size: 13px
+    }
+}
+
+@media screen and (min-width:1920px) {
+    .main-navigation a,
+    .main-navigation--overlay a,
+    .main-navigation .folder,
+    .main-navigation--overlay .folder {
+        font-size: 13px
+    }
+}
+
+.main-navigation a:hover,
+.main-navigation--overlay a:hover {
+    color: #333
+}
+
+.main-navigation .active>a,
+.main-navigation--overlay .active>a {
+    color: #333
+}
+
+.main-navigation .folder,
+.main-navigation--overlay .folder {
+    position: relative
+}
+
+.main-navigation--overlay .nav-item {
+    width: 100vw;
+    box-sizing: border-box
+}
+
+.tweak-nav-position-right.tweak-mobile-nav-alignment-with-icon .main-navigation--overlay .folder,
+.tweak-nav-position-right.tweak-mobile-nav-alignment-with-icon .main-navigation--overlay .folder .subnav {
+    text-align: right
+}
+
+.main-navigation--overlay .folder .subnav {
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-transition: max-height 0ms 0ms ease, padding 0ms 0ms ease;
+    -moz-transition: max-height 0ms 0ms ease, padding 0ms 0ms ease;
+    -ms-transition: max-height 0ms 0ms ease, padding 0ms 0ms ease;
+    -o-transition: max-height 0ms 0ms ease, padding 0ms 0ms ease;
+    transition: max-height 0ms 0ms ease, padding 0ms 0ms ease
+}
+
+.main-navigation--overlay .folder .subnav div {
+    padding: 0 0 .8vw
+}
+
+@media screen and (max-width:1024px) {
+    .main-navigation--overlay .folder .subnav div {
+        padding: 0 0 1.6vw
+    }
+}
+
+@media screen and (max-width:640px) {
+    .main-navigation--overlay .folder .subnav div {
+        padding: 0 0 2.4000000000000004vw
+    }
+}
+
+.main-navigation--overlay .folder.folder-open .subnav {
+    padding-top: .8vw;
+    max-height: 100vh;
+    -webkit-transition: max-height 0ms 0ms ease, padding 0ms 0ms ease;
+    -moz-transition: max-height 0ms 0ms ease, padding 0ms 0ms ease;
+    -ms-transition: max-height 0ms 0ms ease, padding 0ms 0ms ease;
+    -o-transition: max-height 0ms 0ms ease, padding 0ms 0ms ease;
+    transition: max-height 0ms 0ms ease, padding 0ms 0ms ease
+}
+
+@media screen and (max-width:1024px) {
+    .main-navigation--overlay .folder.folder-open .subnav {
+        padding-top: 1.6vw
+    }
+}
+
+@media screen and (max-width:640px) {
+    .main-navigation--overlay .folder.folder-open .subnav {
+        padding-top: 2.4000000000000004vw
+    }
+}
+
+
+
+.tweak-nav-link-style-underline-on-hover .main-navigation--overlay .nav-item span:not(.sqs-cart-quantity),
+.tweak-nav-link-style-underline-on-hover .main-navigation--overlay .folder a {
+    border-bottom: solid 1px rgba(34, 34, 34, 0);
+    -webkit-transition: border-color 200ms ease-in-out;
+    -moz-transition: border-color 200ms ease-in-out;
+    -ms-transition: border-color 200ms ease-in-out;
+    -o-transition: border-color 200ms ease-in-out;
+    transition: border-color 200ms ease-in-out
+}
+
+.tweak-nav-link-style-underline-on-hover .main-navigation--overlay .nav-item span:not(.sqs-cart-quantity):hover,
+.tweak-nav-link-style-underline-on-hover .main-navigation--overlay .active>a span:not(.sqs-cart-quantity),
+.tweak-nav-link-style-underline-on-hover .main-navigation--overlay .folder a:hover,
+.tweak-nav-link-style-underline-on-hover .main-navigation--overlay .folder.active>a,
+.tweak-nav-link-style-underline-on-hover .main-navigation--overlay .folder.active div.active a {
+    border-bottom-color: #222
+}
+
+
+@media screen and (min-width:2363px) and (max-width:1920px) {
+    .main-navigation--overlay .nav-item {
+        font-size: .6770833333333334vw
+    }
+}
+
+@media screen and (max-width:2363px) {
+    .main-navigation--overlay .nav-item {
+        font-size: 16px
+    }
+}
+
+@media screen and (min-width:1920px) {
+    .main-navigation--overlay .nav-item {
+        font-size: 13px
+    }
+}
+
+.main-navigation--overlay a,
+.main-navigation--overlay .folder {
+    color: #222
+}
+
+@media screen and (min-width:2363px) and (max-width:1920px) {
+    .main-navigation--overlay a,
+    .main-navigation--overlay .folder {
+        font-size: .6770833333333334vw
+    }
+}
+
+@media screen and (max-width:2363px) {
+    .main-navigation--overlay a,
+    .main-navigation--overlay .folder {
+        font-size: 16px
+    }
+}
+
+@media screen and (min-width:1920px) {
+    .main-navigation--overlay a,
+    .main-navigation--overlay .folder {
+        font-size: 13px
+    }
+}
+
+.main-navigation--overlay .active>a,
+.main-navigation--overlay a:hover,
+.main-navigation--overlay .folder:hover {
+    color: #222
+}
+.nav-open .main-navigation .nav-item,
+.nav-open .main-navigation--overlay .nav-item,
+.nav-open .main-navigation--overlay .folder-open .subnav div {
+    opacity: 1
+}
+
+.nav-open .main-navigation .nav-item:nth-child(2),
+.nav-open .main-navigation--overlay .nav-item:nth-child(2),
+.nav-open .main-navigation--overlay .folder-open .subnav div:nth-child(2) {
+    transition-delay: 170ms
+}
+
+.nav-open .main-navigation .nav-item:nth-child(3),
+.nav-open .main-navigation--overlay .nav-item:nth-child(3),
+.nav-open .main-navigation--overlay .folder-open .subnav div:nth-child(3) {
+    transition-delay: 220ms
+}
+
+.nav-open .main-navigation .nav-item:nth-child(4),
+.nav-open .main-navigation--overlay .nav-item:nth-child(4),
+.nav-open .main-navigation--overlay .folder-open .subnav div:nth-child(4) {
+    transition-delay: 270ms
+}
+
+.nav-open .main-navigation .nav-item:nth-child(5),
+.nav-open .main-navigation--overlay .nav-item:nth-child(5),
+.nav-open .main-navigation--overlay .folder-open .subnav div:nth-child(5) {
+    transition-delay: 320ms
+}
+
+.nav-open .main-navigation .nav-item:nth-child(6),
+.nav-open .main-navigation--overlay .nav-item:nth-child(6),
+.nav-open .main-navigation--overlay .folder-open .subnav div:nth-child(6) {
+    transition-delay: 370ms
+}
+
+.nav-open .main-navigation .nav-item:nth-child(7),
+.nav-open .main-navigation--overlay .nav-item:nth-child(7),
+.nav-open .main-navigation--overlay .folder-open .subnav div:nth-child(7) {
+    transition-delay: 420ms
+}
+
+.nav-open .main-navigation .nav-item:nth-child(8),
+.nav-open .main-navigation--overlay .nav-item:nth-child(8),
+.nav-open .main-navigation--overlay .folder-open .subnav div:nth-child(8) {
+    transition-delay: 470ms
+}
+
+.nav-open .main-navigation .nav-item:nth-child(9),
+.nav-open .main-navigation--overlay .nav-item:nth-child(9),
+.nav-open .main-navigation--overlay .folder-open .subnav div:nth-child(9) {
+    transition-delay: 520ms
+}
+
+.nav-open .main-navigation .nav-item:nth-child(10),
+.nav-open .main-navigation--overlay .nav-item:nth-child(10),
+.nav-open .main-navigation--overlay .folder-open .subnav div:nth-child(10) {
+    transition-delay: 570ms
+}
+
+.nav-open .main-navigation .nav-item:nth-child(11),
+.nav-open .main-navigation--overlay .nav-item:nth-child(11),
+.nav-open .main-navigation--overlay .folder-open .subnav div:nth-child(11) {
+    transition-delay: 620ms
+}
+
+.nav-open .main-navigation .nav-item:nth-child(12),
+.nav-open .main-navigation--overlay .nav-item:nth-child(12),
+.nav-open .main-navigation--overlay .folder-open .subnav div:nth-child(12) {
+    transition-delay: 670ms
+}
+
+.nav-open .main-navigation .nav-item:nth-child(13),
+.nav-open .main-navigation--overlay .nav-item:nth-child(13),
+.nav-open .main-navigation--overlay .folder-open .subnav div:nth-child(13) {
+    transition-delay: 720ms
+}
+
+.nav-open .main-navigation .nav-item:nth-child(14),
+.nav-open .main-navigation--overlay .nav-item:nth-child(14),
+.nav-open .main-navigation--overlay .folder-open .subnav div:nth-child(14) {
+    transition-delay: 770ms
+}
+
+.nav-open .main-navigation .nav-item:nth-child(15),
+.nav-open .main-navigation--overlay .nav-item:nth-child(15),
+.nav-open .main-navigation--overlay .folder-open .subnav div:nth-child(15) {
+    transition-delay: 820ms
+}
+
+.nav-open .main-navigation .nav-item:nth-child(n+16),
+.nav-open .main-navigation--overlay .nav-item:nth-child(n+16),
+.nav-open .main-navigation--overlay .folder-open .subnav div:nth-child(n+16) {
+    transition-delay: 870ms
+}
+
+.tweak-nav-style-icon .main-navigation .nav-item,
+.main-navigation--overlay .nav-item,
+.main-navigation--overlay .subnav div {
+    opacity: 0;
+    -webkit-transition: opacity 400ms 120ms ease-in-out;
+    -moz-transition: opacity 400ms 120ms ease-in-out;
+    -ms-transition: opacity 400ms 120ms ease-in-out;
+    -o-transition: opacity 400ms 120ms ease-in-out;
+    transition: opacity 400ms 120ms ease-in-out
+}
+
+.tweak-nav-position-right.nav-open:not(.mobile-style-nav) .main-navigation .nav-item,
+.tweak-nav-position-right.nav-open:not(.mobile-style-nav) .main-navigation--overlay .nav-item {
+    opacity: 1
+}
+
+.tweak-nav-position-right.nav-open:not(.mobile-style-nav) .main-navigation .nav-item:nth-last-child(1),
+.tweak-nav-position-right.nav-open:not(.mobile-style-nav) .main-navigation--overlay .nav-item:nth-last-child(1) {
+    transition-delay: 120ms
+}
+
+.tweak-nav-position-right.nav-open:not(.mobile-style-nav) .main-navigation .nav-item:nth-last-child(2),
+.tweak-nav-position-right.nav-open:not(.mobile-style-nav) .main-navigation--overlay .nav-item:nth-last-child(2) {
+    transition-delay: 170ms
+}
+
+.tweak-nav-position-right.nav-open:not(.mobile-style-nav) .main-navigation .nav-item:nth-last-child(3),
+.tweak-nav-position-right.nav-open:not(.mobile-style-nav) .main-navigation--overlay .nav-item:nth-last-child(3) {
+    transition-delay: 220ms
+}
+
+.tweak-nav-position-right.nav-open:not(.mobile-style-nav) .main-navigation .nav-item:nth-last-child(4),
+.tweak-nav-position-right.nav-open:not(.mobile-style-nav) .main-navigation--overlay .nav-item:nth-last-child(4) {
+    transition-delay: 270ms
+}
+
+.tweak-nav-position-right.nav-open:not(.mobile-style-nav) .main-navigation .nav-item:nth-last-child(5),
+.tweak-nav-position-right.nav-open:not(.mobile-style-nav) .main-navigation--overlay .nav-item:nth-last-child(5) {
+    transition-delay: 320ms
+}
+
+.tweak-nav-position-right.nav-open:not(.mobile-style-nav) .main-navigation .nav-item:nth-last-child(6),
+.tweak-nav-position-right.nav-open:not(.mobile-style-nav) .main-navigation--overlay .nav-item:nth-last-child(6) {
+    transition-delay: 370ms
+}
+
+.tweak-nav-position-right.nav-open:not(.mobile-style-nav) .main-navigation .nav-item:nth-last-child(7),
+.tweak-nav-position-right.nav-open:not(.mobile-style-nav) .main-navigation--overlay .nav-item:nth-last-child(7) {
+    transition-delay: 420ms
+}
+
+.tweak-nav-position-right.nav-open:not(.mobile-style-nav) .main-navigation .nav-item:nth-last-child(8),
+.tweak-nav-position-right.nav-open:not(.mobile-style-nav) .main-navigation--overlay .nav-item:nth-last-child(8) {
+    transition-delay: 470ms
+}
+
+.tweak-nav-position-right.nav-open:not(.mobile-style-nav) .main-navigation .nav-item:nth-last-child(9),
+.tweak-nav-position-right.nav-open:not(.mobile-style-nav) .main-navigation--overlay .nav-item:nth-last-child(9) {
+    transition-delay: 520ms
+}
+
+.tweak-nav-position-right.nav-open:not(.mobile-style-nav) .main-navigation .nav-item:nth-last-child(10),
+.tweak-nav-position-right.nav-open:not(.mobile-style-nav) .main-navigation--overlay .nav-item:nth-last-child(10) {
+    transition-delay: 570ms
+}
+
+.tweak-nav-position-right.nav-open:not(.mobile-style-nav) .main-navigation .nav-item:nth-last-child(11),
+.tweak-nav-position-right.nav-open:not(.mobile-style-nav) .main-navigation--overlay .nav-item:nth-last-child(11) {
+    transition-delay: 620ms
+}
+
+.tweak-nav-position-right.nav-open:not(.mobile-style-nav) .main-navigation .nav-item:nth-last-child(12),
+.tweak-nav-position-right.nav-open:not(.mobile-style-nav) .main-navigation--overlay .nav-item:nth-last-child(12) {
+    transition-delay: 670ms
+}
+
+.tweak-nav-position-right.nav-open:not(.mobile-style-nav) .main-navigation .nav-item:nth-last-child(13),
+.tweak-nav-position-right.nav-open:not(.mobile-style-nav) .main-navigation--overlay .nav-item:nth-last-child(13) {
+    transition-delay: 720ms
+}
+
+.tweak-nav-position-right.nav-open:not(.mobile-style-nav) .main-navigation .nav-item:nth-last-child(14),
+.tweak-nav-position-right.nav-open:not(.mobile-style-nav) .main-navigation--overlay .nav-item:nth-last-child(14) {
+    transition-delay: 770ms
+}
+
+.tweak-nav-position-right.nav-open:not(.mobile-style-nav) .main-navigation .nav-item:nth-last-child(15),
+.tweak-nav-position-right.nav-open:not(.mobile-style-nav) .main-navigation--overlay .nav-item:nth-last-child(15) {
+    transition-delay: 820ms
+}
+
+.tweak-nav-position-right.nav-open:not(.mobile-style-nav) .main-navigation .nav-item:nth-last-child(n+16),
+.tweak-nav-position-right.nav-open:not(.mobile-style-nav) .main-navigation--overlay .nav-item:nth-last-child(n+16) {
+    transition-delay: 870ms
+}
+
+.mobile-style-nav .main-navigation--overlay {
+    margin: 0 auto 0 0;
+    min-height: -webkit-min-content;
+    min-height: min-content;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-flex-flow: column nowrap;
+    -moz-flex-flow: column nowrap;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    -webkit-justify-content: flex-start;
+    -moz-justify-content: flex-start;
+    -ms-justify-content: flex-start;
+    justify-content: flex-start;
+    -ms-flex-align: flex-start;
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    -ms-align-items: flex-start;
+    align-items: flex-start
+}
+
+.mobile-style-nav .main-navigation--overlay .nav-item {
+    padding: 1vw 0;
+    box-sizing: border-box;
+    -webkit-flex: 0 0 auto;
+    -moz-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto
+}
+
+.mobile-style-nav .main-navigation--overlay .nav-item:last-child {
+    padding-bottom: 0
+}
+
+.mobile-style-nav .main-navigation--overlay .nav-item:first-child {
+    padding-top: 0
+}
+
+@media screen and (max-width:1024px) {
+    .mobile-style-nav .main-navigation--overlay .nav-item {
+        padding: 2vw 0
+    }
+}
+
+@media screen and (max-width:640px) {
+    .mobile-style-nav .main-navigation--overlay .nav-item {
+        padding: 3vw 0
+    }
+}
+
+.mobile-style-nav .main-navigation--overlay .nav-item span {
+    white-space: normal
+}
+
+.mobile-style-nav.tweak-mobile-nav-alignment-center .main-navigation--overlay .nav-item {
+    text-align: center
+}
+
+.mobile-style-nav.tweak-mobile-nav-alignment-center .main-navigation--overlay,
+.mobile-style-nav.tweak-nav-position-right.tweak-mobile-nav-alignment-center .main-navigation--overlay {
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    margin: 0
+}

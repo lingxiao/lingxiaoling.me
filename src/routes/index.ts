@@ -28,7 +28,6 @@ index.get('/curriculum-vitae', (req, res, next) => {
 });
 
 
-
 /**
 	lingxiaoling.me
 */
