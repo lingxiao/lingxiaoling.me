@@ -29,12 +29,19 @@ index.get('/curriculum-vitae', (req, res, next) => {
 
 
 /**
-	lingxiaoling.me
+	trial
+*/
+index.get('/mobile', (req, res, next) => { 
+	res.render('site/mobile', {});
+});
 
-	BUG LIST:
-		1. Images only load on refresh
-		2. navigate back do not load page when navigate to dead link
-		3. do not deploy on gcloud
+index.get('/hero', (req, res, next) => { 
+	res.render('site/hero', {});
+});
+
+
+/**
+	lingxiaoling.me
 */
 index.get('/', (req, res, next) => { 
 	res.render('site/index', {});

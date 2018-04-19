@@ -10,6 +10,12 @@ index.get('/curriculum-vitae', (req, res, next) => {
         res.send(data);
     });
 });
+index.get('/mobile', (req, res, next) => {
+    res.render('site/mobile', {});
+});
+index.get('/hero', (req, res, next) => {
+    res.render('site/hero', {});
+});
 index.get('/', (req, res, next) => {
     res.render('site/index', {});
 });
