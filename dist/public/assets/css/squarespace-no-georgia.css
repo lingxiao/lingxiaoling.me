@@ -4915,7 +4915,7 @@ body.sqs-lightbox-open {
         commenting this one out because it messes up
         when deployed on google cloud platform
     */
-    /*font-family: adobe-garamond-pro;*/
+    font-family: adobe-garamond-pro;
     font-weight: 600;
     font-style: normal;
     font-size: 43px;

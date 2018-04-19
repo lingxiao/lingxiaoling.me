@@ -42,6 +42,12 @@ basic types: https://www.typescriptlang.org/docs/handbook/basic-types.html
 
 1. accidentally recreated the bug locally by changing stuff in .css and .js files. but now list it
 
+<!-- right now when you change adobe-... to georia, sans, you reproduce the error locally -->
+
+
+
+
+
 
 
 
