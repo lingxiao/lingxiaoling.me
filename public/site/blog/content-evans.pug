@@ -1,24 +1,38 @@
+include ../includes/content/title.pug
+
 // / headerWrapper
 #pageWrapper.hfeed(role='main')
   section#page(data-content-field='main-content')
-    article#article-5ab1b4300e2e72081e59396c.hentry.category-social.author-benedict-evans.post-type-text(data-item-id='5ab1b4300e2e72081e59396c')
+    article#article-5ab1b4300e2e72081e59396c.hentry.category-social.author-benedict-evans.post-type-text(data-item-id='')
       .content-wrapper
         // SPECIAL CONTENT
         .post
           // POST HEADER
-          header
-            h1.entry-title(data-content-field='title', itemprop='headline')
-              a(href='/benedictevans/2018/4/2/the-death-of-the-newsfeed') The death of the newsfeed
-            .article-meta-top
-              .location
-              span.date
-                a(href='/benedictevans/2018/4/2/the-death-of-the-newsfeed')
-                  time.published(datetime='2018-04-02', itemprop='datePublished') April 02, 2018
-              span.author
-                a(href='/?author=50363cf324ac8e905e7df863', rel='author') by Benedict Evans
-              span.categories
-                | in 
-                a(href='/?category=Social', rel='tag') Social
+          //- header
+          //-   h1.entry-title(data-content-field='title', itemprop='headline')
+          //-     a(href='/benedictevans/2018/4/2/the-death-of-the-newsfeed') The death of the newsfeed
+          //-   .article-meta-top
+          //-     .location
+          //-     span.date
+          //-       a(href='/benedictevans/2018/4/2/the-death-of-the-newsfeed')
+          //-         time.published(datetime='2018-04-02', itemprop='datePublished') April 02, 2018
+          //-     span.author
+          //-       a(href='/?author=50363cf324ac8e905e7df863', rel='author') by Benedict Evans
+          //-     span.categories
+          //-       | in 
+          //-       a(href='/?category=Social', rel='tag') Social
+          
+          +title("Deep Reinforcement Learning with Hierarchical"
+                , "Recurrent Encoder-Decoder for Conversation"
+                )
+
+          //- need to figure out how to make this center
+          //- <div style='text-align: center'>
+          span.date(style='text-align: center')
+            a(href='')
+              time.published(datetime='2018-04-02', itemprop='datePublished') April 02, 2018
+          //- </div>
+
           // POST BODY
           .body.entry-content
             #item-5ab1b4300e2e72081e59396c.sqs-layout.sqs-grid-12.columns-12(data-layout-label='Post Body', data-type='item', data-updated-on='1521595449661')
@@ -91,7 +105,6 @@
                         | A pessimist might say this looks like slash & burn agriculture, or perhaps the old joke ‘No-one goes there anymore - it’s too crowded.’ That is, for social, Metcalfe’s Law might look more like a bell curve. I don’t know what the next product here will be (I didn’t create Snap, after all). But tech like this tends to move in cycles - we swing from one kind of expression to another and back again, and we might be swinging away from the feed.
                       p
                         | Finally, any such changes have consequences for the traffic that sharing creates. 'Like' buttons made it frictionless to post any web page you want into your feed and push it to (some arbitrarily calculated percentage of) your friends, and many hands have been wrung about how much traffic this can drive and how Facebook moves things up and down the feed ranking. But sharing links inside Stories isn't the same, today, and a link you share in a WhatsApp or iMessage group with 5 friends will only be seen by them, and Facebook has no lever to pull to make this more or less visible. On the other hand,  the 'WhatsApp forward' can take such a link and send it viral across a country, and where Facebook can ultimately kill a link or an entire source across the whole site if it really wants to, it's very different for a P2P messaging app to make that call (outside China, of course). That is, the plea from many media companies to 'up-rank' their posts in the newsfeed - to make people eat their greens - and to kill 'fake news' links is at least theoretically possible on Facebook. It's not possible in iMessage - with end-to-end encryption, Apple has no idea what you’re sharing.
-          // POST FOOTER
         // /post
       // /content-wrapper
     // COMMENTS
