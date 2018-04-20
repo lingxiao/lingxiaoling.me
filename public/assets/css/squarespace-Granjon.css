@@ -5777,7 +5777,7 @@ body:not(.event-show-past-events) .eventlist.eventlist--past {
 
 /* xiao commented this out because when images are loaded, they're not shown */
 /*.eventlist-column-thumbnail img:not(.loaded) {*/
-    /*opacity: 0*/
+    /*opacity: 1*/
 /*}*/
 
 body:not(.event-thumbnails) .eventlist-column-thumbnail {
@@ -20820,7 +20820,7 @@ body:not(.collection-type-gallery).tweak-show-page-title-overlay-not-in-index:no
     /** 
         xiao's modifications
     */
-    background-color: white;
+    background:rgba(255,255,255,0.95);    
     padding: 2vw 0;
     margin: 0vw 0vw;
     opacity: 1;
@@ -22378,7 +22378,10 @@ body:not(.tweak-index-slideshow-on).tweak-index-inactive-on-load .nav-hovered .i
     position: absolute;
     top: 50%;
     left: 4vw;
-    opacity: 0;
+    /**
+        changed the opacity to 1 so that it always shows
+    */
+    opacity: 1;
     -webkit-transform: translate3d(0, -50%, 0);
     -moz-transform: translate3d(0, -50%, 0);
     -ms-transform: translate3d(0, -50%, 0);
@@ -22427,7 +22430,6 @@ body:not(.tweak-index-slideshow-on).tweak-index-inactive-on-load .nav-hovered .i
     font-style: italic;
     letter-spacing: 0px;
     line-height: 1.2em;
-    /*i commented this out reproduce the problem on local server*/
     font-family: Granjon;
     font-size: 120px;
     font-weight: 600;

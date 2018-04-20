@@ -20,11 +20,13 @@ basic types: https://www.typescriptlang.org/docs/handbook/basic-types.html
 
 ## Bug list ##
 
+0. when navigate back to home page, links do not work unless refresh home page first , but this only happens sometimes
+
 1. Images only load on refresh
 
-2. Navigate back do not load page when navigate to dead link
+2. [FIXED] Navigate to home page do not load when clicking from any child pages, prob has something to do w/ the default scroll features
 
-3. home page is wonkey
+3. [FIXED] home page is wonkey
 [FIXED]		1. on browser: the font is off.           
 		problem is font is not delivered:
 

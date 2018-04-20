@@ -5,7 +5,9 @@ block content
     include includes/menu.pug
 
     .main-content-inner-wrapper(data-content-field="main-content").index-gallery-wrapper(data-controller="IndexSetup, IndexPositioning, IndexNavOverflow, IndexNavScroll")
-        .collection-nav-desc-wrapper
+        .collection-nav-desc-wrapper.show
             +menu('/art', '/blog', '/code', '/about-me', 'https://github.com/lingxiao/lingxiaoling.me')
+
+
 
 
