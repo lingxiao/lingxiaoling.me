@@ -38,7 +38,7 @@ basic types: https://www.typescriptlang.org/docs/handbook/basic-types.html
 [FIXED]	2. blog page completely unreadable on mobile: 
 		1. too much space to the left and right: find way to flood the whole page on mobile. the whole thing is fatter 	
 			- the problem is that its' very hard to diagnose this
-[NOT FIXED] 2. font is too big. space between fonts is too big: find way to 
+[FIXED] 2. font is too big. space between fonts is too big: find way to 
 
 
 ## Plan ##

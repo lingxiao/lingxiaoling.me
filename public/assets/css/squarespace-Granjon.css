@@ -25228,7 +25228,6 @@ body:not(.collection-type-index):not(.collection-type-gallery).tweak-show-page-b
 
 /* 
     squish the lines on mobile
- 
     TODO: make the font skinner;  what's currently listed is not working for some reason
 */
 @media screen and (max-width:432px){
@@ -25237,7 +25236,6 @@ body:not(.collection-type-index):not(.collection-type-gallery).tweak-show-page-b
         font-weight: lighter;
     }    
 }
-
 
 
 
