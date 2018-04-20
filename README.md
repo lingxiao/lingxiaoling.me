@@ -35,10 +35,10 @@ basic types: https://www.typescriptlang.org/docs/handbook/basic-types.html
 [FIXED]	2. on mobile: the home page nav menu disappears. it's not centered. it disappears because of animation 
 
 <!-- the plan here is to completly rip out the existing blog template and replace it w/ ben-evans, because we know it looks ok on mobile -->
-[TODO]	2. blog page completely unreadable on mobile: 
+[FIXED]	2. blog page completely unreadable on mobile: 
 		1. too much space to the left and right: find way to flood the whole page on mobile. the whole thing is fatter 	
 			- the problem is that its' very hard to diagnose this
-		2. font is too big. space between fonts is too big: find way to 
+[NOT FIXED] 2. font is too big. space between fonts is too big: find way to 
 
 
 ## Plan ##

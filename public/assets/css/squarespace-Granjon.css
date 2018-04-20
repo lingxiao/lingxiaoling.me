@@ -19708,7 +19708,8 @@ body.nav-open.mobile-style-nav {
     position: relative;
     background-color: #fff;
     z-index: 100;
-    padding: 9vw
+    /*padding: 9vw*/
+    padding: 4vw;
 }
 
 @media screen and (max-width:1024px) {
@@ -25209,6 +25210,30 @@ body:not(.collection-type-index):not(.collection-type-gallery).tweak-show-page-b
     letter-spacing: .01em;
     text-transform: none
 }
+
+
+/**
+    Xiao's additions
+*/
+
+/*
+    reduce margin around text when one mobile phone
+*/
+@media screen and (max-width:432px) {
+    .main-content {
+        padding: 1vw;
+    }
+}
+
+
+@media screen and (max-width:432px){
+    .sqs-block-content{
+        line-height: 1.5;
+    }
+}
+
+
+
 
 
 /*! Squarespace LESS Compiler  (less.js language v1.3.3)  
