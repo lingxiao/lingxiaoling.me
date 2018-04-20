@@ -13,6 +13,9 @@ index.get('/curriculum-vitae', (req, res, next) => {
 index.get('/evans', (req, res, next) => {
     res.render('site/blog/evans', {});
 });
+index.get('/shibori', (req, res, next) => {
+    res.render('site/shibori', {});
+});
 index.get('/', (req, res, next) => {
     res.render('site/index', {});
 });

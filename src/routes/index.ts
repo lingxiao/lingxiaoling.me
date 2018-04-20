@@ -32,6 +32,11 @@ index.get('/evans', (req, res, next) => {
 	res.render('site/blog/evans', {});
 });
 
+index.get('/shibori', (req, res, next) => { 
+	res.render('site/shibori', {});
+});
+
+
 
 /**
 	lingxiaoling.me
