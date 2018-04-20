@@ -25213,7 +25213,7 @@ body:not(.collection-type-index):not(.collection-type-gallery).tweak-show-page-b
 
 
 /**
-    Xiao's additions
+    Xiao's additions regarding mobile behavior
 */
 
 /*
@@ -25226,6 +25226,9 @@ body:not(.collection-type-index):not(.collection-type-gallery).tweak-show-page-b
 }
 
 
+/* 
+    squish the lines on mobile
+*/
 @media screen and (max-width:432px){
     .sqs-block-content{
         line-height: 1.5;
