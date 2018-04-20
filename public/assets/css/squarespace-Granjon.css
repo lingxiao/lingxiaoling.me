@@ -25228,13 +25228,21 @@ body:not(.collection-type-index):not(.collection-type-gallery).tweak-show-page-b
 
 /* 
     squish the lines on mobile
+
+    TODO: make the font skinner;
 */
 @media screen and (max-width:432px){
     .sqs-block-content{
         line-height: 1.5;
-    }
+        font-weight: lighter;
+    }    
 }
 
+@media screen and (max-width:432px){
+    .event-date{
+        line-height: 0.2;
+    }
+}
 
 
 
