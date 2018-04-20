@@ -23,16 +23,15 @@ include ../includes/content/title.pug
           //-       | in 
           //-       a(href='/?category=Social', rel='tag') Social
           
-          +title("Deep Reinforcement Learning with Hierarchical"
+          +title( 'April 02, 2018'
+                , "Deep Reinforcement Learning with Hierarchical"
                 , "Recurrent Encoder-Decoder for Conversation"
                 )
 
-          //- need to figure out how to make this center
-          //- <div style='text-align: center'>
-          span.date(style='text-align: center')
-            a(href='')
-              time.published(datetime='2018-04-02', itemprop='datePublished') April 02, 2018
-          //- </div>
+          <div align='center' class='date-time-xiao'>
+            | likes
+          </div>
+
 
           // POST BODY
           .body.entry-content

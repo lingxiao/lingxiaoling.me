@@ -25226,6 +25226,16 @@ body:not(.collection-type-index):not(.collection-type-gallery).tweak-show-page-b
 
 
 /**
+    Xiao's classes
+*/
+.date-time-xiao{
+    font-family: Arial, Helvetica; 
+    font-weight: normal; 
+    font-style: normal; 
+    color:#A9A9A9;
+    padding: 1vw 0 0 2vw;
+}
+/**
     Xiao's additions regarding mobile behavior
 */
 

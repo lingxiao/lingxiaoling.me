@@ -18,6 +18,17 @@ basic types: https://www.typescriptlang.org/docs/handbook/basic-types.html
 3. Native upvote integration          []
 4. fail whale page                    []
 
+## TODOs #
+
+1. center date on blog content    [DONE]
+2. implement like and share
+4. refactor blog content so that it can be autmoatically generated.
+5. figure out how to insert images into it with caption
+6. write python script that take .md file and create blog file
+
+
+
+
 ## Bug list ##
 
 0. when navigate back to home page, links do not work unless refresh home page first , but this only happens sometimes
