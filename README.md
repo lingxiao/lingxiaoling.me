@@ -43,18 +43,6 @@ basic types: https://www.typescriptlang.org/docs/handbook/basic-types.html
 
 ## Plan ##
 
-1. fix home page on mobile: it's possible that a different template is loaded on mobile by squarespace,
-   but if that's the case. or maybe something is not loaded on remote server
-2. may have to dramatically simplify the templates to see what's going on.
-3. also may have to consider a ground up rewrite of everything, now that you know how the thing works roughly.
-
-
-## where you left off ##
-
-1. accidentally recreated the bug locally by changing stuff in .css and .js files. but now list it
-
-<!-- right now when you change adobe-... to georia, sans, you reproduce the error locally -->
-
 
 
 
