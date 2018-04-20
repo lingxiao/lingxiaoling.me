@@ -4,10 +4,11 @@ nav.main-navigation--overlay
 			span CV
 header#siteHeader.site-header
 	.site-branding(data-content-field='site-title')
-		h1.site-title
+		h1.site-title(style='padding: 0 4vw')
 			a(href='/')
 				span.site-title Xiao Ling
 
+	//- div disappear on scroll
 	a#navToggle.nav-toggle.flex-item
 		div
 			svg.Icon.Icon--hamburger.nav-toggle-label-icon(viewbox='0 0 24 18')
@@ -23,8 +24,10 @@ header#siteHeader.site-header
 				g.svg-icon
 					line(fill='none', stroke-miterlimit='10', stroke-linecap='butt', x1='0', y1='0', x2='18', y2='18')
 					line(fill='none', stroke-miterlimit='10', stroke-linecap='butt', x1='18', y1='0', x2='0', y2='18')
+
+	//- 
 	.nav-social-wrapper(data-content-field='navigation', data-annotation-alignment='bottom')
 		nav#mainNavigation.main-navigation.has-items
-			.nav-item.external
+			.nav-item.external(style='padding: 0 4vw')
 				a(href='/curriculum-vitae', target='_blank')
 					span CV

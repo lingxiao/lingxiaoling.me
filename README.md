@@ -13,9 +13,10 @@ basic types: https://www.typescriptlang.org/docs/handbook/basic-types.html
 
 ## Feature requests ##
 
-1. Twitter and Facebook integration
-2. Native upvote integration
-3. fail whale page
+1. make header non transparent        [DONE]
+2. Twitter and Facebook integration   []
+3. Native upvote integration          []
+4. fail whale page                    []
 
 ## Bug list ##
 

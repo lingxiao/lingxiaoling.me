@@ -20817,14 +20817,25 @@ body:not(.collection-type-gallery).tweak-show-page-title-overlay-not-in-index:no
 }
 
 .site-header {
+    /** 
+        xiao's modifications
+    */
+    background-color: white;
+    padding: 2vw 0;
+    margin: 0vw 0vw;
+    opacity: 1;
+
+    /**
+        original
+    */
     z-index: 1100;
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
-    margin: 0 4vw;
-    padding: 4vw 0;
-    opacity: 0;
+    /*margin: 0 4vw;*/
+    /*padding: 4vw 0;*/
+    /*opacity: 0;*/
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
