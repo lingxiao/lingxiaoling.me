@@ -23,14 +23,49 @@ include ../includes/content/title.pug
           //-       | in 
           //-       a(href='/?category=Social', rel='tag') Social
           
-          +title( 'April 02, 2018'
+          +title( "May 1st, 2017"
                 , "Deep Reinforcement Learning with Hierarchical"
                 , "Recurrent Encoder-Decoder for Conversation"
                 )
 
+          //- now I need to make the icon re-appear again
           <div align='center' class='date-time-xiao'>
-            | likes
+            <i class="icon-bookmark"> Likes </i>
+            <i class="icon-bookmark"> Social </i>
           </div>
+
+          //- this works but text not immediately adjacent to logo
+          //- <div align='center' class='date-time-xiao'>
+          //-   <div align='center' class="clearfix float-my-children">
+          //-     <img src="../../assets/images/chilli-1.png" width=20 height=20>
+          //-     <div>Likes</div>
+          //-   </div>          
+          //-   //- <div class='logo'>
+          //-     <img src='../../assets/images/chilli-1.png' alt='../../assets/images/chilli-1.png', style='position: static; float:left; width: 100%; object-fit: cover; float: left'> likes
+          //-   //- </div>
+          //- </div>
+
+          //- <div class="categories"><i class="icon-bookmark"></i><a href="/?category=Social" rel="tag">Social</a></div>
+
+          //- this does not work at all
+          //- <footer class="article-meta">
+
+              //- <span class="date"><a href="/benedictevans/2018/4/2/the-death-of-the-newsfeed"><i class="icon-calendar"></i><time class="published" datetime="2018-04-02" itemprop="datePublished">April 02, 2018</time></a></span>
+              //- <span class="author">
+                <span class="delimiter">/</span><a href="/?author=50363cf324ac8e905e7df863" rel="author"><i class="icon-user"></i>Benedict Evans</a></span>
+
+
+
+              //- <div class="shareLoveButtons">
+                  <span class="sqs-simple-like" data-item-id="5ab1b4300e2e72081e59396c" data-like-count="194">
+                    <span class="like-icon"></span> 
+                    <span class="like-count"></span> 
+                  </span>
+              //- </div>
+
+
+
+          //- </footer>
 
 
           // POST BODY

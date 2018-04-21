@@ -25235,6 +25235,41 @@ body:not(.collection-type-index):not(.collection-type-gallery).tweak-show-page-b
     color:#A9A9A9;
     padding: 1vw 0 0 2vw;
 }
+
+.logo {
+    display: block;
+    width : 20px;
+    height: 20px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+/* tell the container's children to float left: */
+.float-my-children > * {
+    float:left;
+    margin-right:5px;
+}
+
+/* this is called a clearfix. it makes sure that the container's children floats are cleared, without using extra markup */
+
+.clearfix {
+    *zoom:1 /* for IE */
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* this is called a clearfix. it makes sure that the container's children floats are cleared, without using extra markup */
+
+
 /**
     Xiao's additions regarding mobile behavior
 */
