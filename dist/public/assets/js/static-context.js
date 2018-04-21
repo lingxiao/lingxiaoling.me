@@ -1,6 +1,8 @@
-Static=window.Static || {}
+Static=window.Static || {};
 
-;
+console.log("/*************** static-context-full.js loading ************************/")
+
+
 Static.SQUARESPACE_CONTEXT= {
     "facebookAppId":"314192535267336",
     "rollups": {
@@ -249,3 +251,5 @@ Static.SQUARESPACE_CONTEXT= {
     ,
     "useNewImageLoader":true
 };
+
+console.log("/*************** static-context-full.js loaded ************************/")

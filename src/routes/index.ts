@@ -11,6 +11,9 @@ import * as fs from 'fs';
 
 const index: Router = Router();
 
+
+
+
 /**
 	serve CV
 	this one doens'tn work w/o hardcoded paths
@@ -28,6 +31,16 @@ index.get('/curriculum-vitae', (req, res, next) => {
 });
 
 
+index.get('/art', (req, res, next) => { 
+	res.sendFile('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/art.html')
+});
+
+
+index.get('/about-me', (req, res, next) => { 
+	res.sendFile('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/about-me.html')
+});
+
+
 index.get('/evans', (req, res, next) => { 
 	res.render('site/blog/evans', {});
 });
@@ -42,7 +55,7 @@ index.get('/shibori', (req, res, next) => {
 	lingxiaoling.me
 */
 index.get('/', (req, res, next) => { 
-	res.render('site/index', {});
+	res.render('site/', {});
 });
 
 index.get('/art', (req, res, next) => { 

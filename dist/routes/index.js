@@ -10,6 +10,12 @@ index.get('/curriculum-vitae', (req, res, next) => {
         res.send(data);
     });
 });
+index.get('/art', (req, res, next) => {
+    res.sendFile('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/art.html');
+});
+index.get('/about-me', (req, res, next) => {
+    res.sendFile('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/about-me.html');
+});
 index.get('/evans', (req, res, next) => {
     res.render('site/blog/evans', {});
 });
@@ -17,7 +23,7 @@ index.get('/shibori', (req, res, next) => {
     res.render('site/shibori', {});
 });
 index.get('/', (req, res, next) => {
-    res.render('site/index', {});
+    res.render('site/', {});
 });
 index.get('/art', (req, res, next) => {
     res.render('site/index-art', {});

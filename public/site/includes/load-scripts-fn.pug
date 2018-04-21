@@ -1,0 +1,19 @@
+mixin load-scripts-fn()
+
+	//- script(type='text/javascript', src='../assets/js/static-context-full.js')
+
+	//- script(type="text/javascript").
+	//- 	SquarespaceFonts.loadViaContext(); Squarespace.load(window);
+	//- script(type="application/ld+json").
+	//- 	{"url":"","name":"Xiao Ling","description":"<p>Personal website. Machine Learning. Computer Vision. Natural language 
+	//- 	processing. Figure Drawing.</p>","@context":"http://schema.org","@type":"WebSite"}
+
+	//- script.
+	//- 	(function(){var touchTest="ontouchstart"in window||navigator.msMaxTouchPoints;if(!touchTest){with(document.documentElement){className=className.replace(new RegExp("touch-styles"),"")}}})()
+
+
+	//- make sure this fires on console otherwise this file is never loaded
+	script.
+		(function(){ console.log("load-scripts-fn.mixin executed ...")})()
+
+

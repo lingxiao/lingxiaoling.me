@@ -59,9 +59,9 @@ window.Typekit.config = {
     "ht": "tk",
     "js": "1.19.2",
 
-    /* getting error here stating my domain is not in list of published domains */
-    "kt": "646866_59bfff0151a5849dcf7b03ce",  
-    // "kt": "",
+    /* HACK: commenting out the ID because it throws error when deployed */
+    // "kt": "646866_59bfff0151a5849dcf7b03ce",  
+    "kt": "",
     "l": "typekit",
     "ps": 2,
     "ping": "https://p.typekit.net/p.gif{?s,k,ht,h,f,a,js,app,e,_}",

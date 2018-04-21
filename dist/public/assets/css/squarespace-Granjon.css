@@ -5764,7 +5764,10 @@ body:not(.event-show-past-events) .eventlist.eventlist--past {
     height: 0;
     padding-bottom: 23.333333333333332%;
     text-decoration: none !important;
-    background: rgba(110, 110, 110, .05)
+    background: rgba(110, 110, 110, .05);
+    /*background: red;*/
+    /* I added this so that the child image does not overflow parent boundaries */
+    overflow: hidden;
 }
 
 .eventlist-column-thumbnail img {
@@ -25251,6 +25254,11 @@ body:not(.collection-type-index):not(.collection-type-gallery).tweak-show-page-b
     margin-right:5px;
 }
 
+.icon-bookmark {
+    background-image: 'http://www.pngmart.com/files/1/Dark-Red-Heart-Transparent-Background.png';    
+}
+
+
 /* this is called a clearfix. it makes sure that the container's children floats are cleared, without using extra markup */
 
 .clearfix {
@@ -25267,7 +25275,15 @@ body:not(.collection-type-index):not(.collection-type-gallery).tweak-show-page-b
     clear: both;
 }
 
-/* this is called a clearfix. it makes sure that the container's children floats are cleared, without using extra markup */
+
+.fill {
+  object-fit: fill;
+  width: 100%
+}
+
+
+
+/* end of this is called a clearfix. */
 
 
 /**

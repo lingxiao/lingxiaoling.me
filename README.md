@@ -20,6 +20,8 @@ basic types: https://www.typescriptlang.org/docs/handbook/basic-types.html
 
 ## TODOs #
 
+0. right now if you reload static context on each navigation, then all your problem will be solved
+
 1. center date on blog content    [DONE]
 2. implement like and share
 4. refactor blog content so that it can be autmoatically generated.
@@ -29,11 +31,17 @@ basic types: https://www.typescriptlang.org/docs/handbook/basic-types.html
 
 
 
+
+
 ## Bug list ##
 
-0. when navigate back to home page, links do not work unless refresh home page first , but this only happens sometimes
+note: 0, 1, and 2 are connect by the fact that scripts don't run when navigate to page
 
-1. Images only load on refresh
+0.  when navigate back to home page, links do not work unless refresh home page first , but this only happens sometimes
+[web: FIXED HACK, changed line 637 of site-bundle.js to f = true]
+[mobile: STILL BROKEN]
+
+1. Images only load on refresh, [Reason: static-context.js do not reload on navigation]
 
 2. [FIXED] Navigate to home page do not load when clicking from any child pages, prob has something to do w/ the default scroll features
 

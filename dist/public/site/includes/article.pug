@@ -1,31 +1,38 @@
 mixin article(title, month, date, year, img_src, link, abstract)
 
-	//- article class
-	article.eventlist-event.eventlist-event--upcoming.eventlist-event--hasimg.eventlist-hasimg.eventlist-event--multiday
-		a.eventlist-column-thumbnail.content-fill(href=`${link}`)
+    //- article class
+    article.eventlist-event.eventlist-event--upcoming.eventlist-event--hasimg.eventlist-hasimg.eventlist-event--multiday
+        a.eventlist-column-thumbnail.content-fill(href=`${link}`)
 
-			//- wrote my own div so that image loads on page load instead of on refresh
-			//- TODO: this one does not fill in height wise
-			//- img(src=`${img_src}`, alt=`${img_src}`, style='position: static; float:left; width: 100%; object-fit: cover')
+            //- wrote my own div so that image loads on page load instead of on refresh
+            //- TODO: this one does not fill in height wise
+            //- This is your best bet right now, just make sure the image resizes properly inside the div
+            //- img(src=`${img_src}`, alt=`${img_src}`
+                , style='position: static; float:left; object-fit: cover; width: 100%;'
+                )
+            //- <h2>object-fit: fill</h2>
+            //- <img src="../../assets/images/neural-net-2.png" alt="MDN Logo" class="fill"/>
 
-			//- original one does not load unless page refresh
-			img.eventlist-thumbnail(data-src=`${img_src}`, data-image=`${img_src}`, data-image-dimensions='', data-image-focal-point='0.5,0.5')
+            //- original one does not load unless page refresh because static-context.js is not reloading properly
+            img.eventlist-thumbnail(data-src=`${img_src}`, data-image=`${img_src}`, data-image-dimensions='', data-image-focal-point='0.5,0.5')
 
-			//- load date
-			a.eventlist-column-date(href=`${link}`)
-				.eventlist-datetag
-					.eventlist-datetag-inner
-						.eventlist-datetag-startdate.eventlist-datetag-startdate--month #{month}
-						.eventlist-datetag-startdate.eventlist-datetag-startdate--day #{date}
-						.eventlist-datetag-enddate #{year}
+            //- load date
+            a.eventlist-column-date(href=`${link}`)
+                .eventlist-datetag
+                    .eventlist-datetag-inner
+                        .eventlist-datetag-startdate.eventlist-datetag-startdate--month #{month}
+                        .eventlist-datetag-startdate.eventlist-datetag-startdate--day #{date}
+                        .eventlist-datetag-enddate #{year}
 
-		//- load title and abstract
-		.eventlist-column-info
-			h1.eventlist-title
-				a.eventlist-title-link(href=`${link}`) #{title}
+        //- load title and abstract
+        .eventlist-column-info
+            h1.eventlist-title
+                a.eventlist-title-link(href=`${link}`) #{title}
 
-				#block-yui_3_17_2_1_1521598810432_30584.sqs-block.html-block.sqs-block-html(data-block-type='2')
-					.sqs-block-content(style='font-family: Arial, Helvetica; font-weight: normal; font-style: normal; font-size: 14.6667px; color:#A9A9A9')
-						| #{abstract}
+                #block-yui_3_17_2_1_1521598810432_30584.sqs-block.html-block.sqs-block-html(data-block-type='2')
+                    .sqs-block-content(style='font-family: Arial, Helvetica; font-weight: normal; font-style: normal; font-size: 14.6667px; color:#A9A9A9')
+                        | #{abstract}
 
-	.clear
+    .clear
+
+

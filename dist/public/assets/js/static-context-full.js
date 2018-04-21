@@ -1,117 +1,113 @@
 Static=window.Static || {};
 
-console.log("/*************** static-context-full.js loading ************************/")
-
-
 Static.SQUARESPACE_CONTEXT= {
     "facebookAppId":"314192535267336",
     "rollups": {
         "squarespace-announcement-bar": {
-            "css": "", "js": ""
+            "css": "//static.squarespace.com/universal/styles-compressed/announcement-bar-d41d8cd98f00b204e9800998ecf8427e-min.css", "js": "//static.squarespace.com/universal/scripts-compressed/announcement-bar-dbe2f33d23548e4914dd-min.en-US.js"
         }
         ,
         "squarespace-audio-player": {
-            "css": "", "js": ""
+            "css": "//static.squarespace.com/universal/styles-compressed/audio-player-6c42d60d26f4e09ab1ac335b4bc55b7e-min.css", "js": "//static.squarespace.com/universal/scripts-compressed/audio-player-b53d859df4037235cc90-min.en-US.js"
         }
         ,
         "squarespace-blog-collection-list": {
-            "css": "", "js": ""
+            "css": "//static.squarespace.com/universal/styles-compressed/blog-collection-list-d41d8cd98f00b204e9800998ecf8427e-min.css", "js": "//static.squarespace.com/universal/scripts-compressed/blog-collection-list-128b7908236d1ba1eddb-min.en-US.js"
         }
         ,
         "squarespace-calendar-block-renderer": {
-            "css": "", "js": ""
+            "css": "//static.squarespace.com/universal/styles-compressed/calendar-block-renderer-56713b1663346e1fe5b31a3adb8f31fc-min.css", "js": "//static.squarespace.com/universal/scripts-compressed/calendar-block-renderer-9b521922c1db049e4e72-min.en-US.js"
         }
         ,
         "squarespace-chartjs-helpers": {
-            "css": "", "js": ""
+            "css": "//static.squarespace.com/universal/styles-compressed/chartjs-helpers-9935a41d63cf08ca108505d288c1712e-min.css", "js": "//static.squarespace.com/universal/scripts-compressed/chartjs-helpers-1d7de220a222f75ac660-min.en-US.js"
         }
         ,
         "squarespace-comments": {
-            "css": "", "js": ""
+            "css": "//static.squarespace.com/universal/styles-compressed/comments-c32adaffffa61675d5f238e2ea399b2b-min.css", "js": "//static.squarespace.com/universal/scripts-compressed/comments-ca376c0e75aefbb975f5-min.en-US.js"
         }
         ,
         "squarespace-commerce-cart": {
-        	"js": ""
+            "js": "//static.squarespace.com/universal/scripts-compressed/commerce-cart-1b1ac0af9e6661c083e2-min.en-US.js"
         }
         ,
         "squarespace-dialog": {
-            "css": "", "js": ""
+            "css": "//static.squarespace.com/universal/styles-compressed/dialog-49c6926d5074d007fdadb13ac55d6028-min.css", "js": "//static.squarespace.com/universal/scripts-compressed/dialog-b077a6152f7c5ca752ca-min.en-US.js"
         }
         ,
         "squarespace-events-collection": {
-            "css": "//static.squarespace.com/universal/styles-compressed/events-collection-56713b1663346e1fe5b31a3adb8f31fc-min.css", "js": "//static.squarespace.com/universal/scripts-compressed/events-collection-ff1638541e92c10f0cdc-min.en-US.js"
+            "css": "//static.squarespace.com/universal/styles-compressed/events-collection-56713b1663346e1fe5b31a3adb8f31fc-min.css", "js": "//static.squarespace.com/universal/scripts-compressed/events-collection-6a289d337ba09381a59a-min.en-US.js"
         }
         ,
         "squarespace-form-rendering-utils": {
-        	"js": ""
+            "js": "//static.squarespace.com/universal/scripts-compressed/form-rendering-utils-8e2d1f2237e8d2a8611d-min.en-US.js"
         }
         ,
         "squarespace-forms": {
-            "css": "", "js": ""
+            "css": "//static.squarespace.com/universal/styles-compressed/forms-4af1b5b3c288ba939ea861fe2d37119a-min.css", "js": "//static.squarespace.com/universal/scripts-compressed/forms-ad12d3c483187082d6c4-min.en-US.js"
         }
         ,
         "squarespace-gallery-collection-list": {
-            "css": "", "js": ""
+            "css": "//static.squarespace.com/universal/styles-compressed/gallery-collection-list-d41d8cd98f00b204e9800998ecf8427e-min.css", "js": "//static.squarespace.com/universal/scripts-compressed/gallery-collection-list-616d3f6d871d566e522d-min.en-US.js"
         }
         ,
         "squarespace-image-zoom": {
-            "css": "", "js": ""
+            "css": "//static.squarespace.com/universal/styles-compressed/image-zoom-ae974921915aeccaff8ad60c60e19c31-min.css", "js": "//static.squarespace.com/universal/scripts-compressed/image-zoom-40efe5d9e1c73cf71b2f-min.en-US.js"
         }
         ,
         "squarespace-pinterest": {
-            "css": "", "js": ""
+            "css": "//static.squarespace.com/universal/styles-compressed/pinterest-d41d8cd98f00b204e9800998ecf8427e-min.css", "js": "//static.squarespace.com/universal/scripts-compressed/pinterest-fe63e3985c83d788134e-min.en-US.js"
         }
         ,
         "squarespace-popup-overlay": {
-            "css": "", "js": ""
+            "css": "//static.squarespace.com/universal/styles-compressed/popup-overlay-6b891e5f689f032ce65af5855c067b4f-min.css", "js": "//static.squarespace.com/universal/scripts-compressed/popup-overlay-e7d613d211303a5b4d8e-min.en-US.js"
         }
         ,
         "squarespace-product-quick-view": {
-            "css": "", "js": ""
+            "css": "//static.squarespace.com/universal/styles-compressed/product-quick-view-9abaaa4dfff182aa8d4ccf3b6ffdbe8d-min.css", "js": "//static.squarespace.com/universal/scripts-compressed/product-quick-view-2c0b3106f94d236ea19c-min.en-US.js"
         }
         ,
         "squarespace-products-collection-item-v2": {
-            "css": "", "js": ""        	
+            "css": "//static.squarespace.com/universal/styles-compressed/products-collection-item-v2-ae974921915aeccaff8ad60c60e19c31-min.css", "js": "//static.squarespace.com/universal/scripts-compressed/products-collection-item-v2-bcc3f5398cf133cfd893-min.en-US.js"
         }
         ,
         "squarespace-products-collection-list-v2": {
-            "css": "", "js": ""        	
+            "css": "//static.squarespace.com/universal/styles-compressed/products-collection-list-v2-ae974921915aeccaff8ad60c60e19c31-min.css", "js": "//static.squarespace.com/universal/scripts-compressed/products-collection-list-v2-891f2aa5753e70ab423b-min.en-US.js"
         }
         ,
         "squarespace-search-page": {
-            "css": "", "js": ""        	
+            "css": "//static.squarespace.com/universal/styles-compressed/search-page-9c747eeaabe96dacfea4932a63336f54-min.css", "js": "//static.squarespace.com/universal/scripts-compressed/search-page-18a53a96d294b05f84f3-min.en-US.js"
         }
         ,
         "squarespace-search-preview": {
-        	"js": ""
+            "js": "//static.squarespace.com/universal/scripts-compressed/search-preview-8c7dfc9b82cab4b750c0-min.en-US.js"
         }
         ,
         "squarespace-share-buttons": {
-        	"js": ""
+            "js": "//static.squarespace.com/universal/scripts-compressed/share-buttons-25f6a721d20ba0446db6-min.en-US.js"
         }
         ,
         "squarespace-simple-liking": {
-            "css": "", "js": ""        	
+            "css": "//static.squarespace.com/universal/styles-compressed/simple-liking-09fa291ec2800c97714f0d157fd0a6ca-min.css", "js": "//static.squarespace.com/universal/scripts-compressed/simple-liking-f29bc69e2a2f0868d336-min.en-US.js"
         }
         ,
         "squarespace-social-buttons": {
-            "css": "", "js": ""     
+            "css": "//static.squarespace.com/universal/styles-compressed/social-buttons-7a696232d1cd101fd62b5f174f9ae6ff-min.css", "js": "//static.squarespace.com/universal/scripts-compressed/social-buttons-e13f21f244a6160f7469-min.en-US.js"
         }
         ,
         "squarespace-tourdates": {
-            "css": "", "js": ""    
+            "css": "//static.squarespace.com/universal/styles-compressed/tourdates-d41d8cd98f00b204e9800998ecf8427e-min.css", "js": "//static.squarespace.com/universal/scripts-compressed/tourdates-1a1821f354b53d35ddc3-min.en-US.js"
         }
         ,
         "squarespace-website-overlays-manager": {
-            "css": "", "js": ""    
+            "css": "//static.squarespace.com/universal/styles-compressed/website-overlays-manager-923311a5ffb05ecb734ddfc7d9be08bc-min.css", "js": "//static.squarespace.com/universal/scripts-compressed/website-overlays-manager-5403c1b4735b0c1f8170-min.en-US.js"
         }
     }
     ,
     "pageType":1,
-
     "website": {
         "id":"59bfff0151a5849dcf7b03ce",
-        "identifier":"",
+        "identifier":"xiao-ling-wtaw",
         "websiteType":1,
         "contentModifiedOn":1518656524167,
         "cloneable":false,
@@ -126,13 +122,14 @@ Static.SQUARESPACE_CONTEXT= {
         "siteDescription":"<p>Personal website. Machine Learning. Computer Vision. Natural language processing. Figure Drawing.</p>",
         "socialLogoImageId":"59c164c9b078699a73cff3d5",
         "shareButtonOptions": {
-            "8": true, "2": true, "5": true, "6": true, "7": true, "3": true, "4": true, "1": true
+            "4": true, "6": true, "8": true, "1": true, "3": true, "5": true, "7": true, "2": true
         }
         ,
-        "socialLogoImageUrl":"/assets/images/hi.jpg",
-        "authenticUrl":"/",
-        "baseUrl":"/",
-        "primaryDomain":"",
+        "socialLogoImageUrl":"//static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/59c164c9b078699a73cff3d5/1518656524167/",
+        "authenticUrl":"https://lingxiaoling.me",
+        "internalUrl":"https://xiao-ling-wtaw.squarespace.com",
+        "baseUrl":"https://lingxiaoling.me",
+        "primaryDomain":"lingxiaoling.me",
         "sslSetting":3,
         "isHstsEnabled":false,
         "typekitId":"",
@@ -142,8 +139,8 @@ Static.SQUARESPACE_CONTEXT= {
     }
     ,
     "websiteSettings": {
-        "id":"",
-        "websiteId":"",
+        "id":"59bfff0151a5849dcf7b03d1",
+        "websiteId":"59bfff0151a5849dcf7b03ce",
         "subjects":[],
         "country":"US",
         "state":"PA",
@@ -191,7 +188,7 @@ Static.SQUARESPACE_CONTEXT= {
     ,
     "websiteCloneable":false,
     "collection": {
-        "title": "Work", "id": "", "fullUrl": "/", "type": 1
+        "title": "Work", "id": "59c081a9d7bdce2c3ebab429", "fullUrl": "/", "type": 1
     }
     ,
     "subscribed":false,
@@ -207,35 +204,35 @@ Static.SQUARESPACE_CONTEXT= {
     4],
     "impersonatedSession":false,
     "demoCollections":[ {
-        "collectionId": "", "deleted": true
+        "collectionId": "57acdb54d2b857e385b27b72", "deleted": true
     }
     ,
     {
-        "collectionId": "", "deleted": true
+        "collectionId": "57aced14f7e0abc4e9d7cf1c", "deleted": true
     }
     ,
     {
-        "collectionId": "", "deleted": true
+        "collectionId": "57acf94f725e251f76b9d003", "deleted": true
     }
     ,
     {
-        "collectionId": "", "deleted": true
+        "collectionId": "57ae1156e3df28c4ce90ea48", "deleted": true
     }
     ,
     {
-        "collectionId": "", "deleted": true
+        "collectionId": "57ae1164c534a5bee9b19cae", "deleted": true
     }
     ,
     {
-        "collectionId": "", "deleted": true
+        "collectionId": "57ae119237c58135e955e032", "deleted": true
     }
     ,
     {
-        "collectionId": "", "deleted": true
+        "collectionId": "57ae11ceff7c50648d8d919c", "deleted": true
     }
     ,
     {
-        "collectionId": "", "deleted": true
+        "collectionId": "57ae1a57e58c62414bd19b52", "deleted": true
     }
     ],
     "isFacebookTab":false,
