@@ -22399,7 +22399,10 @@ body:not(.tweak-index-slideshow-on).tweak-index-inactive-on-load .nav-hovered .i
 
 
 .collection-nav-desc-wrapper.show {
-    opacity: 1
+    opacity: 1;
+
+    /* xiao added this to move the home page nav up a little*/
+    /*top: -10vw;*/
 }
 
 .collection-nav-desc-wrapper.too-tall {

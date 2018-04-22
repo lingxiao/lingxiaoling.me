@@ -4,8 +4,15 @@ block content
 
     include includes/menu.pug
 
-    .main-content-inner-wrapper(data-content-field="main-content").index-gallery-wrapper(data-controller="IndexSetup, IndexPositioning, IndexNavOverflow, IndexNavScroll", style='background-color:#A3D5F2; margin: 0; height:100%; overflow: hidden')
-        .collection-nav-desc-wrapper.show
+    script.
+        (function(){ 
+            console.log("index.pug" )}
+        )()
+
+    .main-content-inner-wrapper(data-content-field="main-content").index-gallery-wrapper(data-controller="IndexSetup, IndexPositioning, IndexNavOverflow, IndexNavScroll", style='background-color: blue')
+
+        //- .collection-nav-desc-wrapper.show(style='background-color:#A3D5F2; top: -10vw')
+        .collection-nav-desc-wrapper(style='background-color:#A3D5F2; top: -10vw')
             +menu('/art', '/blog', '/code', '/about-me', 'https://github.com/lingxiao/lingxiaoling.me')
 
 
