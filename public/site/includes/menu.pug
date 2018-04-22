@@ -1,4 +1,6 @@
-mixin menu(art, blog, code, aboutme, src)
+include icon.pug
+
+mixin menu(art, blog, code, src_1, src_2, src_3)
     
     
     //- TODO: remove background color after debugging
@@ -10,10 +12,12 @@ mixin menu(art, blog, code, aboutme, src)
                 a(href=`${blog}`)   Blog
                 |  |
                 a(href=`${code}`)   Code
-                //- |  |
-                //- a(href=`${aboutme}`)   ___
 
         nav.index-navigation.collection-nav(role='navigation')
-            a.art(href=`${src}` target='_blank')
-                span.collection-nav-item-span github
+
+            <div id="quotescointainer" style='width:100%; overflow:hidden; float:center'>
+                +icon(src_1)
+                +icon(src_2)
+                +icon(src_3)
+            </div>
 

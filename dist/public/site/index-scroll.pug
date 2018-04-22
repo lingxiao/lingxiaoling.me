@@ -3,11 +3,18 @@ extend parent-scroll.pug
 block content
 
     include includes/menu.pug
-    include includes/article.pug
+    include includes/icon.pug
 
     .main-content-inner-wrapper(data-content-field="main-content").index-gallery-wrapper(data-controller="IndexSetup, IndexPositioning, IndexNavOverflow, IndexNavScroll")
 
-        +menu('/art', '/blog', '/code', '/about-me', 'https://github.com/lingxiao/lingxiaoling.me')
+        +menu( '/art'
+             , '/blog'
+             , '/code'
+             , '../assets/images/down-1.png'
+             , ''
+             , ''
+             )
+
 
     h1 &nbsp; About Me
     #block-yui_3_17_2_2_1512075837160_19774.sqs-block.image-block.sqs-block-image.sqs-col-4.span-4.float.float-left(data-block-type="5")
