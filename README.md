@@ -36,7 +36,6 @@ basic types: https://www.typescriptlang.org/docs/handbook/basic-types.html
 ## Bug list ##
 
 
-
 0. [FIXED] when navigate back to home page, links do not work unless refresh home page first , but this only happens sometimes
 
 1. [FIXED] Images only load on refresh, [Reason: static-context.js do not reload on navigation]
