@@ -4,15 +4,14 @@ block content
 
     include includes/menu.pug
 
-    script.
+    //- script.
         (function(){ 
             console.log("index.pug" )}
         )()
 
-    .main-content-inner-wrapper(data-content-field="main-content").index-gallery-wrapper(data-controller="IndexSetup, IndexPositioning, IndexNavOverflow, IndexNavScroll", style='background-color: blue')
+    .main-content-inner-wrapper(data-content-field="main-content").index-gallery-wrapper(data-controller="IndexSetup, IndexPositioning, IndexNavOverflow, IndexNavScroll")
 
-        //- .collection-nav-desc-wrapper.show(style='background-color:#A3D5F2; top: -10vw')
-        .collection-nav-desc-wrapper(style='background-color:#A3D5F2; top: -10vw')
+        .collection-nav-desc-wrapper(style='top: -10vw')
             +menu('/art', '/blog', '/code', '/about-me', 'https://github.com/lingxiao/lingxiaoling.me')
 
 
