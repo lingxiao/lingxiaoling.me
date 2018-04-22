@@ -21,13 +21,13 @@ basic types: https://www.typescriptlang.org/docs/handbook/basic-types.html
 ## TODOs #
 
 1. center date on blog content    [DONE]
-2. make about me page on the home page - it also solves the scroll problem
-3. implement like and share
-4. refactor blog content so that it can be autmoatically generated.
-5. figure out how to insert images into it with caption
-6. write python script that take .md file and create blog file
-
-
+2. ABOUT-ME: make about me page on the home page - it also solves the scroll problem
+3. Migrate project pages over
+4. Outline blog on computer vision
+5. implement like and share
+6. refactor blog content so that it can be autmoatically generated.
+7. figure out how to insert images into it with caption
+8. write python script that take .md file and create blog file
 
 
 
