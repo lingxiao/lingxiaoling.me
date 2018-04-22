@@ -35,13 +35,11 @@ basic types: https://www.typescriptlang.org/docs/handbook/basic-types.html
 
 ## Bug list ##
 
-note: 0, 1, and 2 are connect by the fact that scripts don't run when navigate to page
 
-0.  when navigate back to home page, links do not work unless refresh home page first , but this only happens sometimes
-[web: FIXED HACK, changed line 637 of site-bundle.js to f = true]
-[mobile: STILL BROKEN]
 
-1. Images only load on refresh, [Reason: static-context.js do not reload on navigation]
+0. [FIXED] when navigate back to home page, links do not work unless refresh home page first , but this only happens sometimes
+
+1. [FIXED] Images only load on refresh, [Reason: static-context.js do not reload on navigation]
 
 2. [FIXED] Navigate to home page do not load when clicking from any child pages, prob has something to do w/ the default scroll features
 
@@ -61,6 +59,9 @@ note: 0, 1, and 2 are connect by the fact that scripts don't run when navigate t
 		1. too much space to the left and right: find way to flood the whole page on mobile. the whole thing is fatter 	
 			- the problem is that its' very hard to diagnose this
 [FIXED] 2. font is too big. space between fonts is too big: find way to 
+
+
+4. When home page resizes, things don't move around to recenter
 
 
 ## Plan ##
