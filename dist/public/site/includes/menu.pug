@@ -1,4 +1,4 @@
-include icon.pug
+include my_icon.pug
 
 mixin menu(art, blog, code, src_1, src_2, src_3)
     
@@ -14,10 +14,16 @@ mixin menu(art, blog, code, src_1, src_2, src_3)
                 a(href=`${code}`)   Code
 
         nav.index-navigation.collection-nav(role='navigation')
+            <a href="" class="hvr-icon-hang" style='width:3vw'>
+                Icon <i class="fa fa-chevron-down hvr-icon" style='font-size:2vw'>
+                </i>
+            </a>
 
-            <div id="quotescointainer" style='width:100%; overflow:hidden; float:center'>
-                +icon(src_1)
-                +icon(src_2)
-                +icon(src_3)
-            </div>
+            //- <div id="quotescointainer" style='width:100%; overflow:hidden; float:center'>
+                +my_icon(src_1)
+                +my_icon(src_2)
+                +my_icon(src_3)
+                </div>
 
+                Icon <i class="fa fa-arrow-circle-o-down hvr-icon" style='font-size:3vw'>
+//- 
