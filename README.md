@@ -29,6 +29,9 @@ basic types: https://www.typescriptlang.org/docs/handbook/basic-types.html
 7. figure out how to insert images into it with caption
 8. write python script that take .md file and create blog file
 
+1. make image actual height
+2. 
+
 
 
 
