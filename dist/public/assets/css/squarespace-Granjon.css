@@ -22381,6 +22381,9 @@ body:not(.tweak-index-slideshow-on).tweak-index-inactive-on-load .nav-hovered .i
     position: absolute;
     top: 50%;
     left: 4vw;
+    /*top: -10vw;*/
+
+
     /**
         changed the opacity to 1 so that it always shows
     */
@@ -22400,9 +22403,6 @@ body:not(.tweak-index-slideshow-on).tweak-index-inactive-on-load .nav-hovered .i
 
 .collection-nav-desc-wrapper.show {
     opacity: 1;
-
-    /* xiao added this to move the home page nav up a little*/
-    /*top: -10vw;*/
 }
 
 .collection-nav-desc-wrapper.too-tall {
@@ -22781,7 +22781,9 @@ body:not(.tweak-index-slideshow-on).tweak-index-inactive-on-load .nav-hovered .i
 
 .tweak-index-nav-position-bottom-center .collection-nav-desc-wrapper {
     width: 100%;
-    top: auto;
+    /*top: auto;*/
+    /* xiao changed it here so that the bottom menu would show up*/
+    top: -4vw;
     left: 0;
     right: 0;
     bottom: 0;
