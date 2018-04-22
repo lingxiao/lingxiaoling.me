@@ -1,6 +1,6 @@
 include icons/down_arrow.pug
 
-mixin menu(art, blog, code, hero)
+mixin menu(art, blog, code, hero, about_me_link, github_link)
     
     
     //- TODO: remove background color after debugging
@@ -16,11 +16,11 @@ mixin menu(art, blog, code, hero)
         nav.index-navigation.collection-nav(role='navigation')
 
             if hero
-                <a href="#about-me">
+                <a href="#{about_me_link}">
                     <i class="fas fa-flag-xiao fa-chevron-down" style='font-size:2vw'></i> &nbsp;
                 </a>
             else
-                <a href="https://github.com/lingxiao/lingxiaoling.me", target='_blank'>
+                <a href="#{github_link}", target='_blank'>
                     <i class="fab fa-flag-xiao fa-github" style='font-size:2vw'></i>
                 </a>
 
