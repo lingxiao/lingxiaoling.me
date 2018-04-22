@@ -1,33 +1,15 @@
-extend parent-scroll.pug
-
-block content
-
-    include includes/menu.pug
-    include includes/icon.pug
-    include includes/about_me.pug
-
-    .main-content-inner-wrapper(data-content-field="main-content").index-gallery-wrapper(data-controller="IndexSetup, IndexPositioning, IndexNavOverflow, IndexNavScroll")
-
-        +menu( '/art'
-             , '/blog'
-             , '/code'
-             , true
-             )
+mixin about_me(img_src)
 
 
-    <div id = 'about-me'>
-        +about_me('../../assets/images/about-me-1.jpg')
-    </div>
-
-    //- h1 &nbsp; About Me
-    //- #block-yui_3_17_2_2_1512075837160_19774.sqs-block.image-block.sqs-block-image.sqs-col-4.span-4.float.float-left(data-block-type="5")
+    h1 &nbsp; About Me
+    #block-yui_3_17_2_2_1512075837160_19774.sqs-block.image-block.sqs-block-image.sqs-col-4.span-4.float.float-left(data-block-type="5")
         .sqs-block-content
             .image-block-outer-wrapper.layout-caption-below.design-layout-inline
                 <div style='overflow: hidden'>
                     <img src='../assets/images/about-me-1.jpg' style='position: static; float: left; object-fit: cover; width:100%'>
                 </div>
 
-    //- #block-yui_3_17_2_5_1512316064481_80478.sqs-block.html-block.sqs-block-html(data-block-type="2")
+    #block-yui_3_17_2_5_1512316064481_80478.sqs-block.html-block.sqs-block-html(data-block-type="2")
         .sqs-block-content
             p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum hendrerit in arcu non sollicitudin. Donec at velit arcu. Aliquam luctus odio ut vestibulum sodales. Quisque aliquam purus ligula, blandit dictum nisi aliquam sed. Suspendisse facilisis interdum enim eget sollicitudin. Mauris orci velit, tempus pellentesque maximus id, sollicitudin vitae est. Integer mollis justo at velit tincidunt dictum. Integer elementum mauris sapien, eu malesuada tortor luctus a. Vivamus at blandit eros. Aenean vitae quam est. In venenatis mollis erat, non egestas nisi feugiat id. Cras in nibh maximus, viverra sem vitae, lobortis eros.
 
