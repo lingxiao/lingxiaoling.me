@@ -3,10 +3,10 @@ extend parent-scroll.pug
 block content
 
     include includes/menu.pug
+    include includes/article.pug
 
     .main-content-inner-wrapper(data-content-field="main-content").index-gallery-wrapper(data-controller="IndexSetup, IndexPositioning, IndexNavOverflow, IndexNavScroll")
 
         .collection-nav-desc-wrapper(style='background-color:powderblue')
             +menu('/art', '/blog', '/code', '/about-me', 'https://github.com/lingxiao/lingxiaoling.me')
-
 

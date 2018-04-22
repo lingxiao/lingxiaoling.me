@@ -63,8 +63,6 @@ basic types: https://www.typescriptlang.org/docs/handbook/basic-types.html
 4. When home page resizes, things don't move around to recenter - this is because of the div I am using to contain the nav menu
 
 
-5. On safari, the bottom menu fails to show up
-
 6. on iphone safari, the scrolling is not disabled
 
 
