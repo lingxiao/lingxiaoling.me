@@ -20,10 +20,9 @@ basic types: https://www.typescriptlang.org/docs/handbook/basic-types.html
 
 ## TODOs #
 
-0. right now if you reload static context on each navigation, then all your problem will be solved
-
 1. center date on blog content    [DONE]
-2. implement like and share
+2. make about me page on the home page - it also solves the scroll problem
+3. implement like and share
 4. refactor blog content so that it can be autmoatically generated.
 5. figure out how to insert images into it with caption
 6. write python script that take .md file and create blog file
@@ -51,14 +50,15 @@ basic types: https://www.typescriptlang.org/docs/handbook/basic-types.html
 			 * http://www.adobe.com/products/eulas/tou_typekit. For font license
 			 * information, see the list below.
 			 		
-[FIXED]	2. on mobile: the home page nav menu disappears. it's not centered. it disappears because of animation 
+	[FIXED]	2. on mobile: the home page nav menu disappears. it's not centered. it disappears because of animation 
 
-<!-- the plan here is to completly rip out the existing blog template and replace it w/ ben-evans, because we know it looks ok on mobile -->
-[FIXED]	2. blog page completely unreadable on mobile: 
-		1. too much space to the left and right: find way to flood the whole page on mobile. the whole thing is fatter 	
-			- the problem is that its' very hard to diagnose this
-[FIXED] 2. font is too big. space between fonts is too big: find way to 
+	<!-- the plan here is to completly rip out the existing blog template and replace it w/ ben-evans, because we know it looks ok on mobile -->
+	[FIXED]	2. blog page completely unreadable on mobile: 
+			1. too much space to the left and right: find way to flood the whole page on mobile. the whole thing is fatter 	
+				- the problem is that its' very hard to diagnose this
+	[FIXED] 2. font is too big. space between fonts is too big: find way to 
 
+4. On safari, it fails to scroll even though there is scroll on chrome
 
 4. When home page resizes, things don't move around to recenter - this is because of the div I am using to contain the nav menu
 
