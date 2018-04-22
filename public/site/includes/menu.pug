@@ -1,4 +1,4 @@
-include my_icon.pug
+include icons/down_arrow.pug
 
 mixin menu(art, blog, code, src_1, src_2, src_3)
     
@@ -14,8 +14,4 @@ mixin menu(art, blog, code, src_1, src_2, src_3)
                 a(href=`${code}`)   Code
 
         nav.index-navigation.collection-nav(role='navigation')
-            <a href="" class="hvr-icon-hang" style='width:3vw'>
-                Icon <i class="fa fa-chevron-down hvr-icon" style='font-size:2vw'>
-                </i>
-            </a>
-
+            +down_arrow()
