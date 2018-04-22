@@ -50,7 +50,7 @@ index.get('/evans', (req, res, next) => {
 	lingxiaoling.me
 */
 index.get('/', (req, res, next) => { 
-	res.render('site/', {});
+	res.render('site/index-alt', {});
 });
 
 index.get('/art', (req, res, next) => { 

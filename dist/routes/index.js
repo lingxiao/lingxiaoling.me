@@ -20,7 +20,7 @@ index.get('/evans', (req, res, next) => {
     res.render('site/blog/evans', {});
 });
 index.get('/', (req, res, next) => {
-    res.render('site/', {});
+    res.render('site/index-alt', {});
 });
 index.get('/art', (req, res, next) => {
     res.render('site/index-art', {});
