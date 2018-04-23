@@ -72,10 +72,3 @@ practical considerations, speed considerations, latency of x-ms of sending data 
 
 similarly for image transformation (deep net).
 
-
-
-
-
-
-
-

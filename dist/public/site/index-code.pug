@@ -5,7 +5,7 @@ block content
 	include includes/title-card.pug
 	include includes/article.pug
 
-	+title_card('TECH', 'Some of my machine learning projects')
+	//- +title_card('TECH', 'Some of my machine learning projects')
 
 	.main-content-inner-wrapper(data-content-field="main-content")
 		.gallery-wrapper(data-controller="GalleryLayout")
@@ -13,8 +13,8 @@ block content
 				.grid-wrapper
 
 					+article('Deep Recurrent Dialogue Generation'
-						, 'May' 
-						, '22'
+						, 'April' 
+						, '20th'
 						, '2017'
 						, '../assets/images/g-home-2.png'
 						, '/drl-dialogue'
