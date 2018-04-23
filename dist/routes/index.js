@@ -22,7 +22,13 @@ index.get('/blog', (req, res, next) => {
 index.get('/code', (req, res, next) => {
     res.render('site/index-code', {});
 });
+index.get('/on-cv', (req, res, next) => {
+    res.render('site/blog/on-cv.pug', {});
+});
+index.get('/on-nlp', (req, res, next) => {
+    res.render('site/blog/on-nlp.pug', {});
+});
 index.get('/drl-dialogue', (req, res, next) => {
-    res.render('site/blog/drl-dialogue.pug', {});
+    res.render('site/code/drl-dialogue.pug', {});
 });
 exports.default = index;

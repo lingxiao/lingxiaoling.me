@@ -17,6 +17,7 @@ basic types: https://www.typescriptlang.org/docs/handbook/basic-types.html
 2. Twitter and Facebook integration   []
 3. Native upvote integration          []
 4. fail whale page                    []
+5. separation of view from filesystem 
 
 ## TODOs #
 

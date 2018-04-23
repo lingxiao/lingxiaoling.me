@@ -12,8 +12,6 @@ import * as fs from 'fs';
 const index: Router = Router();
 
 
-
-
 /**
 	serve CV
 	this one doens'tn work w/o hardcoded paths
@@ -53,9 +51,23 @@ index.get('/code', (req, res, next) => {
 });
 
 
+/**
+	blog
+*/
+index.get('/on-cv', (req, res, next) => { 
+	res.render('site/blog/on-cv.pug', {});
+});
 
+index.get('/on-nlp', (req, res, next) => { 
+	res.render('site/blog/on-nlp.pug', {});
+});
+
+
+/**
+	code
+*/
 index.get('/drl-dialogue', (req, res, next) => { 
-	res.render('site/blog/drl-dialogue.pug', {});
+	res.render('site/code/drl-dialogue.pug', {});
 });
 
 
