@@ -22,6 +22,7 @@ basic types: https://www.typescriptlang.org/docs/handbook/basic-types.html
 
 1. center date on blog content    [DONE]
 2. ABOUT-ME: make about me page on the home page   [DONE]
+3. move image url to native url
 3. Migrate project pages over
 4. Outline blog on computer vision
 5. implement like and share
