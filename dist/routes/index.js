@@ -10,29 +10,17 @@ index.get('/curriculum-vitae', (req, res, next) => {
         res.send(data);
     });
 });
-index.get('/art', (req, res, next) => {
-    res.sendFile('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/art.html');
-});
-index.get('/about-me', (req, res, next) => {
-    res.sendFile('/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/about-me.html');
-});
-index.get('/evans', (req, res, next) => {
-    res.render('site/blog/evans', {});
-});
 index.get('/', (req, res, next) => {
-    res.render('site/index-scroll', {});
+    res.render('site/index-home', {});
 });
 index.get('/art', (req, res, next) => {
-    res.render('site/index-art', {});
+    res.render('site/index-art-raw', {});
 });
 index.get('/blog', (req, res, next) => {
     res.render('site/index-blog', {});
 });
 index.get('/code', (req, res, next) => {
     res.render('site/index-code', {});
-});
-index.get('/about-me', (req, res, next) => {
-    res.render('site/about_me', {});
 });
 index.get('/drl-dialogue', (req, res, next) => {
     res.render('site/blog/drl-dialogue.pug', {});

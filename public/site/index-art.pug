@@ -1,1 +1,44 @@
-h2 Hello art
+extend parent.pug
+
+
+block content
+
+    include includes/title-card.pug
+    include includes/article.pug
+
+    //- +title_card('ART', 'It is Art, and Art only, that reveals us to ourselves')
+
+    main#page.site-page(role="main" data-controller="ProjectController")
+      #collection-header-5728d6237c65e4dbdad6bcf5.sqs-layout.sqs-grid-12.columns-12.collection-header.empty(data-layout-label="Collection Header Content" data-type="block-field")
+        .row.sqs-row
+          .col.sqs-col-12.span-12
+      .main-content(data-content-field="main-content")
+        .project-container
+          .project-slides
+            .project-slide.project-slide-has-no-description.project-first-slide(data-slide-id="5728f0937c65e46333e00d6d" data-slide-url="jc90io5jt31ursa7lgbwpkdtjbqvza")
+              //- .project-slide-image-container(data-image-dimensions="2000x1333")
+            figure.project-slide-image-wrapper.content-fill.not-ready
+                img.eventlist-thumbnail(src="https://en.wikipedia.org/wiki/File:Lion_(Panthera_leo)_(30941994012).jpg", data-image="https://en.wikipedia.org/wiki/File:Lion_(Panthera_leo)_(30941994012).jpg", data-image-dimensions='', data-image-focal-point='0.5,0.5')
+
+
+    //- .main-content-inner-wrapper(data-content-field="main-content")
+        .gallery-wrapper(data-controller="GalleryLayout")
+            .slides
+                .grid-wrapper
+
+                    +article('On Higher Education'
+                        , ''
+                        , ''
+                        , ''
+                        , '../assets/drawings/title.jpg'
+                        , ''
+                        , ''
+                        )
+
+        //- img.eventlist-thumbnail(data-src="../assets/drawing/title.jpg", data-image="../assets/drawing/title.jpg", data-image-dimensions='', data-image-focal-point='0.5,0.5')
+
+
+        //- .gallery-wrapper(data-controller="GalleryLayout")
+            //- .slides
+                //- .grid-wrapper
+

@@ -21,16 +21,13 @@ basic types: https://www.typescriptlang.org/docs/handbook/basic-types.html
 ## TODOs #
 
 1. center date on blog content    [DONE]
-2. ABOUT-ME: make about me page on the home page - it also solves the scroll problem
+2. ABOUT-ME: make about me page on the home page   [DONE]
 3. Migrate project pages over
 4. Outline blog on computer vision
 5. implement like and share
 6. refactor blog content so that it can be autmoatically generated.
 7. figure out how to insert images into it with caption
 8. write python script that take .md file and create blog file
-
-1. make image actual height
-2. 
 
 
 
@@ -61,13 +58,8 @@ basic types: https://www.typescriptlang.org/docs/handbook/basic-types.html
 				- the problem is that its' very hard to diagnose this
 	[FIXED] 2. font is too big. space between fonts is too big: find way to 
 
-4. On safari, it fails to scroll even though there is scroll on chrome
 
-4. When home page resizes, things don't move around to recenter - this is because of the div I am using to contain the nav menu
-
-
-6. on iphone safari, the scrolling is not disabled
-
+4. on safari images fail to rescale on browser resize
 
 ## Plan ##
 

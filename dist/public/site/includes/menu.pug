@@ -4,7 +4,8 @@ mixin menu(art, blog, code, hero, about_me_link, github_link)
     
     
     //- TODO: remove background color after debugging
-    .collection-nav-desc-wrapper(style='background-color:powderblue')
+    //- .collection-nav-desc-wrapper(style='background-color:powderblue')
+    .collection-nav-desc-wrapper
         #collectionDesc.collection-desc
             p
                 a(href=`${art}`) Art 
@@ -17,11 +18,10 @@ mixin menu(art, blog, code, hero, about_me_link, github_link)
 
             if hero
                 <a href="#{about_me_link}">
-                    <i class="fas fa-flag-xiao fa-chevron-down" style='font-size:2vw'></i> &nbsp;
+                    <i class="fas fa-flag-xiao fa-chevron-down" style='font-size:3vw'></i> &nbsp;
                 </a>
             else
                 <a href="#{github_link}", target='_blank'>
-                    <i class="fab fa-flag-xiao fa-github" style='font-size:2vw'></i>
+                    <i class="fab fa-flag-xiao fa-github" style='font-size:3vw'></i>
                 </a>
-
 

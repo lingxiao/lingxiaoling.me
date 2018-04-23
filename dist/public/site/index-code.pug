@@ -1,4 +1,4 @@
-extend parent-scroll.pug
+extend parent.pug
 
 block content
 
@@ -12,14 +12,11 @@ block content
 			.slides
 				.grid-wrapper
 
-					//- right now there's a huge problem: images do not load on click through
-					//- squarespace does this standard thing where images don't load when you navigate to page
-
 					+article('Deep Recurrent Dialogue Generation'
 						, 'May' 
 						, '22'
 						, '2017'
-						, '../assets/images/g-home-1.png'
+						, '../assets/images/g-home-2.png'
 						, '/drl-dialogue'
 						, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum hendrerit in arcu non sollicitudin. Donec at velit arcu. Aliquam luctus odio ut vestibulum sodales. Quisque aliquam purus ligula, blandit dictum nisi aliquam sed. Suspendisse facilisis interdum enim eget sollicitudin. Mauris orci velit, tempus pellentesque maximus id, sollicitudin vitae est. Integer mollis justo at velit tincidunt dictum. Integer elementum mauris sapien, eu malesuada tortor luctus a. Vivamus at blandit eros. Aenean vitae quam est. In venenatis mollis erat, non egestas nisi feugiat id. Cras in nibh maximus, viverra sem vitae, lobortis eros.'
 						) 
