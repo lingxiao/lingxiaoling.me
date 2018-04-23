@@ -39,8 +39,7 @@ index.get('/', (req, res, next) => {
 });
 
 index.get('/art', (req, res, next) => { 
-	res.render('site/index-art-raw', {});
-	// res.sendFile("/Users/lingxiao/Documents/Career/lingxiaoling.me/public/site/index-art.html")
+	res.render('site/index-art', {});
 });
 
 

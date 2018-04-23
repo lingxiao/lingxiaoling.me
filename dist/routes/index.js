@@ -14,7 +14,7 @@ index.get('/', (req, res, next) => {
     res.render('site/index-home', {});
 });
 index.get('/art', (req, res, next) => {
-    res.render('site/index-art-raw', {});
+    res.render('site/index-art', {});
 });
 index.get('/blog', (req, res, next) => {
     res.render('site/index-blog', {});
