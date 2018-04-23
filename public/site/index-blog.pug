@@ -5,6 +5,10 @@ block content
     include includes/title-card.pug
     include includes/article.pug
 
+
+    +title_card('BLOG', 'Technology, society and their relationship with each other')
+
+
     .main-content-inner-wrapper(data-content-field="main-content")
         .gallery-wrapper(data-controller="GalleryLayout")
             .slides
@@ -20,15 +24,23 @@ block content
                         , 'In this post, I discuss the current state of the art in natural langauge processing, and how the high-valued tasks in this field differs significantly from those of other "AI" tasks such as computer vision.'
                         ) 
 
-                    +article('On Computer Vision'
+                    +article('On Computer Vision: Technical Survey'
                         , 'April' 
                         , '30'
                         , '2018'
-                        , '../assets/images/neural-net-2.png'
-                        , '/on-cv'
+                        , '../assets/images/neural-net-1.png'
+                        , '/on-cv-tech'
                         , 'In this post, I disucss the limitations of deep learning applied to computer vision. Specifically the difference between so called "web computer vision" versus those encountered in robotics.'
                         ) 
 
+                    +article('On Computer Vision: Commerical Applications'
+                        , 'April' 
+                        , '30'
+                        , '2018'
+                        , '../assets/images/point-cloud-1.jpeg'
+                        , '/on-cv-commerical'
+                        , 'In this post, I disucss the limitations of deep learning applied to computer vision. Specifically the difference between so called "web computer vision" versus those encountered in robotics.'
+                        ) 
 
 //- 
                     +article('On Higher Education'

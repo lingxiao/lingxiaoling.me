@@ -22,8 +22,11 @@ index.get('/blog', (req, res, next) => {
 index.get('/code', (req, res, next) => {
     res.render('site/index-code', {});
 });
-index.get('/on-cv', (req, res, next) => {
-    res.render('site/blog/on-cv.pug', {});
+index.get('/on-cv-tech', (req, res, next) => {
+    res.render('site/blog/on-cv-tech.pug', {});
+});
+index.get('/on-cv-commerical', (req, res, next) => {
+    res.render('site/blog/on-cv-commerical.pug', {});
 });
 index.get('/on-nlp', (req, res, next) => {
     res.render('site/blog/on-nlp.pug', {});

@@ -54,9 +54,14 @@ index.get('/code', (req, res, next) => {
 /**
 	blog
 */
-index.get('/on-cv', (req, res, next) => { 
-	res.render('site/blog/on-cv.pug', {});
+index.get('/on-cv-tech', (req, res, next) => { 
+	res.render('site/blog/on-cv-tech.pug', {});
 });
+
+index.get('/on-cv-commerical', (req, res, next) => { 
+	res.render('site/blog/on-cv-commerical.pug', {});
+});
+
 
 index.get('/on-nlp', (req, res, next) => { 
 	res.render('site/blog/on-nlp.pug', {});
