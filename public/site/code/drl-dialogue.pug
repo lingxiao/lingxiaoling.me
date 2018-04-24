@@ -44,7 +44,7 @@ block content
                         p
                           | In recent years, the proliferation of home assistant devices such as the Alexa and Google Home led to a resurgence of interest in intelligent conversation agents, so called “chatbots.”  Broadly speaking, chabots are expected to carry on two kinds of conversation: informational-retrieval based conversation where the user expects the correct answer for a specific query; and open-domain dialog, where the chatbot is expected to speak about any topic and be “interesting.”  We focus on the second task, using the latest machine learning techniques to train an algorithm on conversation etiquette using transcripts from movie scripts and recorded phone calls. 
 
-                        +image('../../assets/images/G-mini-5.jpg', 'The proliferation of home assistant devices means that the battle for "engagement" is moving beyond images into natural langauges.')
+                        +image('../../assets/images/G-mini-5.jpg', 'The proliferation of home assistant devices means that the battle for "engagement" is moving beyond images into natural languages.')
 
                         +header_2('TECHNICAL BACKGROUND')
 
@@ -100,13 +100,45 @@ block content
                         +image('../../assets/images/her-2.jpeg', 'Fig 7.  Similar to Samantha from the film Her (Spike Jonze, 2013), our neural dialogue agents learns conversation etiquette over the course of many dialogue sessions, in this case with itself.')
                    
                    
-                        +header_2('DISCUSSION OF RESULTS')
+                        +header_2('DATA SET')
+
+                        p 
+                            | The most important aspect of deep learning project is the volume of data and its relevance to the measures defined. Finding natural conversation data is particularly challenging due to privacy concerns, we had access to the following sets of data:
+
+                            <ul>
+                                <li> The CALLHOME American English Speech Corpus (LDC97S42), with 120 thirty minute phone conversations between native English speakers. 
+                                <li> OpenSubtitles corpus with 28 movie scripts. 
+                            </ul>
+
+                        +image('../../assets/images/CALLHOME.png', 'Fig 8. Observe how A leads the convesation while B tacitly acknowledges with "uh-huh" and "mhm", entire conversations is carried out this way')
+
+                        p 
+                            | Note that relative to standard deep learning projects, our data set is very small. Furthermore, the distribution over utterances is not ideal given the goal of training an engaging conversation agent. In CALLHOME, one speaker often directed the conversation while the listener gave terse responses such as “mhm” or “okay”, in fact about 20% of the utterances in this dataset is “mhm”. This would bias naive maximum likelihood models to output short responses given long queries. The distribution of utterances in OpenSubtitles was significantly better with regards to uninformative responses, however it lacked topic coherence because the scripts were a concatenation of dialogues from different scenes, with no clear break token between the scenes. 
+
+                        +header_2('RESULTS AND DISCUSSION')
 
                         p
-                            | 
+                            | In this section we discuss the results of our experiment, and close with a broader critique on the limitations of deep learning applied to open domain conversations.
 
-                            //- talk about how long you trained the bot for
-                            //- 
+                        +header_3('HRED')
+
+                        p 
+                            | This model was trained for 5 days on a GeForce GTX TITAN X GPU. After five hours the model appears to have acquired a basic grammar, but have a tendancy to output repeated words. After training for 72 hours there is a marked decrease in sentences with repeated words, with some basic semblance of semantic relationship between question and query. In general, the results after five days do not appear qualitatively better than results after just 72 hours. In particular, we see no evidence that HRED is tracking “some” conversation state. 
+
+                        +header_3('DRL-Seq2Seq')
+
+                        +image('../../assets/images/seq2seq.png', 'Fig 9. Backward seq2seq model outputs')
+
+                        p
+                            | The training results of the backward SEQ2SEQ model after 109000 steps are presented in figure 9. Since it is a backward model, the bot generates the most likely utterance that will have the input utterance as its response. The examples in the Good section show good performance of the model. The generated responses in the Bad section do not make sense. The model tends to generate certain responses such as ”I am going to go to the bathroom”, or simply output repeated words. The training results of the SEQ2SEQ model with concatenated utterances after 107000 steps are presented in figure 10. Each row of the table is one conversation, since the model consider two previous sentences. The model responses appear to be a function of the two previous utterances. The results of the mutual information model were poor for two reasons. First, since the mutual information score is averaged by the number of words in a sentence and each term is negative (log probability), shorter responses score higher according to our objective. Secondly, it tends to generate repeated words in a sentence. Thus we added an additional reward for the number of words of an output sentence and penalized repeated words. However, the modified rewad funtion did not improve the overall quality of the response.
+
+                        +image('../../assets/images/drl-seq2seq.png', 'Fig 9. drl-seq2seq model outputs.')
+
+                        +header_3('Discussion')
+
+                        
+
+
 
 
 
