@@ -79,6 +79,15 @@ index.get('/sent-analysis', (req, res, next) => {
 	res.render('site/code/sent-analysis.pug', {});
 });
 
+index.get('/corpus-mt', (req, res, next) => { 
+	res.render('site/code/corpus-mt.pug', {});
+});
+
+index.get('/multi-mt', (req, res, next) => { 
+	res.render('site/code/multi-mt.pug', {});
+});
+
+
 export default index;
 
 
