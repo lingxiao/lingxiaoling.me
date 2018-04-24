@@ -34,4 +34,7 @@ index.get('/on-nlp', (req, res, next) => {
 index.get('/drl-dialogue', (req, res, next) => {
     res.render('site/code/drl-dialogue.pug', {});
 });
+index.get('/sent-analysis', (req, res, next) => {
+    res.render('site/code/sent-analysis.pug', {});
+});
 exports.default = index;
