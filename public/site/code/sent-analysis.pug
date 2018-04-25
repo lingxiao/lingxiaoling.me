@@ -43,22 +43,35 @@ block content
                         p
                           | One of the most exciting trends in the next decade is <em>ambient computing</em>: an ongoing, multi-modal augmented experience of the world. Ambient computing promises technology will fade into the background, and people will once again occupy the foreground in our lives. One gateway to ambient computing is voice. Presently, voice-driven consumer products such as Siri, Amazon Alexa, and Google Home has already made <a target="_blank" href="http://fortune.com/2017/09/18/amazon-sells-15m-echos/">considerable</a> <a target="_blank" href="https://chatbotsmagazine.com/the-impact-of-alexa-and-google-home-on-consumer-behavior-c5753d838a38">inroads</a> into many of our lives. In the future, a more engaging and useful dialogue system requires an even more sophisticated understanding of the endless subtlety of human speech. Modern dialogue systems rely on rich lexical knowledge base for subtlety. And one such subtlety is adjectives that are supposedly synonymous but actually differ in intensity, for example a <em>good burger </em>is different than an <em>excellent burger.</em> However, commonly used lexical resources such as <a target="_blank" href="https://wordnet.princeton.edu/">WordNet</a> do not disambiguate the varying intensity among synonymous adjectives. 
 
-
-                        +header_2('TECHNICAL BACKGROUND')
+                        +header_3('Prior Work')
 
                         p
-                          | hello world
-                          
+                          <a target='_blank' href='https://www.cs.unc.edu/~mbansal/papers/tacl_acl13_semanticIntensity.pdf'> Bansal and de Melo</a> used pairwise co-occurrence of adjectives around manually procured patterns that signify the adjectives relative strength. For example if good co-occur with great in the pattern "good but not great", then we suspect good is less intense than great (see paper link for the rest of the patterns). Then they counted the frequency of said patterns for each pair of adjectives in the Google N-grams corpus. They encountered two primary challenges:
 
+                            <ol>
+                              <li> Data sparsity: since the patterns are two to three words long,  a pattern with two adjectives is four to five words long, any phrase of such length is rare in corpus.
+                              <li> Contradictory data: language use is noisy and often times data suggest a word is both weaker and strong than another word.
+                            </ol>
 
-                        +header_2('PROBLEM FORMULATION')
+                        +image('../../assets/images/zipf-1.png', 'Fig 1. Data sparsity is a significant challenge as most phrases are rare. Empirically, the r-th most frequent phrase has frequency f(r) =  1/(r + 2.7). This form is commonly called the Zipfian distribution and is the nightmare of all computational linguists.')
 
+                        //- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4176592/
+
+                        p
+                          | Bansal and de Melo solved the problem by aggregating the data in an integer linear program (ILP) formulation that look for the most likely ordering given the data, subject to transitivity constraints. That is if s is less intense than t, and t less intense than r, then s is less intense than t. They procured 93 clusters, with two to seven words in each cluster, and procured labels by ranking each cluster using Amazon Mechanical Turks. Five of the clusters were used to develop the algorithm, while the remaining 88 were held out as the test set. Their formulation outperformed the previous state of the art by 46%. However, we replicated and applied the ILP algorithm to a newly procured cluster and saw their method failed outright. Upon closer inspection we found that it failed because of data sparsity in Google N-Gram, segmenting the errors it became clear that Bansal’s formulation performed acceptably when more than 2/3 of all pairs in a cluster witnessed some comparison in data, but most of the words in the clusters we procured did not appear in the N-Gram corpus with the linguistic patterns they used. Instead of collecting more n-grams or finding new patterns, we reposed the question as a machine learning problem, where we learn the most likely ordering given two words and their respective neighbors in a newly constructed data set from the Paraphrase Database. 
 
                         +header_2('DATA SET')
 
                         p
                           | hello world
-                            
+
+                          +header_3('Paraphrase Data Base')
+
+                          +header_3('Paraphrase Graph')
+
+
+                        +header_2('PROBLEM FORMULATION')
+
 
                         +header_2('RESULTS AND DISCUSSION')
 
