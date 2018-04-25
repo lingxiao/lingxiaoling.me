@@ -58,20 +58,39 @@ block content
                         //- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4176592/
 
                         p
-                          | Bansal and de Melo solved the problem by aggregating the data in an integer linear program (ILP) formulation that look for the most likely ordering given the data, subject to transitivity constraints. That is if s is less intense than t, and t less intense than r, then s is less intense than t. They procured 93 clusters, with two to seven words in each cluster, and procured labels by ranking each cluster using Amazon Mechanical Turks. Five of the clusters were used to develop the algorithm, while the remaining 88 were held out as the test set. Their formulation outperformed the previous state of the art by 46%. However, we replicated and applied the ILP algorithm to a newly procured cluster and saw their method failed outright. Upon closer inspection we found that it failed because of data sparsity in Google N-Gram, segmenting the errors it became clear that Bansal’s formulation performed acceptably when more than 2/3 of all pairs in a cluster witnessed some comparison in data, but most of the words in the clusters we procured did not appear in the N-Gram corpus with the linguistic patterns they used. Instead of collecting more n-grams or finding new patterns, we reposed the question as a machine learning problem, where we learn the most likely ordering given two words and their respective neighbors in a newly constructed data set from the Paraphrase Database. 
+                          | Bansal and de Melo solved the problem by aggregating the data in an integer linear program (ILP) formulation that look for the most likely ordering given the data, subject to transitivity constraints. That is if s is less intense than t, and t less intense than r, then s is less intense than r. They procured 93 clusters, with two to seven words in each cluster, and procured labels by ranking each cluster using Amazon Mechanical Turks. Five of the clusters were used to develop the algorithm, while the remaining 88 were held out as the test set. Their formulation outperformed the previous state of the art by 46%. However, we replicated and applied the ILP algorithm to a newly procured cluster and saw their method failed outright. Upon closer inspection we found that it failed because of data sparsity in Google N-Gram, segmenting the errors it became clear that Bansal’s formulation performed acceptably when more than 2/3 of all pairs in a cluster witnessed some comparison in data, but most of the words in the clusters we procured did not appear in the N-Gram corpus with the linguistic patterns they used. Instead of collecting more n-grams or finding new patterns, we reposed the question as a machine learning problem, where we learn the most likely ordering given two words and their respective neighbors in a newly constructed data set from the Paraphrase Database. 
 
                         +header_2('DATA SET')
 
                         p
-                          | hello world
+                          | In this section we describe the motivation of the paraphrase database (PPDB), and the directed graph of adjective and adverbs constructed using PPDB.
 
-                          +header_3('Paraphrase Data Base')
+
+                        +header_3('Paraphrase Database (PPDB)')
+
+                        +image('../../assets/images/ppdb-1.png', 'Fig 2. Paraphrases are automatically extracted from bilingual corpora. Because "thrown into jail" and "imprisoned" translates to the same German phrase, it is assumed that they are paraphrases of each other.')
+
+                        p
+
+                          | Paraphrases are different textual realizations of the same meaning and are valuable for a variety of downstream natural language processing (NLP) tasks such as textual entailment, measuring semantic similarity of texts, monolingual alignment, natural language generation, and improving lexical embeddings. The <a target='_blank' href='https://www.cis.upenn.edu/~ccb/publications/ppdb.pdf'>paraphrase</a> <a target = '_blank' href='https://cs.brown.edu/people/epavlick/papers/ppdb2.pdf'>database</a> is a collection of over 220 million paraphrase patterns, comprised of 73 million phrasal and 8 million lexical paraphrases, and 140 million paraphrase patterns that capture meaning equivalent syntactic transformations. The paraphrases are extracted from bilingual parallel corpora of over 100 million sentence pairs and over 2 billion English words. Specifically, if two English strings translate to the same foreign string (commonly called a pivot string) in some text, then it is assumed that they have the same meaning. PPDB provides a set of paraphrases for each string and their associated distributional similarity, very loosely interpreted as a confidence score of how likely one utterance is a paraphrase of another. The similarity is computed as the cosine distance between the feature representation of the two phrases, where the feature set is comprised of n-grams and syntactical features. 
 
                           +header_3('Paraphrase Graph')
+
+                        +image('../../assets/images/ppdb-3.png', 'Fig 3. Three adjectives from the Adverb Paraphrase Graph and their respective vertices.')
+                        
+                        p
+                          | Inspecting PPDB, we find a litany of (adj, adv adj) paraphrase pairs that could be valuable in ranking adjectives, for example (“great”, “very good”) and (“great”, “extremely good”). Furthermore, we hypothesized that both the frequency and intensity of adverbs (ie very vs extremely) modifying the adjective are informative features when ranking adjectives. This intuition motivated the construction of the Adverb Paraphrase Graph (AdParaGraph) where the vertices are adjectives, and the directed edges are adverbs, so that if there is an edge from vertex s to t with label u, then the string u s is a paraphrase of t. We bootstrapped the graph by manually selecting base, comparative, and superlative adjective triplets, and and pruned PPDB for the adverbs that modified the weaker word in the triplet so that the clause is a paraphrase of the stronger adjective. We then compiled all (adj_1 adj_2; adv) triplets from the PPDB given the adverbs we have collected. Overall the graph has 18,936 edges, covering 2,745 adjectives modified by 544 unique adverbs. On a practical note, upon closer inspection it became clear that some adverbs de-intensified the adjective (“somewhat”) while others intensified it (“very”), however analysis shows that the overwhelming majority of adverbs appear as intensifiers, thus removed the de-intensifiers from the graph. 
+
+
+                          +header_3('N-Gram Graph')
+
+                        p
+                          | We noted that the directed graph formulation can be readily applied to N-Graph data as well, in this case the pattern “good but not great” could correspond to the tuple (good, but not great), whereby the utterance “but not” de-intensify the adjective “great”. In the interest of simplicity we invert the edge so that the triplet is actually (good, great; but not) in keeping with the convention that the source of the edge is weaker than the target under the edge label. The N-gram graph has 36,8439 edges, but only covers 178 of the adjectives we found in AdParaGraph. 
 
 
                         +header_2('PROBLEM FORMULATION')
 
+                        +image('../../assets/images/good-great.png', 'Fig 4. Assigning pairwise ordering between adjectives based on the graph connectivity patterns of their neighbors is most robust to noise and data sparsity. Left: the local topology around the word "good". Right: the graph around "great".')
 
                         +header_2('RESULTS AND DISCUSSION')
 

@@ -11,8 +11,8 @@ from skimage.io import imsave
 import cv2
 
 
-in_path  = 'git-2.png'
-out_path = 'git-4.png'
+in_path  = 'great.png'
+out_path = 'great-1.png'
 
 def invert_color(in_path, out_path):
 
@@ -33,3 +33,38 @@ def invert_color(in_path, out_path):
 	else:
 	    inverted_image = PIL.ImageOps.invert(image)
 	    inverted_image.save(out_path)
+
+
+# swap out black with red
+her   = np.array(Image.open('her-0.jpg'  ))
+img   = np.array(Image.open('graph-t.jpg'))
+red   = her[0][0]
+white = img[0][0]
+
+(W,H,C) = img.shape
+
+# for w in xrange(W):
+# 	for h in xrange(H):
+# 		if any(img[w][h] != white):
+# 			img[w][h] = red
+
+# final_path = 'graph-red.png'			
+# img = Image.fromarray(img, 'RGB')
+# img.save(final_path)
+# img.show()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
