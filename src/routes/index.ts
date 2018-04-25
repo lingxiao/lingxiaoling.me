@@ -19,7 +19,7 @@ const index: Router = Router();
 */
 index.get('/curriculum-vitae', (req, res, next) => { 
 
-	// var pdf_path = "site/resume.pdf"
+	// var pdf_path = "https://github.com/lingxiao/curriculum-vitae/blob/master/resume.pdf"
 	var pdf_path = "/Users/lingxiao/Documents/Career/Resume/CV/resume.pdf"	
 
 	fs.readFile( pdf_path, (err, data) =>{

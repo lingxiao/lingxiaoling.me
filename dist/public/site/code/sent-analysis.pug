@@ -18,11 +18,11 @@ block content
 
 
             +title( "August 1st, 2017"
-                  , "Adjective Sentiment Analysis Using the"
-                  , "ParaPhrase Database"
-                  )
+              , "Adjective Sentiment Analysis Using the"
+              , "ParaPhrase Database"
+              )
 
-    
+
             // POST BODY
             .body.entry-content
               #item-5ab1b4300e2e72081e59396c.sqs-layout.sqs-grid-12.columns-12(data-layout-label='Post Body', data-type='item', data-updated-on='1521595449661')
@@ -77,18 +77,20 @@ block content
                           +header_3('Paraphrase Graph')
 
                         +image('../../assets/images/graph-2.png', 'Fig 3. An adjectives subgraph from the Adverb Paraphrase Graph and their respective vertices. From Veronica Wharton.')
-                        
+
                         p
-                          | Inspecting PPDB, we find a litany of (adj, adv adj) paraphrase pairs that could be valuable in ranking adjectives, for example (“great”, “very good”) and (“great”, “extremely good”). Furthermore, we hypothesized that both the frequency and intensity of adverbs (ie very vs extremely) modifying the adjective are informative features when ranking adjectives. This intuition motivated the construction of the Adverb Paraphrase Graph (AdParaGraph) where the vertices are adjectives, and the directed edges are adverbs, so that if there is an edge from vertex s to t with label u, then the string u s is a paraphrase of t. We bootstrapped the graph by manually selecting base, comparative, and superlative adjective triplets, and and pruned PPDB for the adverbs that modified the weaker word in the triplet so that the clause is a paraphrase of the stronger adjective. We then compiled all (adj_1 adj_2; adv) triplets from the PPDB given the adverbs we have collected. Overall the graph has 18,936 edges, covering 2,745 adjectives modified by 544 unique adverbs. On a practical note, upon closer inspection it became clear that some adverbs de-intensified the adjective (“somewhat”) while others intensified it (“very”), however analysis shows that the overwhelming majority of adverbs appear as intensifiers, thus removed the de-intensifiers from the graph. 
+                          | Inspecting PPDB, we find a litany of (adj, adv adj) paraphrase pairs that could be valuable in ranking adjectives, for example (“great”, “very good”) and (“great”, “extremely good”). Furthermore, we hypothesized that both the frequency and intensity of adverbs (ie very vs extremely) modifying the adjective are informative features when ranking adjectives. This intuition motivated the construction of the Adverb Paraphrase Graph where the vertices are adjectives, and the directed edges are adverbs, so that if there is an edge from vertex s to t with label u, then the string u s is a paraphrase of t. We bootstrapped the graph by manually selecting base, comparative, and superlative adjective triplets, and and pruned PPDB for the adverbs that modified the weaker word in the triplet so that the clause is a paraphrase of the stronger adjective. We then compiled all (adj_1 adj_2; adv) triplets from the PPDB given the adverbs we have collected. Overall the graph has 18,936 edges, covering 2,745 adjectives modified by 544 unique adverbs. On a practical note, upon closer inspection it became clear that some adverbs de-intensified the adjective (“somewhat”) while others intensified it (“very”), however analysis shows that the overwhelming majority of adverbs appear as intensifiers, thus removed the de-intensifiers from the graph. 
 
 
                           +header_3('N-Gram Graph')
 
                         p
-                          | We noted that the directed graph formulation can be readily applied to N-Graph data as well, in this case the pattern “good but not great” could correspond to the tuple (good, but not great), whereby the utterance “but not” de-intensify the adjective “great”. In the interest of simplicity we invert the edge so that the triplet is actually (good, great; but not) in keeping with the convention that the source of the edge is weaker than the target under the edge label. The N-gram graph has 36,8439 edges, but only covers 178 of the adjectives we found in AdParaGraph. 
+                          | We noted that the directed graph formulation can be readily applied to N-Graph data as well, in this case the pattern “good but not great” could correspond to the tuple (good, but not great), whereby the utterance “but not” de-intensify the adjective “great”. In the interest of simplicity we invert the edge so that the triplet is actually (good, great; but not) in keeping with the convention that the source of the edge is weaker than the target under the edge label. The N-gram graph has 36,8439 edges, but only covers 178 of the adjectives we found in Paraphrase Graph. 
 
 
                         +header_2('PROBLEM FORMULATION')
+
+                        +header_3('Total Ordering')
 
 
                         p
@@ -104,33 +106,35 @@ block content
                           </ol>
 
                         p
-                          | Furthermore, suppose we have s < t < r, then a subgraph corresponding to this ordering would be the set of pairs: {(s, t), (s, r), and (t, r)}.  Thus we enumerate all possible total orderings (tractable because the clusters are relatively small), and then computing the likelihood of each ranked pair. Finally, per independence assumption the pairwise probability is multiplied to arrive at the likelihood of the final ordering, and the most likely one is chosen. 
+                          | Furthermore, suppose we have s < t < r, then a subgraph corresponding to this ordering would be the set of pairs: {(s, t), (s, r), and (t, r)}, where each pair correspond to a Bernoulli variable.  Thus we enumerate all possible total orderings (tractable because the clusters are relatively small), and then computing the likelihood of each ranked pair. Finally, per independence assumption the pairwise probability is multiplied to arrive at the likelihood of the final ordering, and the most likely one is chosen. 
+
+                        +header_3('Pairwise Ordering')
 
                         +image('../../assets/images/good-great.png', 'Fig 4. Assigning pairwise ordering between adjectives based on local connectivity patterns of their neighbors is robust to noise and data sparsity. Left: the local topology around the word "good". Right: the graph around "great".')
-                          
-                        p 
-                          | Now we must find a pairwise ranking algorithm that is robust to noise and data sparsity, and outputs a likelihood of the rank. The directed graphs makes us suspect that the relationship between words does to simply depend on their local connectivity, but that of its connectivity to their neighbors as well. This process could conceivably recurse outward, which inspired our initial attempt at ranking adjectives using well-known network centrality measures such as PageRank and Personalized PageRank.  This formulation is stimulating but results proved this intuition to be misguided. Instead, we opted for a machine learning approach where the local connectivity of the graph is used as feature representation for the words.  In particular we experimented with lasso and ridge regression where the input is some representation of the adjective pair (s, t), and the binary output is 1 if s is less than t, and 0 otherwise.  Experimentally speaking, the best representation of the adjective pair (s, t) is the concatenation of the top 10 most connected adjectives neighboring s and t, where each neighbor is represented by a value in [0,1] computed as in degree divided by total degree of the adjective. This representation is interesting because:
 
-                        <ol>
+                        p 
+                          | Now we must find a pairwise ranking algorithm that is robust to noise and data sparsity, and outputs a likelihood of the rank. The directed graphs makes us suspect that the relationship between words does to simply depend on their local connectivity, but that of its connectivity to their neighbors as well. This process could conceivably recurse outward, which inspired our initial attempt at ranking adjectives using well-known network centrality measures such as PageRank and Personalized PageRank.  This formulation is stimulating but results proved this intuition to be misguided. Instead, we opted for frequency based estimation where the Bernoulli parameter of each edge is the empirical likelihood computed by the in-degree divided by the total degree. If two words are to be compared but their comparisons are not observed, then we employ a machine learning approach where the local connectivity of the graph is used as feature representation for the words.  In particular we experimented with lasso and ridge regression where the input is some representation of the adjective pair (s, t), and the binary output is 1 if s is less than t, and 0 otherwise.  Experimentally speaking, the best representation of the adjective pair (s, t) is the concatenation of the top 10 most connected adjectives neighboring s and t, where each neighbor is represented by a value in [0,1] computed as in degree divided by total degree of the adjective. This representation is interesting because:
+
+
+                        <ul>
                           <li> The connectivity information of a vertex to its neighbors is not used
                           <li> The less connected neighbors are not considered
-                          <li> It does not require a direct comparison between adjectives s and t.
-                        </ol>
-
-                      p 
-                        | This makes the representation of (s, t) robust to noise and data sparsity. Since the features are easily interpretable, it’s curious to read the model as stating that the neighbors of words are very informative to how strong the word is emotionally. Because the total ranking system demands a probability, we experiment with two methods. As a baseline we arbitrarily assign a value (1/2 + epsilon) for some very small epsilon if logistic regression decides s is less than t, and 1/2 - epsilon otherwise. Note in the case where there is absolutely not data, we output 1/2, interpreted as “do not know.” Next, we define a formal variant of the baseline. The heart of the of the problem is that we have some prior belief about the likelihood that one adjective is weaker than another, and an updated belief after observing some data, be it direct comparison or estimation from a model. Since we are modeling each edge a Bernoulli variable with parameter θ ranging over [0, 1], the prior is then a distribution over the Bernoulli θ, this is the Beta distribution. 
-
-
-                        +header_2('RESULTS AND DISCUSSION')
+                        </ul>
 
                         p
-                          | hello world
+                          | This makes the representation of (s, t) robust to noise and data sparsity. Since the features are easily interpretable, it’s curious to read the model as stating that the neighbors of words are very informative to how strong the word is emotionally. Because the total ranking system demands a probability, we experiment with two methods. As a baseline we arbitrarily assign a value (1/2 + ε) for some very small ε if logistic regression decides s is less than t, and 1/2 - ε otherwise. Note in the case where there is absolutely not data, we output 1/2, interpreted as “do not know.” Next, we define a formal variant of the baseline. The heart of the of the problem is that we have some prior belief about the likelihood that one adjective is weaker than another, and an updated belief after observing some data, be it direct comparison or estimation from a model. Since we are modeling each edge a Bernoulli variable with parameter θ ranging over [0, 1], the prior is then a distribution over the Bernoulli θ, this is the Beta distribution. 
 
 
-                        +header_2('CONCLUSION')
+            //- +header_2('RESULTS AND DISCUSSION')
 
-                        p
-                          | hello world
+            //- p
+            //-   | hello world
+
+
+            //- +header_2('CONCLUSION')
+
+            //- p
+            //-   | hello world
 
 
 
