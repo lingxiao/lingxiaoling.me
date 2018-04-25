@@ -90,7 +90,38 @@ block content
 
                         +header_2('PROBLEM FORMULATION')
 
-                        +image('../../assets/images/good-great.png', 'Fig 4. Assigning pairwise ordering between adjectives based on the graph connectivity patterns of their neighbors is most robust to noise and data sparsity. Left: the local topology around the word "good". Right: the graph around "great".')
+
+                        p
+                          | Similar to Bansal, we separate the ranking task into pairwise ordering and total ranking. In total ranking,  we assume a generative process where a coin are tossed independently between vertices, and directed edges are placed according to how the coin lands. Thus the most likely ordering of adjective in a cluster is equivalent to the most likely set of edges among the vertices, subject to transitivity constraints. For example, suppose we have vertices s, t, and r, then there are six possible consistent orderings:
+
+                          <ol>
+                            <li> s < t < r
+                            <li> s < r < t
+                            <li> t < s < r
+                            <li> t < r < s
+                            <li> r < s < t
+                            <li> r < t < s
+                          </ol>
+
+                        p
+                          | Furthermore, suppose we have s < t < r, then a subgraph corresponding to this ordering would be the set of pairs: {(s, t), (s, r), and (t, r)}.  Thus we enumerate all possible total orderings (tractable because the clusters are relatively small), and then computing the likelihood of each ranked pair. Finally, per independence assumption the pairwise probability is multiplied to arrive at the likelihood of the final ordering, and the most likely one is chosen. 
+
+                        +image('../../assets/images/good-great.png', 'Fig 4. Assigning pairwise ordering between adjectives based on local connectivity patterns of their neighbors is robust to noise and data sparsity. Left: the local topology around the word "good". Right: the graph around "great".')
+                          
+                        p 
+                          | Now we must find a pairwise ranking algorithm that is robust to noise and data sparsity, and outputs a likelihood of the rank. The directed graphs makes us suspect that the relationship between words does to simply depend on their local connectivity, but that of its connectivity to their neighbors as well. This process could conceivably recurse outward, which inspired our initial attempt at ranking adjectives using well-known network centrality measures such as PageRank and Personalized PageRank.  This formulation is stimulating but results proved this intuition to be misguided. Instead, we opted for a machine learning approach where the local connectivity of the graph is used as feature representation for the words.  In particular we experimented with lasso and ridge regression where the input is some representation of the adjective pair (s, t), and the binary output is 1 if s is less than t, and 0 otherwise.  Experimentally speaking, the best representation of the adjective pair (s, t) is the concatenation of the top 10 most connected adjectives neighboring s and t, where each neighbor is represented by a value in [0,1] computed as in degree divided by total degree of the adjective. This representation is interesting because:
+
+                        <ol>
+                          <li> The connectivity information of a vertex to its neighbors is not used
+                          <li> The less connected neighbors are not considered
+                          <li> It does not require a direct comparison between adjectives s and t.
+                        </ol>
+
+                      p 
+                        | This makes the representation of (s, t) robust to noise and data sparsity. Since the features are easily interpretable, it’s curious to read the model as stating that the neighbors of words are very informative to how strong the word is emotionally. Because the total ranking system demands a probability, we experiment with two methods. As a baseline we arbitrarily assign a value (1/2 + epsilon) for some very small epsilon if logistic regression decides s is less than t, and 1/2 - epsilon otherwise. Note in the case where there is absolutely not data, we output 1/2, interpreted as “do not know.” Next, we define a formal variant of the baseline. The heart of the of the problem is that we have some prior belief about the likelihood that one adjective is weaker than another, and an updated belief after observing some data, be it direct comparison or estimation from a model. Since we are modeling each edge a Bernoulli variable with parameter θ ranging over [0, 1], the prior is then a distribution over the Bernoulli θ, this is the Beta distribution. 
+
+
+
 
                         +header_2('RESULTS AND DISCUSSION')
 
