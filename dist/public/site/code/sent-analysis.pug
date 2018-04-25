@@ -131,15 +131,16 @@ block content
 
                       +header_2('RESULTS AND DISCUSSION')
 
-                      +image('../../assets/images/sent-table.png', 'Fig 5. Our results (l1-logistic regression) outperformed the state-of-the-art (MILP) by significant margins across all test sets. BCS is base-comparative-superlative training set, and performance is appropriately high. Turk is the set of 81 adjectives we porocured, while Mohit is its variations is the test set from prior work. Note both test sets had synonymous adjectives, which is not captured by our model, thus we removed them in *-no-tie. ')
+                      +image('../../assets/images/sent-table.png', 'Fig 5. Our results (l1-logistic regression) outperformed the state-of-the-art (MILP) by significant margins across all test sets. BCS is base-comparative-superlative training set, and performance is appropriately high. Turk is the set of 81 adjectives constructed and ordered by Mechanical Turks, while Bansal and its variations is the test set from prior work. Note both test sets had synonymous adjectives, which is not captured by our model, thus we removed them in *-no-tie. ')
+
                       p
-                        | We trained the logistic regression model 
+                        | We measured the quality of our ranking using pairwise accuracy, defined as the fraction of pairs that is correctly classified. And Kendall's-τ, which measures the total number of pairwise inversions. We trained our model on the paraphrase graph alone, the N-gram graph alone, and both graphs combined. Curiously we found that PPDB has great data coverage over the set of adjectives in our test set, but poor coverage over Bansal's test set. Similarly Bansal's dataset does not cover our test set at all. In figure 5 we report the logistic regression model trained on the combine graph only. The model outperforms Bansal's MILP method across all test sets and both measures, demonstrating the efficacy of incorporating PPDB and N-gram data into a machine-learning based prediction system.
 
 
-                      //- +header_2('CONCLUSION')
+                      +header_2('CONCLUSION')
 
-                      //- p
-                      //-   | hello world
+                      p
+                        | The fundamental hypothesis underlying all methods is that there is a positive relationship between how words are used on average in the context of intensifiers such as adverbs or N-gram patterns, and how an annotator ranks pairs of such words in isolation. The fact that all successful methods we have seen so far achieved close to or above 70% pairwise accuracy confirms this hypothesis. However, we must caution those who wish to improve upon this results, inter-annotator accuracy on Mohit’s set is 78%. In fact, many of the rankings are subjective and we do not believe it is meaningful to achieve aim for accuracy higher than 90%. Some of the clusters contained adjectives that are not necessarily synonymous, and thus it is difficult for the annotators to agree on a ranking (independently). Therefore the best way forward is actually to procure "better" clusters where adjectives can fall on a similar scale. There are two ways to improve the quality of each cluster: prune the clusters for synonyms, and resist the temptation for large clusters. The first suggestion is self explanatory, since none of the models account for synonyms, clusters that contain words annotators would consider to be synonyms will unfairly depress the score. Eschewing large clusters is important because the larger the cluster, the more likely polysemy wills confuse the annotator. 
 
 
 
