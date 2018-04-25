@@ -5,14 +5,14 @@ block content
 	include includes/title-card.pug
 	include includes/article.pug
 
-	//- +title_card('TECH', 'Some of my machine learning projects')
+	//- +title_card('Machine Learning Projects', '')
 
 	.main-content-inner-wrapper(data-content-field="main-content")
 		.gallery-wrapper(data-controller="GalleryLayout")
 			.slides
 				.grid-wrapper
 
-					+article('Deep Recurrent Dialogue Generation'
+					+article('Deep Recurrent Dialogue Generation Trained with Reinforcement Learning'
 						, 'April' 
 						, '20'
 						, '2017'
@@ -22,7 +22,7 @@ block content
 						) 
 
 
-					+article('Adjective Sentiment Analysis using The Paraphrase Database'
+					+article('Learning Adjective Sentiments from the Paraphrase Database'
 						, 'April' 
 						, '24'
 						, '2017'
@@ -32,13 +32,13 @@ block content
 						) 
 
 
-					+article('Learning Multi-modal Translations via Matrix Completion'
-						, 'April' 
+					+article('Learning Translations via Matrix Completion'
+						, 'May'
 						, '20'
 						, '2017'
 						, '../assets/images/matrix-2.png'
-						, '/corpus-mt'
-						, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum hendrerit in arcu non sollicitudin. Donec at velit arcu. Aliquam luctus odio ut vestibulum sodales. Quisque aliquam purus ligula, blandit dictum nisi aliquam sed. Suspendisse facilisis interdum enim eget sollicitudin. Mauris orci velit, tempus pellentesque maximus id, sollicitudin vitae est. Integer mollis justo at velit tincidunt dictum. Integer elementum mauris sapien, eu malesuada tortor luctus a. Vivamus at blandit eros. Aenean vitae quam est. In venenatis mollis erat, non egestas nisi feugiat id. Cras in nibh maximus, viverra sem vitae, lobortis eros.'
+						, '/multi-mt'
+						, 'Bilingual lexicon induction is the task of learning word translations without bilingual parallel corpora. In this paper published in ACL 2017, we consider model bilingual lexicon induction as a matrix completion problem leverage diverse set of data from text to images. This model achieves state-of-the-art performance in both high and low resource languages.'
 						) 
 
 
@@ -47,7 +47,7 @@ block content
 						, '1'
 						, '2017'
 						, '../assets/images/neural-net-2.png'
-						, '/multi-mt'
+						, '/corpus-mt'
 						, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum hendrerit in arcu non sollicitudin. Donec at velit arcu. Aliquam luctus odio ut vestibulum sodales. Quisque aliquam purus ligula, blandit dictum nisi aliquam sed. Suspendisse facilisis interdum enim eget sollicitudin. Mauris orci velit, tempus pellentesque maximus id, sollicitudin vitae est. Integer mollis justo at velit tincidunt dictum. Integer elementum mauris sapien, eu malesuada tortor luctus a. Vivamus at blandit eros. Aenean vitae quam est. In venenatis mollis erat, non egestas nisi feugiat id. Cras in nibh maximus, viverra sem vitae, lobortis eros.'
 						) 
 

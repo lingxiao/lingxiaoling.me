@@ -18,8 +18,8 @@ block content
 
 
             +title( "May 20th, 2017"
-                  , "Learning Multi-modal Translations"
-                  , "via Matrix Completion"
+                  , "Learning Translations via"
+                  , "Matrix Completion"
                   )
 
     
@@ -34,13 +34,16 @@ block content
                         +header_2('ABSTRACT')
 
                         p
-                          | hell world
+                          | I played a small role in part of a large team led by <a target='_blank' href = 'http://www.seas.upenn.edu/~derry/'>Derry Wijyaya</a>, in collaboration with <a target='_blank' href='https://www.linkedin.com/in/brendan-d-callahan-a6473327/'>Brendan Callahan </a>, <a target='_blank' href='https://www.seas.upenn.edu/~johnhew/'> John Hewitt </a>, <a target='_blank' href='https://www.linkedin.com/in/jiegaoupenn/'>Jie Gao</a>, <a target='_blank' href='https://perso.limsi.fr/marianna/'>Marianna Apidianaki</a>. Supervised by <a target ='_target' href='http://www.cis.upenn.edu/~ccb/'>Chris Callison-Burch</a>. The <a target='_blank' href='http://www.aclweb.org/anthology/D17-1152'>paper</a> was published in ACL 2017. Bilingual lexicon induction is the task of learning word translations without bilingual parallel corpora. In this paper published in ACL 2017, we model bilingual lexicon induction as a matrix completion problem leveraging diverse set of data from text to images, each of which is allowed to be incomplete or noisy. Specifically, we construct a matrix with source words in the columns and target words in the rows, and formulate translation as matrix factorization with a Bayesian Personalized Ranking objective (BPR). This objective is appropriate because  the absence of values in the matrix does not imply a missing translation, and BPR cast the prediction of missing values as a ranking task.  The framework is tested on the VULIC1000 data set comprising of 1000 nouns in Spanish, Italian, and Dutch, and their one-to-one ground-truth translations in English, outperforming the state-of-the art models by significant margin. 
+
 
 
                         +header_2('INTRODUCTION')
+                       
+                        +image('../../assets/images/city-2.jpg', 'The world is getting smaller, opportunity and danger lies in every corner. When it speaks, will you understand?')
 
                         p
-                          | hello world
+                          | Machine translation between languages is a crucial step in bringing the world together.  However machine translation requires large, sentence aligned bilingual texts to learn effective models, and such corpora is rare, especially for resource-constrained languages, leading inaccurate translations at run time due to "out-of-vocabulary" words. The Bilingual Lexicon Induction (BLI) task which learns word translations from monolingual or comparable corpora to increase word coverage, such translations could signficantly improve existing machine translation systems. We developed a matrix factorization-based framework that uses diverse but incomplete information from dictionaries, signal from related languages, word embeddings, and visual similarities. This stands in contrast to prior work, which either uses only one monolingual signal, or rely on supervised methods to aggregate signals. 
 
 
                         +header_2('TECHNICAL BACKGROUND')
