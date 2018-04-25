@@ -76,7 +76,7 @@ block content
 
                           +header_3('Paraphrase Graph')
 
-                        +image('../../assets/images/ppdb-3.png', 'Fig 3. Three adjectives from the Adverb Paraphrase Graph and their respective vertices.')
+                        +image('../../assets/images/graph-2.png', 'Fig 3. An adjectives subgraph from the Adverb Paraphrase Graph and their respective vertices. From Veronica Wharton.')
                         
                         p
                           | Inspecting PPDB, we find a litany of (adj, adv adj) paraphrase pairs that could be valuable in ranking adjectives, for example (“great”, “very good”) and (“great”, “extremely good”). Furthermore, we hypothesized that both the frequency and intensity of adverbs (ie very vs extremely) modifying the adjective are informative features when ranking adjectives. This intuition motivated the construction of the Adverb Paraphrase Graph (AdParaGraph) where the vertices are adjectives, and the directed edges are adverbs, so that if there is an edge from vertex s to t with label u, then the string u s is a paraphrase of t. We bootstrapped the graph by manually selecting base, comparative, and superlative adjective triplets, and and pruned PPDB for the adverbs that modified the weaker word in the triplet so that the clause is a paraphrase of the stronger adjective. We then compiled all (adj_1 adj_2; adv) triplets from the PPDB given the adverbs we have collected. Overall the graph has 18,936 edges, covering 2,745 adjectives modified by 544 unique adverbs. On a practical note, upon closer inspection it became clear that some adverbs de-intensified the adjective (“somewhat”) while others intensified it (“very”), however analysis shows that the overwhelming majority of adverbs appear as intensifiers, thus removed the de-intensifiers from the graph. 
@@ -119,8 +119,6 @@ block content
 
                       p 
                         | This makes the representation of (s, t) robust to noise and data sparsity. Since the features are easily interpretable, it’s curious to read the model as stating that the neighbors of words are very informative to how strong the word is emotionally. Because the total ranking system demands a probability, we experiment with two methods. As a baseline we arbitrarily assign a value (1/2 + epsilon) for some very small epsilon if logistic regression decides s is less than t, and 1/2 - epsilon otherwise. Note in the case where there is absolutely not data, we output 1/2, interpreted as “do not know.” Next, we define a formal variant of the baseline. The heart of the of the problem is that we have some prior belief about the likelihood that one adjective is weaker than another, and an updated belief after observing some data, be it direct comparison or estimation from a model. Since we are modeling each edge a Bernoulli variable with parameter θ ranging over [0, 1], the prior is then a distribution over the Bernoulli θ, this is the Beta distribution. 
-
-
 
 
                         +header_2('RESULTS AND DISCUSSION')
