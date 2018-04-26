@@ -1,14 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
-const fs = require("fs");
 const index = express_1.Router();
 index.get('/curriculum-vitae', (req, res, next) => {
+    var external = "https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5ad558a2562fa7b58d9307fb/1523931298159/cv.pdf";
     var pdf_path = "/Users/lingxiao/Documents/Career/Resume/CV/resume.pdf";
-    fs.readFile(pdf_path, (err, data) => {
-        res.contentType('application/pdf');
-        res.send(data);
-    });
+    res.redirect(external);
 });
 index.get('/', (req, res, next) => {
     res.render('site/index-home', {});

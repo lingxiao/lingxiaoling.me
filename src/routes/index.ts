@@ -13,19 +13,20 @@ const index: Router = Router();
 
 
 /**
-	serve CV
-	this one doens'tn work w/o hardcoded paths
-	maybe do later
+	TODO: external cannot be displayed on the iphone
+	need to figure out how to ge the path
 */
 index.get('/curriculum-vitae', (req, res, next) => { 
 
-	// var pdf_path = "https://github.com/lingxiao/curriculum-vitae/blob/master/resume.pdf"
+	var external = "https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5ad558a2562fa7b58d9307fb/1523931298159/cv.pdf"
 	var pdf_path = "/Users/lingxiao/Documents/Career/Resume/CV/resume.pdf"	
 
-	fs.readFile( pdf_path, (err, data) =>{
-		res.contentType('application/pdf');
-		res.send(data)
-	})
+	res.redirect(external)
+
+	// fs.readFile( pdf_path, (err, data) =>{
+		// res.contentType('application/pdf');
+		// res.send(data)
+	// })
 });
 
 
