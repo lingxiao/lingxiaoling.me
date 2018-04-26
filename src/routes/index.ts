@@ -18,15 +18,18 @@ const index: Router = Router();
 */
 index.get('/curriculum-vitae', (req, res, next) => { 
 
-	var external = "https://static1.squarespace.com/static/59bfff0151a5849dcf7b03ce/t/5ad558a2562fa7b58d9307fb/1523931298159/cv.pdf"
-	var pdf_path = "/Users/lingxiao/Documents/Career/Resume/CV/resume.pdf"	
+	// alternate way:
+	// var external = "path/to/external"
+	// res.redirect(external)
 
-	res.redirect(external)
+	var pdf_path = __dirname + '/../public/assets/resume.pdf'
 
-	// fs.readFile( pdf_path, (err, data) =>{
-		// res.contentType('application/pdf');
-		// res.send(data)
-	// })
+	console.log('pdf_path: ', pdf_path)
+
+	fs.readFile( pdf_path, (err, data) =>{
+		res.contentType('application/pdf');
+		res.send(data)
+	})
 });
 
 
