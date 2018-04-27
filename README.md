@@ -62,8 +62,6 @@ basic types: https://www.typescriptlang.org/docs/handbook/basic-types.html
 
 4. on safari images fail to rescale on browser resize
 
-## Plan ##
-
 
 
 
