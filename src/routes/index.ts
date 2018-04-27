@@ -22,7 +22,7 @@ index.get('/curriculum-vitae', (req, res, next) => {
 	// var external = "path/to/external"
 	// res.redirect(external)
 
-	var pdf_path = __dirname + '/../public/assets/resume.pdf'
+	var pdf_path = __dirname + '/../public/curriculum-vitae/resume.pdf'
 
 	console.log('pdf_path: ', pdf_path)
 
