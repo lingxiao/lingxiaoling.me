@@ -4,7 +4,7 @@ const express_1 = require("express");
 const fs = require("fs");
 const index = express_1.Router();
 index.get('/curriculum-vitae', (req, res, next) => {
-    var pdf_path = __dirname + '/../public/assets/resume.pdf';
+    var pdf_path = __dirname + '/../public/curriculum-vitae/resume.pdf';
     console.log('pdf_path: ', pdf_path);
     fs.readFile(pdf_path, (err, data) => {
         res.contentType('application/pdf');
