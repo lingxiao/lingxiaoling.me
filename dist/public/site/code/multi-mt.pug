@@ -17,9 +17,9 @@ block content
             // POST HEADER
 
             +title( "May 20th, 2017"
-                  , "Learning Translations via"
-                  , "Matrix Completion"
-                  )
+              , "Learning Translations via"
+              , "Matrix Completion"
+              )
 
             // POST BODY
             .body.entry-content
@@ -32,11 +32,11 @@ block content
                         +header_2('ABSTRACT')
 
                         p
-                          | I was a role player in part of a large team led by <a target='_blank' href = 'http://www.seas.upenn.edu/~derry/'>Derry Wijyaya</a>, in collaboration with <a target='_blank' href='https://www.linkedin.com/in/brendan-d-callahan-a6473327/'>Brendan Callahan </a>, <a target='_blank' href='https://www.seas.upenn.edu/~johnhew/'> John Hewitt </a>, <a target='_blank' href='https://www.linkedin.com/in/jiegaoupenn/'>Jie Gao</a>, <a target='_blank' href='https://perso.limsi.fr/marianna/'>Marianna Apidianaki</a>. Supervised by <a target ='_target' href='http://www.cis.upenn.edu/~ccb/'>Chris Callison-Burch</a>. The <a target='_blank' href='http://www.aclweb.org/anthology/D17-1152'>paper</a> was published in ACL 2017 (25% acceptance rate). Bilingual lexicon induction is the task of learning word translations without bilingual parallel corpora. In this paper published in ACL 2017, we model bilingual lexicon induction as a matrix completion problem leveraging diverse set of data from text to images, each of which is allowed to be incomplete or noisy. Specifically, we construct a matrix with source words in the columns and target words in the rows, and formulate translation as matrix factorization with a Bayesian Personalized Ranking objective (BPR). This objective is appropriate because  the absence of values in the matrix does not imply a missing translation, and BPR cast the prediction of missing values as a ranking task.  The framework is tested on the VULIC1000 data set comprising of 1000 nouns in Spanish, Italian, and Dutch, and their one-to-one ground-truth translations in English, outperforming the state-of-the art models by significant margin. 
+                          | I was part of a large team led by <a target='_blank' href = 'http://www.seas.upenn.edu/~derry/'>Derry Wijyaya</a>, in collaboration with <a target='_blank' href='https://www.linkedin.com/in/brendan-d-callahan-a6473327/'>Brendan Callahan </a>, <a target='_blank' href='https://www.seas.upenn.edu/~johnhew/'> John Hewitt </a>, <a target='_blank' href='https://www.linkedin.com/in/jiegaoupenn/'>Jie Gao</a>, <a target='_blank' href='https://perso.limsi.fr/marianna/'>Marianna Apidianaki</a>. Supervised by <a target ='_target' href='http://www.cis.upenn.edu/~ccb/'>Chris Callison-Burch</a>. The <a target='_blank' href='http://www.aclweb.org/anthology/D17-1152'>paper</a> was published in ACL 2017 (25% acceptance rate). Bilingual lexicon induction is the task of learning word translations without bilingual parallel corpora. In this paper published in ACL 2017, we model bilingual lexicon induction as a matrix completion problem leveraging diverse set of data from text to images, each of which is allowed to be incomplete or noisy. Specifically, we construct a matrix with source words in the columns and target words in the rows, and formulate translation as matrix factorization with a Bayesian Personalized Ranking objective (BPR). This objective is appropriate because  the absence of values in the matrix does not imply a missing translation, and BPR cast the prediction of missing values as a ranking task.  The framework is tested on the VULIC1000 data set comprising of 1000 nouns in Spanish, Italian, and Dutch, and their one-to-one ground-truth translations in English, outperforming the state-of-the art models by significant margin. 
 
 
                         +header_2('INTRODUCTION')
-                       
+
                         +image('../../assets/images/city-2.jpg', 'The world is shrinking, opportunity and danger lay in every corner. When it speaks, will you understand?')
 
                         p
@@ -86,7 +86,7 @@ block content
                           | The model is trained using stochastic gradient descent. 
 
 
-                        +header_2('DATA SET')
+                        +header_2('DATASET AND EXPERIMENTS')
 
                         p
                           | We benchmark our method on two tests sets:
@@ -97,21 +97,43 @@ block content
                           </ol>
 
                         p
-                          | For each language, we randomly pick up to 1000 words that have only one English word translation in the crowdsourced dictionary to be the test set for that language. On average, there are 967 test source words with a variety of POS per language. 
+                          | For each language, we randomly pick up to 1000 words that have only one English word translation in the crowdsourced dictionary to be the test set for that language. On average, there are 967 test source words with a variety of POS per language.  Furthermore, we construct another bilingual translation dataset WIKI, using interlingual links among Wikipedia pages to identify words in a third language that translates to words in the source and target language. And finally, we construct WIKI + CROWD comprised of a set of translations from the source to non-target languages, pivoted through wikipedia pages. We test the efficacy of our algorithm in these four studies using the datasets we collected:
+
+                          <ol type ='I'>
+                            <li> x<sub>e,f</sub><sup>MF-W</sup> Monolingual signals for translation: using WIKI
+                            <li> x<sub>e,f</sub><sup>MF-W+C</sup> Monolingual signals for translation: using WIKI+CROWD
+                            <li> x<sub>e,f</sub><sup>AUX-WE</sup>Bilingual informed word embeddings: the source and target embeddings are learned using word2vec skiagram model on tokenized Wikipedia pages. And the mapping between two embeddings are learned with crowdsourced translations as seed. The linear mapping minimizes squared error after translation:
+
+
+                            +image('../../assets/images/mf-6.png', '')
+
+                          p
+                            | where X<sub>E</sub> and X<sub>F</sub> are source and target languages, while W is the transformation between the two sets. 
+
+                            <li> x<sub>e,f</sub><sup>AUX-VIS</sup> Visual representation of words: We use a large <a target='_blank' href='/corpus-mt'>multilingual corpus</a> of labeled images to obtain the visual representation of the words in our source and target languages. The corpus contains 100 images for up to 10k words in each of 100 foreign languages, plus images of each of their translations into English. For each word, we use 10 images from the dataset and extract feature representation using a four layer neural net W = (φ(1), φ(2), φ(3), φ(4)) trained with the objective:<br>
+
+
+                            +image('../../assets/images/mf-7.png', '')
+
+                          p
+                            | where x<sub>e</sub> and x<sub>f</sub> are source and target words.
+                          </ol>
+
+                          p
+                            | Finally, during testing we combine two auxiliary singals word embeddings and image embeddings with:<br>
+
+                            +image('../../assets/images/mf-9.png')
+
+                          p
+                            | and output the translation probability according to:<br>
+
+                            +image('../../assets/images/mf-8.png')
 
 
                         +header_2('RESULTS AND DISCUSSION')
 
                         p
                           | Coming Soon!
-//- 
-
-                        +header_2('CONCLUSION')
-
-                        p
-                          | tbw
-
-
 
 
 
