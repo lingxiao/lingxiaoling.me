@@ -42,7 +42,7 @@ block content
                         p
                           | Machine translation between languages is a crucial step in bringing the world together.  However machine translation requires large, sentence aligned bilingual texts to learn effective models, and such corpora is rare, especially for resource-constrained languages, and result in inaccurate translations. Due to the low quantity and thus coverage of the texts, there may still be “out-of-vocabulary” words encountered at run-time. The Bilingual Lexicon Induction (BLI) task which learns word translations from monolingual or comparable corpora to increase word coverage. Past attempts have often relied on simple count based methods, however the feature vectors constructed such way typically only support heuristic notion of distance. In recent years, there has been a resurgence of interest in word embeddings learned by recurrent neural networks (RNNs) that supports better notion of word similarities in certain tests. Recent work in machine translation leveraged such advances by constructing a shared bilingual embedding space spanned by the same basis, in this shared space words of the same meaning from different languages are distributed close together, providing an immediate measure to determine translations (see Fig 1). Typically, the transformation between the semantic space between two languages is induced using seed translations from existing dictionaries, or reliably extracted from pseudo-bilingual copra of comparable tasks. Recent work by <a target='_blank' href='https://arxiv.org/pdf/1706.00374.pdf'> Vulic et al. (2016)</a> and others showed what naively combining word embeddings with visual similarities from images can improve translation accuracy. We extend prior attempts by constructing a unified framework to integrate signals from monolingual, bilingual, and image data to improve accuracy of machine translation. 
 
-                        +image('../../assets/images/word-embedding-1.png', 'Fig 1. It is possible to induce a representation of words so that similar words across languages are closer together in a shared space. From Mikolov et al. (2013)')
+                        +image('../../assets/images/mf-11.png', 'Fig 1. It is possible to align the embedings of two languages so if two words translates into each other, they are closer in a shared space. The alignment process requires a set of seed words to constrain the transformation. From Vulic and Korhonen (2016).')
 
 
                         +header_2('PROBLEM FORMULATION')
@@ -100,7 +100,7 @@ block content
                           | For each language, we randomly pick up to 1000 words that have only one English word translation in the crowdsourced dictionary to be the test set for that language. On average, there are 967 test source words with a variety of POS per language.  Furthermore, we construct another bilingual translation dataset WIKI, using interlingual links among Wikipedia pages to identify words in a third language that translates to words in the source and target language. And finally, we construct WIKI + CROWD comprised of a set of translations from the source to non-target languages, pivoted through wikipedia pages. We test the efficacy of our algorithm in these four studies using the datasets we collected:
 
                           <ol type ='I'>
-                            <li> x<sub>e,f</sub><sup>MF-W</sup> Monolingual signals for translation: using WIKI
+                            <li> x<sub>e,f</sub><sup>MF-W</sup> Monolingual signals for translation: using WIKI. 
                             <li> x<sub>e,f</sub><sup>MF-W+C</sup> Monolingual signals for translation: using WIKI+CROWD
                             <li> x<sub>e,f</sub><sup>AUX-WE</sup>Bilingual informed word embeddings: the source and target embeddings are learned using word2vec skiagram model on tokenized Wikipedia pages. And the mapping between two embeddings are learned with crowdsourced translations as seed. The linear mapping minimizes squared error after translation:
 
@@ -133,7 +133,29 @@ block content
                         +header_2('RESULTS AND DISCUSSION')
 
                         p
-                          | Coming Soon!
+                          | Using the back-off scheme we described before, we run the following six set of experiments:
+
+                          <ol>
+                            <li> BPR_W uses only x<sub>e,f</sub><sup>MF-W</sup> 
+                            <li> BPR_W+C uses x<sub>e,f</sub><sup>MF-W</sup>  with back-off to x<sub>e,f</sub><sup>MF-W+C</sbup> 
+                            <li> BPR_LN uses only x<sub>e,f</sub><sup>AUX-WE</sup> with linear mapping as described in III
+                            <li> BPR_NN uses only x<sub>e,f</sub><sup>AUX-WE</sup>  with nonlinear mapping as seen in IV
+                            <li> BPR_WE uses x<sub>e,f</sub><sup>MF-W</sup>, x<sub>e,f</sub><sup>MF-W+C</sup>  and x<sub>e,f</sub><sup>AUX-WE</sup> with nonlinear mapping
+                            <li> BPR_VIS uses x<sub>e,f</sub><sup>MF-W</sup>, x<sub>e,f</sub><sup>MF-W+C</sup>, and combines x<sub>e,f</sub><sup>AUX-WE</sup> with x<sub>e,f</sub><sup>AUX-VIS</sup> as described above.
+                          </ol>
+
+                        p
+                          | We benchmark each of the methods against the <a target='_blank' href='https://pdfs.semanticscholar.org/9b25/2a3318efbe39f95520d1d03a787059430035.pdf'>state of the art</a> baseline model on the VULIC1000 dataset:<br>
+
+                          +image('../../assets/images/mf-10.png','')
+
+                        p
+                          | The baseline mutual nearest neighbor method (MNN) uses mutual nearest neighbor pairs (MNN) obtained from pseudo-bilingual corpora constructed from unannotated monolingual data of the source and target languages, and ranks candidate target words based on their cosine similarities to the source word in the shared space. As we can see above, our methods perform better across all translation pairs, in particular when multi-modal information is used for translation. We observe  a similar trend in the CROWDTest data. <br>
+
+                          +image('../../assets/images/mf-12.png','Fig 4. CROWDTest across 27 languages shows that more signals improves translation accuracies.')
+
+                        p
+                          | Finally, we noted that a seed lexicon size of 5k is sufficient to achieve optimal performance across languages, although it is unclear why this is.  In conclusion, in this project we proposed a novel framework for combining multi-modal data from diverse sources, each of which may be sparse or noisy. The framework is based on matrix completion and use BPR to learn translations. Our method is effective across different languages, and accuracy improves as the volume of data increases. Finally, our framework can trivially incorporate additional signals.
 
 
 
