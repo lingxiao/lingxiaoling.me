@@ -42,30 +42,32 @@ block content
 
                         +header_2('INTRODUCTION')
 
-                        +image('../../assets/images/corpus-mt-1.png', 'Fig 1. Images within the same labels are closer together in embedding space. Because images returned by Google searches are similar across different languages, we can leverage the similarity to translate among languages Socher et al. (2013b)')
+                        +image('../../assets/images/corpus-mt-1.png', 'Fig 1. Images within the same labels are closer together in embedding space. Because images returned by Google searches are similar across different languages, we can exploit the similarity to translate among languages. Socher et al. (2013b)')
 
                         p
                           | Machine translation typically require bilingual sentence-aligned parallel texts. However such texts often do no exist, in particular for low resource languages.  In such cases researchers have explored various  monolingual signals from surface form of words to aligning word embeddings. In this paper, we explore the efficacy of using image representation of words extracted by SIFT (scale invariant feature transform) and those learned by AlexNet for machine translation. We differentiate from prior dataset in both size and scope. Our data has 100 images covering over 260k words in English, and over 10k words in 99 foreign languages. We introduced the methodology for creating the resources, in particular how we avoided recreating Google’s bilingual dictionaries used to query results for the image search, and reported a series fo experiments that demonstrate the value of our images for machine translation. 
-
 
 
                         +header_2('TECHNICAL BACKGROUND')
 
                         p
                           | To be written
-                          
+
+                        +image('../../assets/images/corpus-mt-4.png', 'Fig 2. The first layer (top) and second layer (bottom) learned from natural images. Note the first layer learns oriented edges. From Lee et al (2009).')
 
 
-                        +header_2('PROBLEM FORMULATION')
+                        +image('../../assets/images/corpus-mt-2.png', 'Fig 3. Bottom layers in the network detecting lower level structures such as oriented edges, colors, and corners. From Shi (2018).')
+
+                        +image('../../assets/images/corpus-mt-3.png', 'Fig 4. Deeper layers detecting high-level concepts such as object structure and their parts. From Shi (2018).')
 
 
-                        +header_2('DATA SET')
 
-                        p
-                          | To be written
-                            
 
-                        +header_2('RESULTS AND DISCUSSION')
+                        +header_2('CORPUS CREATION')
+
+
+
+                        +header_2('DISCUSSION')
 
                         p
                           | To be written
