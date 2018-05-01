@@ -34,7 +34,7 @@ block content
                         +header_2('ABSTRACT')
 
                         p
-                          | I was part of a multi-year project led by <a target='_blank' href='https://www.linkedin.com/in/brendan-d-callahan-a6473327/'>Brendan Callahan </a>, in collaboration with <a target='_blank' href='https://www.seas.upenn.edu/~johnhew/'> John Hewitt </a> and  <a target='_blank' href = 'http://www.seas.upenn.edu/~derry/'>Derry Wijyaya</a>, supervised by <a target ='_target' href='http://www.cis.upenn.edu/~ccb/'>Chris Callison-Burch</a>.  In this project, we introduce a new large scale multilingual corpus of labeled images collected to facilitate research into learning translations through visual similarity. We have collected 100 images for up to 10,000 words in each of 100 foreign languages, plus images for each of their translations into English. In addition to the images, we collected the text from the web pages where each of the images appeared. Our dataset contains 35 million images and web pages, totaling 25 terabytes of data. We also release vectors represent each image using Scale Invariant Feature Transform (SIFT) features, color histograms and convolutional neural network (CNN) based features.
+                          | I was part of a multi-year project led by <a target='_blank' href='https://www.linkedin.com/in/brendan-d-callahan-a6473327/'>Brendan Callahan </a>, in collaboration with <a target='_blank' href='https://www.seas.upenn.edu/~johnhew/'> John Hewitt </a> and  <a target='_blank' href = 'http://www.seas.upenn.edu/~derry/'>Derry Wijyaya</a>, supervised by <a target ='_target' href='http://www.cis.upenn.edu/~ccb/'>Chris Callison-Burch</a>.  In this project, we introduce a new large scale multilingual corpus of labeled images collected to facilitate research in learning translations via visual similarity. We have collected 100 images for up to 10,000 words in each of 100 foreign languages, and images for each of their translations into English. In addition, we collected the text from the web pages where each of the images appeared. Our dataset contains 35 million images and web pages, totaling 25 terabytes of data. Finally, we released vectors representation of each image extracted using Scale Invariant Feature Transform (SIFT) features, color histograms and convolutional neural network (CNN) features from AlexNet. 
 
                         p
                           | The project paper "A Large Multilingual Corpus for Learning Translations from Images" that was submitted for EMNLP 2017 but ultimately rejected because "the authors have provided some imporatant examples and statistics in the supplementary material whereas the paper should be self-contained as mentioned in the call for papers."
@@ -42,10 +42,10 @@ block content
 
                         +header_2('INTRODUCTION')
 
-                        p
-                          | To be written
-
                         +image('../../assets/images/corpus-mt-1.png', 'Fig 1. Images within the same labels are closer together in embedding space. Because images returned by Google searches are similar across different languages, we can leverage the similarity to translate among languages Socher et al. (2013b)')
+
+                        p
+                          | Machine translation typically require bilingual sentence-aligned parallel texts. However such texts often do no exist, in particular for low resource languages.  In such cases researchers have explored various  monolingual signals from surface form of words to aligning word embeddings. In this paper, we explore the efficacy of using image representation of words extracted by SIFT (scale invariant feature transform) and those learned by AlexNet for machine translation. We differentiate from prior dataset in both size and scope. Our data has 100 images covering over 260k words in English, and over 10k words in 99 foreign languages. We introduced the methodology for creating the resources, in particular how we avoided recreating Google’s bilingual dictionaries used to query results for the image search, and reported a series fo experiments that demonstrate the value of our images for machine translation. 
 
 
 
@@ -74,7 +74,7 @@ block content
                         +header_2('CONCLUSION')
 
                         p
-                          | To be written
+                          | In this project, we created and released a new dataset to assess the value add of image similarity in machine translation. Our data has 100 images covering over 260k words in English, and over 10k words in 99 foreign languages. We introduced the methodology for creating the resources, in particular how we avoided recreating Google’s bilingual dictionaries used to query results for the image search, and reported a series fo exeipiemends that demonstrate the value of our images for machine translation. 
 
 
 
