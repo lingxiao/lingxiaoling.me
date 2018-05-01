@@ -42,30 +42,37 @@ block content
 
                         +header_2('INTRODUCTION')
 
-                        +image('../../assets/images/corpus-mt-1.png', 'Fig 1. Images within the same labels are closer together in embedding space. Because images returned by Google searches are similar across different languages, we can exploit the similarity to translate among languages. Socher et al. (2013b)')
+                        +image('../../assets/images/corpus-mt-6.png', 'Fig 1. Matching words through their images: images retrieved from Google for the word cat in different languages. We match using SIFT and AlexNet features (Callahan 2017).')
 
                         p
-                          | Machine translation typically require bilingual sentence-aligned parallel texts. However such texts often do no exist, in particular for low resource languages.  In such cases researchers have explored various  monolingual signals from surface form of words to aligning word embeddings. In this paper, we explore the efficacy of using image representation of words extracted by SIFT (scale invariant feature transform) and those learned by AlexNet for machine translation. We differentiate from prior dataset in both size and scope. Our data has 100 images covering over 260k words in English, and over 10k words in 99 foreign languages. We introduced the methodology for creating the resources, in particular how we avoided recreating Google’s bilingual dictionaries used to query results for the image search, and reported a series fo experiments that demonstrate the value of our images for machine translation. 
+                          | Machine translation typically require bilingual sentence-aligned parallel texts. However such texts often do no exist, in particular for low resource languages.  In such cases researchers have explored various monolingual signals that is preserved across languages: from <a target='_blank' href='http://www.aclweb.org/anthology/E03-1076'>surface</a> <a target='_blank' href='http://www.aclweb.org/anthology/P08-1088'>form</a> of words to aligning <a target='_blank' href='https://www.cs.jhu.edu/~vandurme/papers/BergsmaVanDurmeIJCAI11.pdf'>SIFT image representation of words</a>. Image represenation of words is ideal because it is both universal and plentiful: billions of images with associated labels can be readily retrieved across languages using Google search. In this project, we compared the efficacy of using image representation of words extracted by SIFT (scale invariant feature transform) and those learned by AlexNet for machine translation. We differentiate from prior dataset in both size and scope. Our data has 100 images covering over 260k words in English, and over 10k words in 99 foreign languages. We introduced the methodology for creating the resources, in particular how we avoided recreating Google’s bilingual dictionaries used to query results for the image search, and reported a series of experiments that demonstrate the value of our images for machine translation. 
 
 
                         +header_2('TECHNICAL BACKGROUND')
 
                         p
-                          | To be written
+                          | In this section we introduce SIFT, convolutional neural nets, and machine translation through multi-modal data. SIFT, or scale invariant feature transform are local image features that is invariant to scaling and rotation, they are robust to illumination, noise and distortion. Until the introduction of convolutional neural nets, SIFT is the most common local feature descriptor method in computer vision.  For example, SIFT features may be extracted and concatenated to create a bag-of-words description for the image, which may be used in a regression model for classification. In fact, <a target='_blank' href='https://www.cs.jhu.edu/~vandurme/papers/BergsmaVanDurmeIJCAI11.pdf'>Bergsma and Van Durme</a> used this bag-of-words representation to significantly increase the accuracy of translation in over 15 language pairs. 
 
-                        +image('../../assets/images/corpus-mt-4.png', 'Fig 2. The first layer (top) and second layer (bottom) learned from natural images. Note the first layer learns oriented edges. From Lee et al (2009).')
+                        +image('../../assets/images/corpus-mt-7.png', 'Fig 2. SIFT features is invariant to scaling and rotation of image. It is robust enough across images that it can used as the input to computer vision pipeline that takes multiple pictures reconstructs the three dimensional structure of an object in this classical work by Sameer et al 2009.')
+
+                        p
+                          | Since the late 2000s, convolutional neural networks (CNN) have replaced many traditional methods in computer vision due to cheaper computing power, deluge of data, and the fact that performance of CNNs continue to increase with the size of data while traditional methods often plateau. Contrary to some neural networks, features learned by CNNs are both informative and can be interpreted visually. In figures 3 - 6, we show that lower layers in the network capture local features similar to SIFT, while higher levels discriminate among class-level concepts. Empricially speaking, this makes the top layers of a convolutional neural net better representations of classes than SIFT across many tasks. This makes CNNs ideal feature extractors for monolingual machine translation. 
+
+                        +image('../../assets/images/corpus-mt-4.png', 'Fig 3. The first layer (top) and second layer (bottom) learned from natural images. Note the first layer learns oriented edges, while the second layer learns combination of oriented edges. From Lee et al (2009).')
+
+                        +image('../../assets/images/corpus-mt-2.png', 'Fig 4. Bottom layers in the network detecting lower level structures such as oriented edges, colors, and corners. From Shi (2018).')
+
+                        +image('../../assets/images/corpus-mt-3.png', 'Fig 5. Deeper layers detecting high-level concepts such as object structure and their parts. From Shi (2018).')
+
+                        +image('../../assets/images/corpus-mt-5.png', 'Fig 6. The last layers of the network differentiate among multiple object classes, and thus are informative representations of such classes. From Shi (2018).')
 
 
-                        +image('../../assets/images/corpus-mt-2.png', 'Fig 3. Bottom layers in the network detecting lower level structures such as oriented edges, colors, and corners. From Shi (2018).')
-
-                        +image('../../assets/images/corpus-mt-3.png', 'Fig 4. Deeper layers detecting high-level concepts such as object structure and their parts. From Shi (2018).')
-
-
-
+                        //- +image('../../assets/images/corpus-mt-1.png', 'Fig 2. Images within the same labels are closer together in embedding space. Because images returned by Google searches are similar across different languages, we can exploit the similarity to translate among languages. Socher et al. (2013b)')
 
                         +header_2('CORPUS CREATION')
 
-
+                        p
+                          | To be written
 
                         +header_2('DISCUSSION')
 
