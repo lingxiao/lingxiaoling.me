@@ -45,7 +45,7 @@ block content
                         +image('../../assets/images/corpus-mt-6.png', 'Fig 1. Matching words through their images: images retrieved from Google for the word cat in different languages. We match using SIFT and AlexNet features (Callahan 2017).')
 
                         p
-                          | Machine translation typically require bilingual sentence-aligned parallel texts. However such texts often do no exist, in particular for low resource languages.  In such cases researchers have explored various monolingual signals that is preserved across languages: from <a target='_blank' href='http://www.aclweb.org/anthology/E03-1076'>surface</a> <a target='_blank' href='http://www.aclweb.org/anthology/P08-1088'>form</a> of words to aligning <a target='_blank' href='https://www.cs.jhu.edu/~vandurme/papers/BergsmaVanDurmeIJCAI11.pdf'>SIFT image representation of words</a>. Image represenation of words is ideal because it is both universal and plentiful: billions of images with associated labels can be readily retrieved across languages using Google search. In this project, we compared the efficacy of using image representation of words extracted by SIFT (scale invariant feature transform) and those learned by AlexNet for machine translation. We differentiate from prior dataset in both size and scope. Our data has 100 images covering over 260k words in English, and over 10k words in 99 foreign languages. Finally, our corpus include both concrete and non-concrete nouns. We introduced the methodology for creating the resources, in particular how we avoided recreating Google’s bilingual dictionaries used to query results for the image search, and reported a series of experiments that demonstrate the value of our images for machine translation. 
+                          | Machine translation typically require bilingual sentence-aligned parallel texts. However such texts often do no exist, in particular for low resource languages.  In such cases researchers have explored various monolingual signals that is preserved across languages: from <a target='_blank' href='http://www.aclweb.org/anthology/E03-1076'>surface</a> <a target='_blank' href='http://www.aclweb.org/anthology/P08-1088'>form</a> of words to aligning <a target='_blank' href='https://www.cs.jhu.edu/~vandurme/papers/BergsmaVanDurmeIJCAI11.pdf'>SIFT image representation of words</a>. Image represenation of words is ideal because it is both universal and plentiful: billions of images with associated labels can be readily retrieved across languages using Google search. In this project, we compared the efficacy of using image representation of words extracted by SIFT (scale invariant feature transform) and those learned by AlexNet for machine translation. We differentiate from prior dataset in both size and scope. Our data has 100 images covering over 260k words in English, and over 10k words in 100 foreign languages. Finally, our corpus include both concrete and non-concrete nouns. We introduced the methodology for creating the resources, in particular how we avoided recreating Google’s bilingual dictionaries used to query results for the image search, and reported a series of experiments that demonstrate the value of our images for machine translation. 
 
 
                         +header_2('TECHNICAL BACKGROUND')
@@ -66,19 +66,19 @@ block content
 
                         +image('../../assets/images/corpus-mt-5.png', 'Fig 6. The last layers of the network differentiate among multiple object classes, and thus are informative representations of such classes. From Shi (2018).')
 
-
-
                         //- +image('../../assets/images/corpus-mt-1.png', 'Fig 2. Images within the same labels are closer together in embedding space. Because images returned by Google searches are similar across different languages, we can exploit the similarity to translate among languages. Socher et al. (2013b)')
 
                         +header_2('CORPUS CREATION')
 
                         p
-                          | In this section, we describe how the corpus was created, in particular how we avoided recreating Google's internal translation system based on the images it serves across languages.
+                          | We created our dataset by querying Google Image Search for images associated with the English and foreign words in 100 bilingual dictionaries.  Specifically We constructed bilingual dictionaries from English onto 100 foreign languages, with 10k words in each dictionary. We discarded words where English and foreign words are identical. Then for each word in the dictionary, we queried Google Image search for images associated with the word in English and the foreign word. In order to prevent replication of Google's internal bilingual dictionary which may have been used to construct the return query,  we cross-referenced the URL associated with the image to ensure the image appeared on the page. In addition, we filter out images from pages that is not from the target language. Over all, 100 images are retrieved per word for English and the foreign language, and we extracted feature representation of the words using SIFT with color histograms, and AlexNet.
 
-                        +header_2('DISCUSSION')
+                        +header_2('RESULTS AND DISCUSSION')
 
                         p
-                          | To be written
+                          | 
+
+                        +image('../../assets/images/corpus-mt-8.png', '')
 
 
                         +header_2('CONCLUSION')
@@ -86,7 +86,7 @@ block content
                         p
                           | In this project, we created and released a new dataset to assess the value add of image similarity in machine translation. Our data has 100 images covering over 260k words in English, and over 10k words in 99 foreign languages. We introduced the methodology for creating the resources, in particular how we avoided recreating Google’s bilingual dictionaries used to query results for the image search, and reported a series fo exeipiemends that demonstrate the value of our images for machine translation. 
 
-
+                        +image('../../assets/images/corpus-mt-5.png', 'Fig 6. The last layers of the network differentiate among multiple object classes, and thus are informative representations of such classes. From Shi (2018).')
 
 
 
