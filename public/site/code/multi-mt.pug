@@ -73,7 +73,7 @@ block content
                           | in this case θ<sub>e</sub> is the visual features extracted by AlexNet, and each α<sub>i</sub> is another auxiliary feature. Note all the parameters in the expression are learned. Note although it is possible to combine x<sub>e,f</sub><sup>MF</sup> and x<sub>e,f</sub><sup>AUX</sup> by addition, we note that x<sub>e,f</sub><sup>MF</sup> has high precision but low recall, and vice versa for x<sub>e,f</sub><sup>AUX</sup>. Thus we only back-off to x<sub>e,f</sub><sup>AUX</sup> for words that have too few associated translations. 
 
                         p
-                          | Learning for Bayesian Personalized Ranking involves maximizing the difference in values assigned to observed translations compmared to those assigned to unobserved translations. That is given a training set of triples: (e, f, g) so that e translates to f, but not to g, we want to maximize the difference: 
+                          | Learning for Bayesian Personalized Ranking involves maximizing the difference in values assigned to observed translations compared to those assigned to unobserved translations. That is given a training set of triples: (e, f, g) so that e translates to f, but not to g, we want to maximize the difference: 
 
                         +image('../../assets/images/mf-4.png', '')
 
@@ -120,7 +120,7 @@ block content
                           </ol>
 
                           p
-                            | Finally, during testing we combine two auxiliary singals word embeddings and image embeddings with:<br>
+                            | Finally, during testing we combine two auxiliary signals word embeddings and image embeddings with:<br>
 
                             +image('../../assets/images/mf-9.png')
 
