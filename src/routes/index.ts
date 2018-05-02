@@ -7,31 +7,39 @@ import { Router }   from 'express';
 import * as express from 'express';
 import * as path    from 'path'   ;
 import * as pug     from 'pug'    ;
-import * as fs from 'fs';
+import * as fs      from 'fs'     ;
+import * as url     from 'url'    ;
 
 const index: Router = Router();
 
 
+
 /**
-	TODO: external cannot be displayed on the iphone
-	need to figure out how to ge the path
+	@Use: Given  path : <String> to pdf and res : <Response Object>,
+	      render pdf 
 */
-index.get('/curriculum-vitae', (req, res, next) => { 
+function serve_pdf(path, res){
 
-	// alternate way:
-	// var external = "path/to/external"
-	// res.redirect(external)
-
-	var pdf_path = __dirname + '/../public/curriculum-vitae/resume.pdf'
-
-	console.log('pdf_path: ', pdf_path)
+	var pdf_path = url.resolve(__dirname, path)
 
 	fs.readFile( pdf_path, (err, data) =>{
 		res.contentType('application/pdf');
 		res.send(data)
 	})
+}
+
+
+index.get('/curriculum-vitae', (req, res, next) => { 
+
+	return serve_pdf('../public/curriculum-vitae/resume.pdf',res)
+
 });
 
+index.get('/final_hj_ling', (req, res, next) => { 
+
+	return serve_pdf('../public/assets/pdf/final_hj_ling.pdf', res)
+
+});
 
 /**
 	lingxiaoling.me
