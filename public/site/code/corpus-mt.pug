@@ -76,21 +76,20 @@ block content
                         +header_2('RESULTS AND DISCUSSION')
 
                         p
-                          | We replicated experiments from prior work using our feature representations, and ran further experiments over low resource languages. We use the following expression to find words with the closest translation, given sets of images &#8496 from the source word e and &#8497 from the target word f, the average top-matches are used to produce a single value: 
+                          | We use the following expression to find words with the closest translation, given sets of images &#8496 from the source word e and &#8497 from the target word f, the average top-matches are used to produce a single value: 
 
 
                         +image('../../assets/images/corpus-mt-8.png', '')
 
                         p
-                          | The model's ranking is evaluated using Mean Reciprocal Rank (MRR) and top-N accuracy. 
+                          | The model's ranking is evaluated using Mean Reciprocal Rank (MRR) and top-N accuracy. Unlike <a target='_blank' href='https://www.cs.jhu.edu/~vandurme/papers/BergsmaVanDurmeIJCAI11.pdf'>previous work</a> which only translate among concrete nouns in high resource languages, we consider all words in our corpus, and amongst many low resource languages such as Uzbek and Urdu. When analyzing the results, we chose 500 most concrete words (often words that is grounded in one concept in reality, such as "car") and report the results separately. The concrete nouns are selected according the Ghent dataset.  
 
+                        +image('../../assets/images/corpus-mt-9.png', 'Fig 7. MRR for some of the languages. Closer to 1 is better. S+H is SIFT with color histogram features, CNN is features extracted by AlexNet.')
+
+                        p
+                          | Given figure 7, it is clear that AlexNet out performs Sift and histogram features across the board, confirming our initial intuition. Furthermore, translation quality is higher for concrete nouns, which have a narrower distribution of images, than all words. 
 
                         +header_2('CONCLUSION')
 
                         p
-                          | In this project, we created and released a new dataset to assess the value add of image similarity in machine translation. Our data has 100 images covering over 260k words in English, and over 10k words in 99 foreign languages. We introduced the methodology for creating the resources, in particular how we avoided recreating Google’s bilingual dictionaries used to query results for the image search, and reported a series fo exeipiemends that demonstrate the value of our images for machine translation. 
-
-                        +image('../../assets/images/corpus-mt-5.png', 'Fig 6. The last layers of the network differentiate among multiple object classes, and thus are informative representations of such classes. From Shi (2018).')
-
-
-
+                          | In this project, we created and released a new dataset to assess the value add of image similarity in machine translation. Our data set is significantly larger than prior attempts and cover high and low resource languages. We demonstrate the superior value of features extracted by AlexNet versus those from color histograms and SIFT. Furthermore, in the paper <a target='_blank' href='./multi-mt'>"Learning Translations v
