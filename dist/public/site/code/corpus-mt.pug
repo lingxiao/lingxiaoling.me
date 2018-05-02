@@ -73,13 +73,17 @@ block content
                         p
                           | We created our dataset by querying Google Image Search for images associated with the English and foreign words in 100 bilingual dictionaries.  Specifically We constructed bilingual dictionaries from English onto 100 foreign languages, with 10k words in each dictionary. We discarded words where English and foreign words are identical. Then for each word in the dictionary, we queried Google Image search for images associated with the word in English and the foreign word. In order to prevent replication of Google's internal bilingual dictionary which may have been used to construct the return query,  we cross-referenced the URL associated with the image to ensure the image appeared on the page. In addition, we filter out images from pages that is not from the target language. Over all, 100 images are retrieved per word for English and the foreign language, and we extracted feature representation of the words using SIFT with color histograms, and AlexNet.
 
-                        +header_2('DISCUSSION')
+                        +header_2('RESULTS AND DISCUSSION')
 
                         p
-                          | 
+                          | We replicated experiments from prior work using our feature representations, and ran further experiments over low resource languages. We use the following expression to find words with the closest translation, given sets of images &#8496 from the source word e and &#8497 from the target word f, the average top-matches are used to produce a single value: 
+
 
                         +image('../../assets/images/corpus-mt-8.png', '')
-                        
+
+                        p
+                          | The model's ranking is evaluated using Mean Reciprocal Rank (MRR) and top-N accuracy. 
+
 
                         +header_2('CONCLUSION')
 
