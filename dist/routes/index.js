@@ -29,6 +29,9 @@ index.get('/blog', (req, res, next) => {
 index.get('/code', (req, res, next) => {
     res.render('site/index-code', {});
 });
+index.get('/art-1', (req, res, next) => {
+    res.render('site/art.pug', {});
+});
 index.get('/on-cv-tech', (req, res, next) => {
     res.render('site/blog/on-cv-tech.pug', {});
 });

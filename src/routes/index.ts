@@ -42,7 +42,7 @@ index.get('/final_hj_ling', (req, res, next) => {
 });
 
 /**
-	lingxiaoling.me
+	lingxiaoling.us index
 */
 index.get('/', (req, res, next) => { 
 	res.render('site/index-home', {});
@@ -62,6 +62,10 @@ index.get('/code', (req, res, next) => {
 	res.render('site/index-code', {});
 });
 
+index.get('/art-1', (req, res, next) => { 
+	res.render('site/art.pug', {});
+});
+
 
 /**
 	blog
@@ -70,9 +74,11 @@ index.get('/on-cv-tech', (req, res, next) => {
 	res.render('site/blog/on-cv-tech.pug', {});
 });
 
+
 index.get('/on-cv-commerical', (req, res, next) => { 
 	res.render('site/blog/on-cv-commerical.pug', {});
 });
+
 
 
 index.get('/on-nlp', (req, res, next) => { 
@@ -101,6 +107,4 @@ index.get('/multi-mt', (req, res, next) => {
 
 
 export default index;
-
-
 
