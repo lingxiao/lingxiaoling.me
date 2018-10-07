@@ -32,7 +32,6 @@ basic types: https://www.typescriptlang.org/docs/handbook/basic-types.html
 8. write python script that take .md file and create blog file
 
 
-
 ## Bug list ##
 
 

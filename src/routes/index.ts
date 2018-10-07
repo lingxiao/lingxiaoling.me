@@ -13,7 +13,6 @@ import * as url     from 'url'    ;
 const index: Router = Router();
 
 
-
 /**
 	@Use: Given  path : <String> to pdf and res : <Response Object>,
 	      render pdf 
@@ -30,9 +29,7 @@ function serve_pdf(path, res){
 
 
 index.get('/curriculum-vitae', (req, res, next) => { 
-
 	return serve_pdf('../public/curriculum-vitae/resume.pdf',res)
-
 });
 
 index.get('/final_hj_ling', (req, res, next) => { 
@@ -62,9 +59,6 @@ index.get('/code', (req, res, next) => {
 	res.render('site/index-code', {});
 });
 
-index.get('/art-1', (req, res, next) => { 
-	res.render('site/art.pug', {});
-});
 
 
 /**
@@ -78,6 +72,7 @@ index.get('/on-cv-tech', (req, res, next) => {
 index.get('/on-cv-commerical', (req, res, next) => { 
 	res.render('site/blog/on-cv-commerical.pug', {});
 });
+
 
 
 
